@@ -1,0 +1,61 @@
+.navs-pill-all {
+    .navbar-nav{
+        .nav-item {
+            &:not(.static-item) {
+                padding-right: 1rem;
+                padding-left: unset;
+            }
+        }
+    }
+}
+
+.navs-pill{
+    .sidebar-body{
+        padding-left: 1rem;
+        padding-right: unset;
+    }
+}
+
+// Sidebar Item Right Side Full Rounded (50rem)
+.navs-pill {
+    @include sidebar-nav-item-varients(true) {
+        &[aria-expanded=true] {
+            &:after{
+                @if $enable-rounded == true {
+                    border-top-left-radius: #{$border-radius-pill};
+                    border-bottom-left-radius: #{$border-radius-pill};
+                    border-top-right-radius: unset;
+                    border-bottom-right-radius: unset;
+                }
+            }
+        }
+        @if $enable-rounded == true {
+            border-top-left-radius: $border-radius-pill;
+            border-bottom-left-radius: $border-radius-pill;
+            border-top-right-radius: unset;
+            border-bottom-right-radius: unset;
+        }
+    }
+}
+
+// Sidebar Item Right Side Rounded (1rem)
+.navs-rounded {
+    @include sidebar-nav-item-varients(true) {
+        &[aria-expanded=true] {
+            &:after{
+                @if $enable-rounded == true {
+                    border-top-left-radius: #{$border-radius};
+                    border-bottom-left-radius: #{$border-radius};
+                    border-top-right-radius: unset;
+                    border-bottom-right-radius: unset;
+                }
+            }
+        }
+        @if $enable-rounded == true {
+            border-top-left-radius: $border-radius-sm;
+            border-bottom-left-radius: $border-radius-sm;
+            border-top-right-radius: unset;
+            border-bottom-right-radius: unset;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.pricing {
+	.table {
+		th {
+			border-color: $border-color;
+			&.bg-light {
+				background: $body-bg !important;
+			}
+		}
+		thead {
+			tr {
+				border-color: $border-color;
+			}
+		}
+		tr {
+			border-color: $border-color;
+		}
+	}
+}
+.prc-box {
+	background-color: $blue-700;
+}
+.type {
+	&::before {
+		border-left-color: $blue-800;
+	}
+	&::after {
+		border-right-color: $blue-800;
+	}
+}
+.iq-single-card {
+	&.bg-light {
+		background: $dark !important;
+	}
+}
+.line-around {
+	border-color: $border-color;
+	.line-around-1 {
+		background: $body-bg;
+	}
+}

@@ -1,0 +1,11 @@
+.footer {
+    background-color: $card-bg !important;
+    a {
+        color: $body-color;
+        transition: all 400ms ease;
+        &:hover {
+            transition: all 400ms ease;
+            color: $primary;
+        }
+    }
+}

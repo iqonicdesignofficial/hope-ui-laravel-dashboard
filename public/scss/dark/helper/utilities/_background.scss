@@ -1,0 +1,13 @@
+/*
+ * Background color 
+ */
+
+@each $color, $value in $theme-colors{
+	@include bg-variant-dark(".bg-soft-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors{
+	.text-#{$color} {
+		color: #{$value} !important;
+	}
+}

@@ -1,0 +1,8 @@
+.custom-accordion {
+    .accordion-button {
+        color: tint-color($body-color, 30%);
+    }
+    .accordion-item {
+        background: $card-bg;
+    }
+}

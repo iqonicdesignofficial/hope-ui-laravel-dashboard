@@ -1,0 +1,35 @@
+.form-control {
+    color: $body-color;
+    background-color: $card-bg;
+    border-color: $border-color;
+}
+.form-check-input{
+    color: $body-color;
+    background-color: $card-bg;
+    border-color: $border-color;
+}
+.form-select {
+    color: $body-color;
+    background-color: $card-bg;
+    border-color: $border-color;
+}
+.input-group-text {
+    background-color: $card-bg;
+    border-color: $border-color;
+}
+.stepwizard-row {
+    a {
+        &.btn {
+            color: $body-color;
+            background-color: $body-bg;
+        }
+    }
+}
+#top-tabbar-vertical {
+    li {
+        a {
+            color: $body-color;
+            background-color: $body-bg;
+        }
+    }
+}

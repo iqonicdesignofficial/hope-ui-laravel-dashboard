@@ -1,0 +1,16 @@
+.table {
+	thead {
+		tr {
+			th {
+                background-color: $body-bg;
+			}
+		}
+	}
+    tbody {
+        tr {
+            td {
+               color: $light;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.btn-border {
+    border: $border-width * 2 solid $border-color;
+    &:hover {
+        border-color: lighten($border-color, 20%);
+    }
+    &.active {
+        border-color: $primary;
+    }
+}

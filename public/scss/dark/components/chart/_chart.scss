@@ -1,0 +1,17 @@
+.apexcharts-theme-light{
+    .apexcharts-tooltip{
+        background: $card-bg;
+        border: 1px solid $border-color;
+            .apexcharts-tooltip-title{
+                background: $card-bg;
+                border: 1px solid $border-color;
+            }
+    }
+    .apexcharts-xaxistooltip{
+        background: $card-bg;
+        border: 1px solid $border-color;
+        .apexcharts-xaxistooltip-text{
+            color: $body-color;
+        }
+    }
+}

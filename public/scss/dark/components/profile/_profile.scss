@@ -1,0 +1,8 @@
+.profile-media {
+    &::before {
+        border-color: $border-color;
+    }
+}
+.profile-dots-pills {
+    background-color: $card-bg;
+}

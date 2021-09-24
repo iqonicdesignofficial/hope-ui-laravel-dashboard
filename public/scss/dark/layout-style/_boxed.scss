@@ -1,0 +1,12 @@
+&.boxed {
+    background: $primary !important;
+    .boxed-inner {
+        background: $body-bg;
+    }
+}
+&.boxed-fancy {
+    background: $body-bg;
+    .boxed-inner{
+        background: $body-bg; 
+    }
+}

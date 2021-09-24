@@ -1,0 +1,46 @@
+.dark {
+    // Variables
+    @import "./dark";
+
+    // Utilities
+    @import "./helper/utilities";
+
+    // Reboot
+    @import "./reboot/reboot";
+
+    // Components
+    @import "./components/accordion/custom-accordion";
+    @import "./components/button/border-button";
+    @import "./components/close/close";
+    @import "./components/menu-style/default-sidebar";
+    @import "./components/menu-style/dual-horizontal";
+    @import "./components/menu-style/dual-compact";
+    @import "./components/menu-style/nav-color";
+    @import "./components/footer/footer";
+    @import "./components/nav/navbar";
+    @import "./components/alert/bs-alert";
+    @import "./components/card/card";
+    @import "./components/chart/chart";
+    @import "./components/card/icon-box";
+    @import "./components/form/form-control";
+    @import "./components/table/table";
+    @import "./components/dropdown/dropdown";
+    @import "./components/profile/profile";
+    @import "./components/timeline/timeline-mega";
+    @import "./components/widgets/credit-card";
+    @import "./components/progressbar/progressbar";
+    @import "./components/pagination/pagination";
+
+    // Pages
+    @import "./pages/kanban/kanban";
+    @import "./pages/pricing/pricing";
+    @import "./pages/auth/authentication";
+
+    // Plugins
+    @import "./plugins/chart";
+    @import "./plugins/full-calendar";
+
+    // Layouts
+    @import "./layout-style/boxed";
+    
+}

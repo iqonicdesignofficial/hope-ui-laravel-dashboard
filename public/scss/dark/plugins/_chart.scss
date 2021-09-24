@@ -1,0 +1,20 @@
+.apexcharts-svg{
+    .apexcharts-yaxis-texts-g{
+        text{
+            fill:$secondary;
+        }
+    }
+    .apexcharts-xaxis-texts-g{
+        text{
+            fill:$secondary;
+        }
+    }
+    line{
+        stroke:$secondary;
+    }
+    .apexcharts-track{
+        path {
+            stroke: $secondary;
+        }
+    }
+}

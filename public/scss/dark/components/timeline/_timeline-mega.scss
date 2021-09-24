@@ -1,0 +1,23 @@
+.iq-timeline {
+	&:before {
+        background-color: $border-color;
+	}
+    li {
+        .timeline-dots {
+            background-color: $body-bg !important;
+        }
+    }
+}
+.iq-timeline0 {
+	&:before {
+        background-color: $border-color;
+	}
+    li {
+        .timeline-dots {
+            background-color: $body-bg !important;
+        }
+        .timeline-dots1 {
+            background-color: $body-bg;
+        }
+    }
+}

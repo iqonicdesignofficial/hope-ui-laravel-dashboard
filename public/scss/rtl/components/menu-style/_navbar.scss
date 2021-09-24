@@ -1,0 +1,51 @@
+.navbar-nav{
+    padding-right: 0;
+    padding-left: unset;
+
+}
+.navbar-expand-lg{
+    .navbar-nav{
+        margin-right: auto;
+        margin-left: unset !important;
+    }
+}
+.nav  {
+    .search-input {
+        direction: ltr;
+        text-align: right;
+
+        &.input-group {
+            .input-group-text {
+                border-radius: 5px 0px 0px 5px !important;
+            }
+			.form-control {
+                border-radius: 0px 5px 5px 0px !important;
+			}
+		}
+    }
+    .navbar-brand {
+        margin-right: 2rem;
+        margin-left: unset;
+		.logo-title {
+            margin-left: unset;
+            margin-right: 1rem;
+		}
+	}
+    .sidebar-toggle{
+        right: 20px;
+        left: auto;
+        top: auto;
+        line-height: 15px;
+        transform: rotate(180deg);
+    }
+}
+
+.iq-navbar{
+    .dropdown{
+        .dropdown-menu{
+            &.sub-drop{
+                left: -200px;
+            }
+        }
+    } 
+} 

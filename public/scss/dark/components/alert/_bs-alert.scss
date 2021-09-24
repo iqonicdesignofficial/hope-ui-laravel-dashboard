@@ -1,0 +1,56 @@
+
+@each $state, $value in $theme-colors {
+    $alert-background: shift-color($value, $alert-bg-scale);
+    $alert-border: shift-color($value, $alert-border-scale);
+    $alert-color: shift-color($value, $alert-color-scale);
+    @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+      $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+    }
+    .alert-#{$state} {
+      @include alert-variant($alert-background, $alert-border, $alert-color);
+      .btn-close {
+        filter: $btn-close-white-filter;
+      }
+    }
+}
+  
+.alert-solid {
+    @each $state, $value in $theme-colors {
+        &.alert-#{$state} {
+            @include alert-variant($value, $value, #fff);
+            .btn-close {
+                filter: unset;
+              }
+        }
+    }
+}
+
+
+.alert-left {
+    @each $state, $value in $theme-colors {
+        &.alert-#{$state} {
+            border-color: $value;
+        }
+    }
+}
+.alert-top {
+    @each $state, $value in $theme-colors {
+        &.alert-#{$state} {
+            border-color: $value;
+        }
+    }
+}
+.alert-right {
+    @each $state, $value in $theme-colors {
+        &.alert-#{$state} {
+            border-color: $value;
+        }
+    }
+}
+.alert-bottom {
+    @each $state, $value in $theme-colors {
+        &.alert-#{$state} {
+            border-color: $value;
+        }
+    }
+}

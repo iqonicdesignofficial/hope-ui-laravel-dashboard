@@ -1,0 +1,52 @@
+.form-check {
+    padding-left: unset;
+    padding-right: 1.5em;
+
+    .form-check-input {
+        float: right;
+        margin-left: unset;
+        margin-right: -1.5em;
+    }
+}
+.form-control {
+    direction: ltr;
+    text-align: right;
+}
+.form-switch {
+    padding-right: 2.5em;
+    .form-check-input {
+        margin-right: -2.5em;
+    }
+}
+.select2-container--default{
+    .select2-selection--multiple{
+        .select2-selection__choice {
+            float: right;
+        }
+    } 
+} 
+.select2-container{
+    .select2-search--inline {
+        float: right;
+    }
+} 
+.form-check-inline {
+    margin-left: 1rem;
+    margin-right: unset;
+}
+.form-switch.form-switch.form-check-inline {
+    padding-right: 2.5em;
+    padding-left: unset;
+}
+.form-check.form-switch.form-check-inline {
+    .form-check-input{
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+}
+.iq-comingsoon-form {
+    button {
+        left: 0px;
+        right: unset;
+    }
+} 

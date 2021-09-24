@@ -1,0 +1,12 @@
+.card {
+    background: $card-bg;
+    .card-header, .card-footer {
+        background-color: $card-bg;
+        border-bottom-color: $border-color;
+    }
+}
+
+.card-footer{
+    border-top: 1px solid $border-color;
+}
+

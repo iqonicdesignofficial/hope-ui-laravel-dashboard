@@ -1,0 +1,8 @@
+&.dual-compact{
+    .nav-underline .nav-link:hover {
+        color: var(--bs-primary);
+      }
+    .nav-underline .active {
+        color: $gray-300;
+      }
+}

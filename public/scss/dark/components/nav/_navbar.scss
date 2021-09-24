@@ -1,0 +1,53 @@
+.iq-navbar {
+    border-color: $card-bg;
+    background-color: $card-bg;
+
+    @include nav-item(false) {
+        color: $white;
+        &:hover {
+            color: tint-color($body-color, 40%);
+        }
+    }
+	.navbar-brand {
+		.logo-title {
+			color: $white;
+		}
+	}
+    &.nav-glass{
+        background:linear-gradient(120deg, rgba($dark, 0.5) -8%, rgba($dark, 0.01) 120%);
+        border-color: $border-color;
+    }
+    .dropdown {
+        .dropdown-menu {
+            &.sub-drop {
+                li {
+                    a {
+                        color: $body-color;
+                    }
+                }
+                .iq-sub-card {
+                    color: $body-color;
+                    &:hover{
+                        background: shade-color($primary, 90%)
+                    }
+                    &:not(:last-child) {
+                        border-bottom: $border-width solid $border-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.list-group-item{
+    background-color: unset;
+}
+
+@include media-breakpoint-down(lg){
+    .iq-navbar {
+        .navbar-collapse {
+            &:not(.offcanvas-collapse) {
+                // background: $body-bg;
+            }
+        }
+    }
+}

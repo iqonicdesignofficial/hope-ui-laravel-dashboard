@@ -1,0 +1,9 @@
+.sign-bg {
+	right: 0;
+	left: 0;
+
+	&.sign-bg-right {
+		left: 0;
+		right: auto;
+	}
+}

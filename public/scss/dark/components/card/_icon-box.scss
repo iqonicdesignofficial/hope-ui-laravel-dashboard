@@ -1,0 +1,14 @@
+.icon-box {
+    border-color: $border-color;
+    color: $secondary;
+    .overlay {
+        background-color: $body-bg;
+    }
+    &:hover {
+        .overlay{
+            .btn{
+                color: $white;
+            }
+        }
+    }
+}

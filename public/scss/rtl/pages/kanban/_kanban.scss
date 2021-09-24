@@ -1,0 +1,11 @@
+.card {
+	.card-body {
+		.iq-media-group-1 {
+			.iq-media-1 {
+				&:first-child {
+                    margin-left: -1.25rem;
+				}
+			}
+		}
+	}
+}

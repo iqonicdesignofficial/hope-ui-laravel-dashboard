@@ -1,0 +1,45 @@
+.sidebar-default {
+    .sidebar-list {
+        @include nav-item(false){
+            span {
+                margin-right: $spacer;
+                margin-left: unset;
+            }
+            .right-icon {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            &.active {
+                .right-icon {
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+            &[aria-expanded=true] {
+                .right-icon {
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .sidebar-body{
+        padding-left: 0.75rem;
+        padding-right: unset;
+    }
+}
+.sidebar  {
+    .sidebar-toggle {
+        left: -12px;
+        right: unset;
+        transform: rotate(180deg);
+    }
+    .navbar-brand {
+        margin-left: 1rem;
+        margin-right: unset;
+		.logo-title {
+            margin-left: unset;
+            margin-right: 1rem;
+		}
+	}
+}

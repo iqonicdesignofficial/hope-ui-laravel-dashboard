@@ -1,0 +1,20 @@
+.page-item {
+	&.active {
+		.page-link {
+            z-index: 3;
+            color: #fff;
+            background-color: #3a57e8;
+            border-color: #3a57e8;
+        }
+    }
+} 
+	.page-item {
+		.page-link {
+		    background-color: #001738;
+                &.disabled {
+                    .page-link {
+                        background-color: $body-bg;
+                }
+            }
+        }
+    }
