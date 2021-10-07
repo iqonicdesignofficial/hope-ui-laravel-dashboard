@@ -12,7 +12,7 @@
 <a href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/blob/main/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/iqonicdesignofficial/hope-ui-laravel-dashboard" /> </a>
 <a href="https://twitter.com/iqonicdesign" target="__blank"><img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fiqonicdesign" /></a>
 </p>
-<h3 align="center">Free Open Source Bootstrap 5 Laravel Admin Dashboard.</h3>
+<h3 align="center">Free Open Source Bootstrap 5 Design System.</h3>
 <p align="center">
   <a href="https://templates.iqonic.design/hope-ui/html/dist" title="Hope UI"><strong>Live Demo</strong></a>
   <span>|</span>
@@ -72,7 +72,7 @@ Built ideally for developers, designers, and startups, or Creators, Hope UI brin
 
   - [Quick Start](#quick-start)
     - [Method 1: Direct Download](#method-1-direct-download)
-    - [Method 2: Installation](#method-2-Installation)
+    - [Method 2: Using NPM](#method-2-using-npm)
   - [Documentation](#documentation)
   - [Version](#version)
   - [Public RoadMap](#public-roadmap)
@@ -91,11 +91,11 @@ Built ideally for developers, designers, and startups, or Creators, Hope UI brin
 You can use following method to get started with CSS and JS files of the design system.
 
 ### Method 1: Direct Download
-[Dowload from Github](https://github.com/tafcoder/sleek-dashboard/archive/refs/heads/master.zip)
+[Dowload from Github](https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/archive/refs/heads/main.zip)
 
 [Download from Iqonic Design](https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
 
-### Method 2: Installation
+### Method 2: Using NPM
 Start working with the design system
 1. Install node_modules Run in terminal or CMD:
 ```
