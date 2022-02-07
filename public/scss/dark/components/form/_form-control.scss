@@ -2,6 +2,12 @@
     color: $body-color;
     background-color: $card-bg;
     border-color: $border-color;
+    &.is-invalid{
+        border-color: $danger;
+    }
+    &.is-valid{
+        border-color: $success;
+    }
 }
 .form-check-input{
     color: $body-color;
@@ -11,7 +17,9 @@
 .form-select {
     color: $body-color;
     background-color: $card-bg;
-    border-color: $border-color;
+    &.is-invalid{
+        border-color: $danger;
+    }
 }
 .input-group-text {
     background-color: $card-bg;
@@ -32,4 +40,9 @@
             background-color: $body-bg;
         }
     }
+}
+.custom-form-floating>.form-control:focus~label, 
+.custom-form-floating>.form-control:not(:placeholder-shown)~label, 
+.custom-form-floating>.form-select~label{
+    background-color: $card-bg;
 }

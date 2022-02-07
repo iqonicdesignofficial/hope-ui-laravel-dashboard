@@ -1,0 +1,13 @@
+.type {
+	background: var(--#{$variable-prefix}primary);
+}
+.prc-box {
+	background: var(--#{$variable-prefix}primary-tint-80);
+}
+
+.prc-box.active {
+	background: var(--#{$variable-prefix}primary);
+	.type {
+		background: var(--#{$variable-prefix}primary-tint-80);
+    }
+}

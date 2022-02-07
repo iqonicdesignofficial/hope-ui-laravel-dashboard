@@ -21,3 +21,35 @@
         }
     }
 }
+.sidebar-color {
+    .navbar-nav {
+        .nav-item{
+            .nav-link:not(.disabled){
+                &.active, &[aria-expanded=true]{
+                    background-color: $white !important;
+                    color: var(--bs-primary) !important;
+                    box-shadow: unset !important;
+                }
+            }
+        }
+    }
+}
+.sidebar-dark, .sidebar-white, .sidebar-transparent {
+    .navbar-nav {
+        .nav-item{
+            .nav-link:not(.disabled){
+                &.active, &[aria-expanded=true]{
+                    background-color: var(--bs-primary) !important;
+                    color: $white !important;
+                    box-shadow: unset !important;
+                }
+            }
+        }
+    }
+}
+.sidebar-dark, .sidebar-white, .sidebar-transparent{
+    .navbar-nav .nav-item .nav-link:not(.disabled):hover:not(.active):not([aria-expanded=true]) {
+        background-color: rgba(var(--bs-primary-rgb), 0.2) !important;
+        color: var(--bs-primary) !important;
+    }
+} 

@@ -1,6 +1,6 @@
 (function (jQuery) {
     "use strict";
-if (jQuery("#apex-basic").length) {
+if (document.querySelectorAll("#apex-basic").length) {
   options = {
       chart: {
           height: 350,
@@ -38,7 +38,7 @@ if (jQuery("#apex-basic").length) {
 }
 //apex-line-area
 
-if (jQuery("#apex-line-area").length) {
+if (document.querySelectorAll("#apex-line-area").length) {
   options = {
       chart: {
           height: 350,
@@ -73,7 +73,7 @@ if (jQuery("#apex-line-area").length) {
   }
 }
 //apex-colun
-if (jQuery("#apex-column").length) {
+if (document.querySelectorAll("#apex-column").length) {
   options = {
       chart: {
           height: 350,
@@ -129,7 +129,7 @@ if (jQuery("#apex-column").length) {
   }
 }
 //apex bar
-if (jQuery("#apex-bar").length) {
+if (document.querySelectorAll("#apex-bar").length) {
   options = {
       chart: {
           height: 350,
@@ -156,7 +156,7 @@ if (jQuery("#apex-bar").length) {
   }
 }
 //apex-mixed-chart
-if (jQuery("#apex-mixed-chart").length) {
+if (document.querySelectorAll("#apex-mixed-chart").length) {
   options = {
       chart: {
           height: 350,
@@ -236,7 +236,7 @@ if (jQuery("#apex-mixed-chart").length) {
   }
 }
 //apex
-if (jQuery("#apex-candlestick-chart").length) {
+if (document.querySelectorAll("#apex-candlestick-chart").length) {
   options = {
       chart: {
           height: 350,
@@ -429,7 +429,7 @@ if (jQuery("#apex-candlestick-chart").length) {
   }
 }
 //apex-bubble-chart'
-if (jQuery("#apex-bubble-chart").length) {
+if (document.querySelectorAll("#apex-bubble-chart").length) {
   function generateData(e, t, a) {
       for (var n = 0, o = []; n < t;) {
           var r = Math.floor(Math.random() * (a.max - a.min + 1)) + a.min,
@@ -491,7 +491,7 @@ if (jQuery("#apex-bubble-chart").length) {
   }
 }
 //apex-sccater
-if (jQuery("#apex-scatter-chart").length) {
+if (document.querySelectorAll("#apex-scatter-chart").length) {
   options = {
       chart: {
           height: 350,
@@ -588,7 +588,7 @@ if (jQuery("#apex-scatter-chart").length) {
 //pie chart
 
 //apex-radial-chart
-if (jQuery("#apex-radialbar-chart").length) {
+if (document.querySelectorAll("#apex-radialbar-chart").length) {
   options = {
       chart: {
           height: 340,
@@ -621,7 +621,7 @@ if (jQuery("#apex-radialbar-chart").length) {
     (chart = new ApexCharts(document.querySelector("#apex-radialbar-chart"), options)).render()
   }
 }
-if (jQuery("#apex-pie-chart").length) {
+if (document.querySelectorAll("#apex-pie-chart").length) {
   options = {
       chart: {
           height: 350,
@@ -639,7 +639,7 @@ if (jQuery("#apex-pie-chart").length) {
   }
 }
 //advanced charts
-if (jQuery("#advanced-chart").length) {
+if (document.querySelectorAll("#advanced-chart").length) {
   var options = {
       series: [{
               name: 'Bob',
@@ -784,7 +784,7 @@ if (jQuery("#advanced-chart").length) {
   }
 }
 //radar-multiple-chart
-if (jQuery("#radar-multiple-chart").length) {
+if (document.querySelectorAll("#radar-multiple-chart").length) {
   var options = {
       series: [{
           name: 'Series 1',

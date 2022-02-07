@@ -1,5 +1,5 @@
 /*!
-* Version: 1.1.0
+* Version: 1.2.0
 * Template: Example Project
 * Author: iqonic.design
 * Design and Developed by: iqonic.design
@@ -1218,6 +1218,9 @@
     text-align: center !important;
   }
 }
+[dir=rtl] ol, [dir=rtl] ul {
+  padding-right: 0;
+}
 [dir=rtl] .sidebar-default .sidebar-list .navbar-nav .nav-item .nav-link span {
   margin-right: 1rem;
   margin-left: unset;
@@ -1369,6 +1372,10 @@
 [dir=rtl] .navs-rounded-all .sidebar-body {
   padding-right: unset;
   padding-left: 1rem;
+}
+[dir=rtl] .accordion-button::after {
+  margin-left: unset;
+  margin-right: auto;
 }
 [dir=rtl] .btn {
   border-radius: 0.25rem;

@@ -1,0 +1,66 @@
+:root {
+
+    @mixin custom-color-variables($color-name: 'primary',$color-value: $primary) {
+        --#{$variable-prefix}heading-color: #{shade-color($color-value, 80%)};
+        --#{$variable-prefix}#{$color-name}: #{$color-value};
+        --#{$variable-prefix}#{$color-name}-shade-80: #{shade-color($color-value, 80%)};
+        --#{$variable-prefix}#{$color-name}-shade-60: #{shade-color($color-value, 60%)};
+        --#{$variable-prefix}#{$color-name}-shade-40: #{shade-color($color-value, 40%)};
+        --#{$variable-prefix}#{$color-name}-shade-20: #{shade-color($color-value, 20%)};
+        --#{$variable-prefix}#{$color-name}-tint-80: #{tint-color($color-value, 80%)};
+        --#{$variable-prefix}#{$color-name}-tint-60: #{tint-color($color-value, 60%)};
+        --#{$variable-prefix}#{$color-name}-tint-40: #{tint-color($color-value, 40%)};
+        --#{$variable-prefix}#{$color-name}-tint-20: #{tint-color($color-value, 20%)};
+        --#{$variable-prefix}#{$color-name}-rgb: #{to-rgb($color-value)};
+        --#{$variable-prefix}#{$color-name}-tint-88: #{tint-color($color-value, 88%)};
+    }
+
+    @include custom-color-variables('primary',$primary);
+    
+
+    @each $color, $value in $custom-colors {
+        .#{$color} {
+            @each $name, $hax-value in $value {
+                @include custom-color-variables($name, $hax-value);
+            }
+        }
+    }
+}
+
+@each $color, $value in $custom-colors {
+    .#{$color} {
+        .form-check-input {
+            &:checked {
+                &[type="checkbox"] {
+                    background-color: #{$color};
+                    // background-image: escape-svg( url("data:image/svg+xml,<svg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M0.51662 8.59792C-0.172207 7.90067 -0.172207 6.77019 0.51662 6.07293C1.20545 5.37567 2.32225 5.37567 3.01108 6.07293L5.25609 8.34542C5.39386 8.48488 5.61722 8.48488 5.75499 8.34542L12.9889 1.02294C13.6777 0.325686 14.7946 0.325686 15.4834 1.02294C16.1722 1.7202 16.1722 2.85068 15.4834 3.54794L5.75499 13.3954C5.61722 13.5349 5.39386 13.5349 5.25609 13.3954L0.51662 8.59792Z' fill='#{$value}'/></svg>"))
+                }
+                &[type="radio"] {
+                    // background-image: escape-svg( url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>"))
+                }
+            }
+        }
+        .form-switch {
+            .form-check-input {
+                padding: $form-switch-size; 
+                background-color: $gray-200;
+                border-color: $gray-200;
+                transition: all 300ms ease;
+                &:checked {
+                // background-image:  escape-svg( url("data:image/svg+xml,<svg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='9' fill='white' stroke='#{$value}' stroke-width='2'/></svg>"));
+                background-color: var(--bs-primary-tint-80);
+                border-color: var(--bs-primary-tint-80);
+                transition: all 300ms ease;
+                }
+            }
+        }
+        .accordion-button{
+            &:not(.collapsed) {
+                &::after {
+                    // background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$value}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"));
+                }
+            }
+        }
+    }
+
+}

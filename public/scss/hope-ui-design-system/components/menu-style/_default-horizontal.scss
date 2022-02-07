@@ -30,8 +30,6 @@ body.offcanvas-active{
 			margin-left: 2rem;
 		}
 	}
-}
-@include media-breakpoint-down(xl) {
 	.horizontal-nav{
 		.offcanvas-header{ opacity: 1;display: flex; justify-content: space-between; align-items: center;pointer-events:auto; }
 	}
@@ -59,7 +57,6 @@ body.offcanvas-active{
 		}
 	}
 	.iq-navbar {
-
 		.mobile-offcanvas{
 			&:not(.horizontal-nav) {
 				.navbar-brand {
@@ -69,6 +66,10 @@ body.offcanvas-active{
 				}
 			}
 		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	.iq-navbar {
 		.navbar-collapse{
 			&:not(.offcanvas-collapse) {
 				.navbar-nav{

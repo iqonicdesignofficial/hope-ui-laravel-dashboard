@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :assets="$assets ?? []">
     <div>
         <x-header-breadcrumb class="btn btn-primary"/>
         <div class="row">

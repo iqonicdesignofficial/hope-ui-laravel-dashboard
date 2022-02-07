@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :assets="$assets ?? []">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
    <symbol id="check" viewBox="0 0 16 16">
       <title>Check</title>
@@ -10,7 +10,7 @@
       <div class="col-md-12">
          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-3 text-center">
             <div class="col">
-               <div class="card mb-4 rounded-3 shadow-sm">
+               <div class="card mb-4 rounded-3 ">
                   <div class="card-body">
                      <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
                      <h4 class="my-0 fw-normal mt-3">Free</h4>
@@ -25,7 +25,7 @@
                </div>
             </div>
             <div class="col">
-               <div class="card mb-4 rounded-3 shadow-sm">
+               <div class="card mb-4 rounded-3 ">
                   <div class="card-body">
                      <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
                      <h4 class="my-0 fw-normal mt-3">Pro</h4>
@@ -40,7 +40,7 @@
                </div>
             </div>
             <div class="col">
-               <div class="card mb-4 rounded-3 shadow-sm">
+               <div class="card mb-4 rounded-3 ">
                   <div class="card-body">
                      <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
                      <h4 class="my-0 fw-normal mt-3">Enterprise</h4>
@@ -55,7 +55,7 @@
                </div>
             </div>
             <div class="col">
-               <div class="card mb-4 rounded-3 shadow-sm">
+               <div class="card mb-4 rounded-3 ">
                   <div class="card-body">
                      <h1 class="card-title pricing-card-title">$49<small class="text-muted fw-light">/mo</small></h1>
                      <h4 class="my-0 fw-normal mt-3">Premium</h4>
@@ -539,7 +539,7 @@
                                        <path d="M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     <div class="ms-2">Private forum access</div>
-                                 </div>                           
+                                 </div>
                               </div>
                               <div class="col-lg-6 col-md-6 col-sm-12">
                                  <div class="d-flex align-items-center">
@@ -548,7 +548,7 @@
                                        <path d="M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     <div class="ms-2">Private forum access</div>
-                                 </div>                           
+                                 </div>
                               </div>
                            </div>
                            <div class="row">
@@ -559,7 +559,7 @@
                                        <path d="M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     <div class="ms-2">Private forum access</div>
-                                 </div>                           
+                                 </div>
                               </div>
                               <div class="col-lg-6 col-md-6 col-sm-12">
                                  <div class="d-flex align-items-center">
@@ -568,7 +568,7 @@
                                        <path d="M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     <div class="ms-2">Private forum access</div>
-                                 </div>                           
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -577,7 +577,7 @@
                         <div class="card-body text-center bg-light h-100 iq-single-card">
                            <div class="d-flex align-items-center justify-content-center mb-2">
                               <h1 class="card-title pricing-card-title mb-0">
-                                 $599                              
+                                 $599
                               </h1>
                               <small class="ms-1 text-muted fw-light">USD</small>
                            </div>
@@ -588,8 +588,8 @@
                            <button class="btn btn-primary rounded-pill mt-5 w-100">Get Started</button>
                         </div>
                      </div>
-                  </div>                  
-               </div>               
+                  </div>
+               </div>
             </div>
          </div>
          <div class="row iq-star-inserted row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 mt-5 text-center">

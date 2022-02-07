@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :assets="$assets ?? []">
 <div>
     <div class="row">
         <div class="col-sm-12 col-lg-6">
@@ -185,7 +185,7 @@
             </div>
             <div class="card-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
-                <form class="form-horizontal" action="/action_page.php">
+                <form class="form-horizontal" >
                     <div class="form-group row">
                         <label class="control-label col-sm-3 align-self-center mb-0" for="email">Email:</label>
                         <div class="col-sm-9">

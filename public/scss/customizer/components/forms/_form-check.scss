@@ -1,0 +1,16 @@
+.form-check-input{
+    border-color: var(--#{$variable-prefix}primary-shade-20);
+    &:checked{
+        border-color: var(--#{$variable-prefix}primary-shade-20);
+    }
+    &:focus{
+        border-color: var(--#{$variable-prefix}primary-shade-20);
+    }
+}
+
+
+
+.border-primary{
+    border-color: var(--#{$variable-prefix}primary) !important;
+}
+

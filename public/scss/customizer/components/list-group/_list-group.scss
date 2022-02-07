@@ -1,0 +1,26 @@
+.list-group-item-primary{
+    color: var(--#{$variable-prefix}primary-shade-40);
+    background-color: var(--#{$variable-prefix}primary-tint-80); // 70 pe accha laag raha hai
+    &.list-group-item-action{
+        &:hover, &:focus{
+            color: var(--#{$variable-prefix}primary-shade-40);
+            background-color: var(--#{$variable-prefix}primary-tint-60);
+        }
+    }
+}
+.list-group-item{
+    &.active{
+        color: var(--#{$variable-prefix}white);
+        background-color: var(--#{$variable-prefix}primary);
+        border-color: var(--#{$variable-prefix}primary);
+    }
+}
+
+.list-group-item-action:not(.active){
+    &:hover, &:focus{
+        background-color: var(--bg-body);// to check this
+    }
+    &:active{
+        background-color: var(--#{$variable-prefix}primary-tint-80);
+    }
+}

@@ -1,0 +1,29 @@
+.popover{
+    background-color: $body-bg;
+}
+.popover-header{
+    background-color: $card-bg;
+}
+.bs-popover-end>.popover-arrow::after, 
+.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::after
+{
+    border-right-color: $body-bg;
+}
+.bs-popover-top>.popover-arrow::after, 
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::after{
+    border-top-color: $body-bg;
+}
+.bs-popover-bottom>.popover-arrow::after, 
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after{
+    border-bottom-color: $body-bg;
+}
+.bs-popover-start>.popover-arrow::after, 
+.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after{
+    border-left-color: $body-bg;
+}
+.toast{
+    background-color: #151824;
+    .toast-header{
+        background-color: #222738;
+    }
+}

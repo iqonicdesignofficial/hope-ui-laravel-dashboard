@@ -1,6 +1,6 @@
 <x-guest-layout>
    <section class="login-content">
-      <div class="row m-0 align-items-center bg-white vh-100">            
+      <div class="row m-0 align-items-center bg-white vh-100">
          <div class="col-md-6">
             <div class="row justify-content-center">
                <div class="col-md-10">
@@ -13,7 +13,7 @@
                               <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"/>
                               <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"/>
                            </svg>
-                           <h4 class="logo-title ms-3">Hope UI</h4>
+                           <h4 class="logo-title ms-3">{{env('APP_NAME')}}</h4>
                         </a>
                         <h2 class="mb-2 text-center">Sign In</h2>
                         <p class="text-center">Login to stay connected.</p>
@@ -27,13 +27,13 @@
                               <div class="col-lg-12">
                                  <div class="form-group">
                                     <label for="email" class="form-label">Email</label>
-                                    <input id="email" type="email" name="email"  value="{{old('email')}}"   class="form-control"  placeholder="admin@example.com" required autofocus>
+                                    <input id="email" type="email" name="email"  value="{{env('IS_DEMO') ? 'admin@example.com' : old('email')}}"   class="form-control"  placeholder="admin@example.com" required autofocus>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="form-group">
                                     <label for="password" class="form-label">Password</label>
-                                    <input class="form-control" type="password" placeholder="********"  name="password"  required autocomplete="current-password">
+                                    <input class="form-control" type="password" placeholder="********"  name="password" value="{{ env('IS_DEMO') ? 'password' : '' }}" required autocomplete="current-password">
                                  </div>
                               </div>
                               <div class="col-lg-6">

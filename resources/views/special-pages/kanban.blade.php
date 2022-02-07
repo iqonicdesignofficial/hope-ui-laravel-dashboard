@@ -1,8 +1,8 @@
-@section('scripts')
+@push('scripts')
 <script src="{{asset('vendor/sortable/Sortable.js')}}"></script>
-<script src="{{asset('js/kanban.js')}}"></script>
-@endsection
-<x-app-layout>
+<script src="{{asset('js/plugins/kanban.js')}}"></script>
+@endpush
+<x-app-layout :assets="$assets ?? []">
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -22,16 +22,16 @@
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton04" style="">
                                 <a class="dropdown-item" href="#">Status</a>
                                 <a class="dropdown-item" href="#">Task Name</a>
-                                <a class="dropdown-item" href="#">Priority</a> 
+                                <a class="dropdown-item" href="#">Priority</a>
                                 <a class="dropdown-item" href="#">Assignee</a>
                                 <a class="dropdown-item" href="#">Due date</a>
                                 <a class="dropdown-item" href="#">Start date</a>
-                                <a class="dropdown-item" href="#">Time tracked</a> 
+                                <a class="dropdown-item" href="#">Time tracked</a>
                             </div>
                         </div>
                         <div class="dropdown me-3">
                             <span class="dropdown-toggle align-items-center d-flex" id="dropdownMenuButton04" data-bs-toggle="dropdown" aria-expanded="false">
-                                Group By: Status 
+                                Group By: Status
                             </span>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton04" style="">
                                 <a class="dropdown-item" href="#">
@@ -57,7 +57,7 @@
                                         <path d="M14.9248 3.12012H7.65704C4.6456 3.12012 2.77832 5.25284 2.77832 8.26428V16.3467C2.77832 19.3581 4.60898 21.4817 7.65704 21.4817H16.2612C19.2726 21.4817 21.1399 19.3581 21.1399 16.3467V9.30776" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     Priority
-                                </a> 
+                                </a>
                                 <a class="dropdown-item" href="#">
                                     <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
                                         <path d="M13.8496 4.25024V6.67024" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -66,7 +66,7 @@
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7021 20C20.5242 20 22 18.5426 22 16.7431V14.1506C20.7943 14.1506 19.8233 13.1917 19.8233 12.001C19.8233 10.8104 20.7943 9.85039 22 9.85039L21.999 7.25686C21.999 5.45745 20.5221 4 18.7011 4H5.29892C3.47789 4 2.00104 5.45745 2.00104 7.25686L2 9.93485C3.20567 9.93485 4.17668 10.8104 4.17668 12.001C4.17668 13.1917 3.20567 14.1506 2 14.1506V16.7431C2 18.5426 3.4758 20 5.29787 20H18.7021Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     Tags
-                                </a> 
+                                </a>
                                 <a class="dropdown-item" href="#">
                                     <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
                                         <path d="M3.09277 9.40421H20.9167" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -81,7 +81,7 @@
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2383 3.5791H7.77096C4.83427 3.5791 3 5.21504 3 8.22213V17.2718C3 20.3261 4.83427 21.9999 7.77096 21.9999H16.229C19.175 21.9999 21 20.3545 21 17.3474V8.22213C21.0092 5.21504 19.1842 3.5791 16.2383 3.5791Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     Due Date
-                                </a> 
+                                </a>
                                 <a class="dropdown-item" href="#">
                                     <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
                                         <path d="M14.3955 9.59497L9.60352 14.387" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -89,7 +89,7 @@
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                     None
-                                </a>  
+                                </a>
                             </div>
                         </div>
                         <a href="#" class="text-body me-3 align-items-center d-flex">
@@ -130,14 +130,14 @@
             </div>
         </div>
     </div>
-    
+
     <div class="col-lg-3">
         <div class="card-transparent mb-0 desk-info">
             <div class="card-body p-0">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-body">                           
+                            <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h6 class="text-pink mb-0">Open Projects 05</h6>
                                     <div class="dropdown">
@@ -242,7 +242,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -363,7 +363,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,14 +426,14 @@
                                             </a>
                                             <a href="#" class="iq-media-1">
                                                 <div class="icon iq-icon-box-2 text-success">GT</div>
-                                            </a>   
+                                            </a>
                                                 <a href="#" class="iq-media-1">
                                                 <div class="icon iq-icon-box-2 text-danger">
                                                     <svg width="16" height="16" viewBox="0 0 24 24">
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>                                      
+                                            </a>
                                         </div>
                                     </div>
                                     <span class="remove"></span>
@@ -484,7 +484,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,14 +547,14 @@
                                             </a>
                                             <a href="#" class="iq-media-1">
                                                 <div class="icon iq-icon-box-2 text-success">GT</div>
-                                            </a> 
+                                            </a>
                                                 <a href="#" class="iq-media-1">
                                                 <div class="icon iq-icon-box-2 text-danger">
                                                     <svg width="16" height="16" viewBox="0 0 24 24">
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>                                          
+                                            </a>
                                         </div>
                                     </div>
                                     <span class="remove"></span>
@@ -605,7 +605,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -675,14 +675,14 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>    
+                                            </a>
                                         </div>
                                     </div>
                                     <span class="remove"></span>
                                 </div>
                             </div>
                         </div>
-                    </div>                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -693,7 +693,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-body">                           
+                            <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h6 class="text-warning mb-0">In Progress  02</h6>
                                     <div class="dropdown">
@@ -730,7 +730,7 @@
                                                 <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                 </svg>
                                                 Delete
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -798,7 +798,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -868,7 +868,7 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>    
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -919,7 +919,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -989,7 +989,7 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1044,7 +1044,7 @@
                                                     <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                 </svg>
                                                 Delete
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1112,7 +1112,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1182,14 +1182,14 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>   
+                                            </a>
                                         </div>
                                     </div>
                                     <span class="remove"></span>
                                 </div>
                             </div>
                         </div>
-                    </div>                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -1237,7 +1237,7 @@
                                                     <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                 </svg>
                                                 Delete
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1305,7 +1305,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1375,7 +1375,7 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a> 
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1426,7 +1426,7 @@
                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                         Delete
-                                                    </a> 
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1496,7 +1496,7 @@
                                                         <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                                     </svg>
                                                 </div>
-                                            </a>   
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

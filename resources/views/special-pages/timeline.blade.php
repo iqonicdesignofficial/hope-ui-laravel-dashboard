@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :assets="$assets ?? []">
    <div class="row">
       <div class="col-lg-12">
          <div class="card">
@@ -6,7 +6,7 @@
                <div class="iq-timeline m-0 d-flex align-items-center justify-content-between position-relative">
                   <ul class="list-inline p-0 m-0 w-100">
                      <li>
-                        <div class="time"> 
+                        <div class="time">
                            <span>Jan 2020</span>
                         </div>
                         <div class="content">

@@ -1,0 +1,19 @@
+.accordion-item{
+    background-color: var(--bs-primary-tint-88);
+}
+.accordion-header{
+    background-color: var(--bs-primary-tint-88);
+}
+.accordion-button{
+    background-color: var(--bs-primary-tint-88);
+}
+.accordion-button{
+    &:not(.collapsed){
+        color: var(--#{$variable-prefix}primary-shade-20);
+        background-color: var(--#{$variable-prefix}primary-tint-80);
+    }
+    &:focus{
+        border-color: var(--#{$variable-prefix}primary-tint-60);
+        //box-shadow: remaining
+    }
+}

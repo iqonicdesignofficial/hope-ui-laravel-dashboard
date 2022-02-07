@@ -1,5 +1,5 @@
 /*!
-* Version: 1.1.0
+* Version: 1.2.0
 * Template: Hope-Ui - Responsive Bootstrap 5 Admin Dashboard Template
 * Author: iqonic.design
 * Design and Developed by: iqonic.design
@@ -27,6 +27,7 @@
 @import "./hope-ui-design-system/helper/reboot";
 
 // Layout & components
+@import "./hope-ui-design-system/helper/root";
 @import "./bootstrap/root";
 @import "./bootstrap/reboot";
 @import "./bootstrap/type";

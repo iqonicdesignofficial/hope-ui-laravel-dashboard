@@ -4,6 +4,13 @@
         border-color: lighten($border-color, 20%);
     }
     &.active {
-        border-color: $primary;
+        border-color: var(--bs-primary);
+    }
+}
+.bd-aside{
+    .btn:hover, .btn:focus, .active, a:hover{
+        color: #fff;
+        background-color: #151824;
+        box-shadow: unset;
     }
 }

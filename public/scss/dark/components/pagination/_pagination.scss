@@ -2,19 +2,30 @@
 	&.active {
 		.page-link {
             z-index: 3;
-            color: #fff;
-            background-color: #3a57e8;
-            border-color: #3a57e8;
+            color: $white;
+            background-color: $primary;
+            border-color: $secondary;
         }
     }
 } 
-	.page-item {
-		.page-link {
-		    background-color: #001738;
-                &.disabled {
-                    .page-link {
-                        background-color: $body-bg;
-                }
+.page-item {
+    .page-link {
+        background-color: $card-bg;
+        border-color: $secondary;
+        color: $body-color;
+            &.disabled {
+                .page-link {
+                background-color: $body-bg;
             }
         }
     }
+}
+.list-group{
+    .list-group-item{
+        color: $body-color;
+        border-color: $border-color;
+    }
+}
+.bg-light {
+    background: $dark !important;
+}

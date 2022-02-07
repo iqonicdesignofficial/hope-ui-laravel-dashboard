@@ -1,0 +1,28 @@
+/*!
+*
+* Template: Hope-Ui - Responsive Bootstrap 5 Admin Dashboard Template
+* Author: iqonic.design
+* Design and Developed by: iqonic.design
+* NOTE: This file contains the styling for color variable.
+*
+*/
+
+
+// Configuration
+@import "./bootstrap/functions";
+// Variables
+// @import "./custom/variable";
+@import "./hope-ui-design-system/variable";
+@import "./hope-ui-design-system/variables/index";
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins";
+
+@import "./customizer/variables";
+@import "./customizer/reboot";
+@import "./customizer/root";
+
+// Components
+@import "./customizer/components";
+@import "./customizer/dark";
+@import "./customizer/layouts";
+@import "./customizer/utilities/utilities";

@@ -1,6 +1,6 @@
 (function (jQuery) {
   "use strict";
-if (jQuery('#myChart').length) {
+if (document.querySelectorAll('#myChart').length) {
   const options = {
     series: [55, 75],
     chart: {
@@ -26,11 +26,16 @@ if (jQuery('#myChart').length) {
   labels: ['Apples', 'Oranges'],
   };
   if(ApexCharts !== undefined) {
-    var chart = new ApexCharts(document.querySelector("#myChart"), options);
+    const chart = new ApexCharts(document.querySelector("#myChart"), options);
     chart.render();
+    document.addEventListener('ColorChange', (e) => {
+        const newOpt = {colors: [e.detail.detail2, e.detail.detail1],}
+        chart.updateOptions(newOpt)
+
+    })
   }
 }
-if (jQuery('#d-activity').length) {
+if (document.querySelectorAll('#d-activity').length) {
     const options = {
       series: [{
         name: 'Successful deals',
@@ -100,11 +105,15 @@ if (jQuery('#d-activity').length) {
         }
       }
     };
-  
+
     const chart = new ApexCharts(document.querySelector("#d-activity"), options);
     chart.render();
+    document.addEventListener('ColorChange', (e) => {
+    const newOpt = {colors: [e.detail.detail1, e.detail.detail2],}
+    chart.updateOptions(newOpt)
+    })
   }
-if (jQuery('#d-main').length) {
+if (document.querySelectorAll('#d-main').length) {
   const options = {
       series: [{
           name: 'total',
@@ -183,8 +192,29 @@ if (jQuery('#d-main').length) {
       },
   };
 
-  var chart = new ApexCharts(document.querySelector("#d-main"), options);
+  const chart = new ApexCharts(document.querySelector("#d-main"), options);
   chart.render();
+  document.addEventListener('ColorChange', (e) => {
+    console.log(e)
+    const newOpt = {
+      colors: [e.detail.detail1, e.detail.detail2],
+      fill: {
+        type: 'gradient',
+        gradient: {
+            shade: 'dark',
+            type: "vertical",
+            shadeIntensity: 0,
+            gradientToColors: [e.detail.detail1, e.detail.detail2], // optional, if not defined - uses the shades of same color in series
+            inverseColors: true,
+            opacityFrom: .4,
+            opacityTo: .1,
+            stops: [0, 50, 60],
+            colors: [e.detail.detail1, e.detail.detail2],
+        }
+    },
+   }
+    chart.updateOptions(newOpt)
+  })
 }
 if ($('.d-slider1').length > 0) {
     const options = {
@@ -197,9 +227,9 @@ if ($('.d-slider1').length > 0) {
             320: { slidesPerView: 1 },
             550: { slidesPerView: 2 },
             991: { slidesPerView: 3 },
-            1400: { slidesPerView: 4 },
-            1500: { slidesPerView: 5 },
-            1920: { slidesPerView: 6 },
+            1400: { slidesPerView: 3 },
+            1500: { slidesPerView: 4 },
+            1700: { slidesPerView: 6 },
             2040: { slidesPerView: 7 },
             2440: { slidesPerView: 8 }
         },
@@ -209,13 +239,13 @@ if ($('.d-slider1').length > 0) {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
-        },  
+        },
 
         // And if we need scrollbar
         scrollbar: {
-            el: '.swiper-scrollbar'  
+            el: '.swiper-scrollbar'
         }
-    } 
+    }
     let swiper = new Swiper('.d-slider1',options);
 
     document.addEventListener('ChangeMode', (e) => {

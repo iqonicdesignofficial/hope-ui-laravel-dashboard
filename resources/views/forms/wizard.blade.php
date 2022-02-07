@@ -1,6 +1,6 @@
-<x-app-layout>
+<x-app-layout :assets="$assets ?? []">
 <div>
-   <div class="row">                
+   <div class="row">
          <div class="col-sm-12 col-lg-12">
             <div class="card">
                <div class="card-header d-flex justify-content-between">
@@ -16,7 +16,7 @@
                                  <div class="iq-icon me-3">
                                     <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-                                    </svg>                                        
+                                    </svg>
                                  </div>
                                  <span>Account</span>
                            </a>

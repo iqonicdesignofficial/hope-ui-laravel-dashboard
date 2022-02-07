@@ -6,21 +6,20 @@ window._ = require('lodash');
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-    window.Popper = require('@popperjs/core').default;
-    window.$ = window.jQuery = require('jquery');
-    window.bootstrap = require('bootstrap/dist/js/bootstrap.min.js');
-    window.counterUp = require('counterup2');
-    // require('fslightbox');
-    require('datatables.net-bs4');
-    require('datatables.net');
-    window.noUiSlider = require('nouislider/distribute/nouislider.min.js');
-    require('smooth-scrollbar');
-    require('sweetalert2');
-    require('vanillajs-datepicker');
-    window.Scrollbar = require('smooth-scrollbar/dist/smooth-scrollbar')
-    window.ApexCharts = require('apexcharts');
-    window.waypoint = require('waypoints/lib/noframework.waypoints');
-    window.Swiper = require('swiper/swiper-bundle.min.js');
+window.Popper = require('@popperjs/core').default;
+window.$ = window.jQuery = require('jquery');
+window.bootstrap = require('bootstrap/dist/js/bootstrap.min.js');
+window.counterUp = require('counterup2');
+window.noUiSlider = require('nouislider/distribute/nouislider.min.js');
+require('datatables.net-bs4');
+require('datatables.net');
+require('smooth-scrollbar');
+window.Swal = require('sweetalert2');
+require('vanillajs-datepicker');
+window.Scrollbar = require('smooth-scrollbar/dist/smooth-scrollbar')
+window.ApexCharts = require('apexcharts');
+window.waypoint = require('waypoints/lib/noframework.waypoints');
+window.Swiper = require('swiper/swiper-bundle.min.js');
 
 window.axios = require('axios');
 

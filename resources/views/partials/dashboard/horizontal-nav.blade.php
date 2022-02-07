@@ -8,17 +8,17 @@
                <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"/>
                <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"/>
             </svg>
-            <h4 class="logo-title">Hope UI</h4>
+            <h4 class="logo-title">{{env('APP_NAME')}}</h4>
          </div>
          <button class="btn-close float-end"></button>
       </div>
       <ul class="navbar-nav">
-         <li class="nav-item"><a class="nav-link active" href="{{route('MenuStyle.horizontal')}}"> Horizontal </a></li>
-         <li class="nav-item"><a class="nav-link" href="{{route('MenuStyle.dualhorizontal')}}"> Dual Horizontal </a></li>
-         <li class="nav-item"><a class="nav-link" href="{{route('MenuStyle.dualcompact')}}"><span class="item-name">Dual Compact</span></a></li>
-         <li class="nav-item"><a class="nav-link" href="{{route('MenuStyle.boxed')}}"> Boxed Horizontal </a></li>
-         <li class="nav-item"><a class="nav-link" href="{{route('MenuStyle.boxedfancy')}}"> Boxed Fancy</a></li>
-          
+         <li class="nav-item"><a class="nav-link active" href="{{route('menu-style.horizontal')}}"> Horizontal </a></li>
+         <li class="nav-item"><a class="nav-link" href="{{route('menu-style.dualhorizontal')}}"> Dual Horizontal </a></li>
+         <li class="nav-item"><a class="nav-link" href="{{route('menu-style.dualcompact')}}"><span class="item-name">Dual Compact</span></a></li>
+         <li class="nav-item"><a class="nav-link" href="{{route('menu-style.boxed')}}"> Boxed Horizontal </a></li>
+         <li class="nav-item"><a class="nav-link" href="{{route('menu-style.boxedfancy')}}"> Boxed Fancy</a></li>
+
       </ul>
    </div> <!-- container-fluid.// -->
 </nav>

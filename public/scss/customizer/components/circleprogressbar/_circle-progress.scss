@@ -1,0 +1,21 @@
+.circle-progress-primary{
+    svg{
+        .circle-progress-value{
+            stroke: var(--#{$variable-prefix}primary);
+        }
+        .circle-progress-text {
+            fill: var(--#{$variable-prefix}primary);
+        }
+    }
+}  
+
+.circle-progress-info{
+    svg{
+        .circle-progress-value{
+            stroke: var(--bs-info);
+        }
+        .circle-progress-text {
+            fill: var(--bs-info);
+        }
+    }
+}  

@@ -1,4 +1,4 @@
-<x-app-layout layout="simple">
+<x-app-layout layout="simple" :assets="$assets ?? []">
 <span class="uisheet screen-darken"></span>
     <div class="header" style="background: url({{asset('images/dashboard/top-image.jpg')}}); background-size: cover; background-repeat: no-repeat; height: 100vh;position: relative;">
         <div class="main-img">
@@ -10,15 +10,19 @@
                     <rect x="19.7783" y="-0.779297" width="50" height="7.14286" rx="3.57143" transform="rotate(45 19.7783 -0.779297)" fill="white"/>
                 </svg>
                 <h1 class="my-4">
-                    <span>Hope UI - Design System</span>
+                    <span>{{env('APP_NAME')}} - Design System</span>
                 </h1>
                 <h4 class="text-white mb-5">Production ready FREE Open Source <b>Dashboard UI Kit</b> and <b>Design System</b>.</h4>
                 <div class="d-flex justify-content-center align-items-center">
                     <div>
-                        <a class="btn btn-light bg-white" target="_blank" href="{{route('dashboard')}}">Dashboard Demo</a>
+                        <a class="bg-white btn btn-light d-flex" target="_blank" href="{{route('dashboard')}}">
+                        <svg width="22" height="22" class="me-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Dashboard Demo</a>
                     </div>
                     <div class="ms-3">
-                        <a class="btn btn-light bg-white" href="#components">UI KIT</a>
+                        <a class="bg-white btn btn-light d-flex" target="_blank" href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard"><img src="{{asset('/images/brands/23.png')}}" width="24px" height="24px"><span class="mx-2 text-danger fw-bold">STAR US</span> <span>ON GITHUB</span></a>
                     </div>
                 </div>
 
@@ -35,18 +39,21 @@
                             <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"></rect>
                             <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"></rect>
                         </svg>
-                        <h5 class="logo-title">Hope UI</h5>
+                        <h5 class="logo-title">{{env('APP_NAME')}}</h5>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-2" aria-controls="navbar-2" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbar-2">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-start">
-                            <li class="nav-item me-3">
+                            <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="https://templates.iqonic.design/hope-ui/documentation/laravel/dist/main/" target="_blank">Documentation</a>
                             </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" aria-current="page" href="https://templates.iqonic.design/hope-ui/documentation/laravel/dist/main/change-log.html" target="_blank">Change Log</a>
+                            </li>
                             <li class="nav-item">
-                                <a class="btn btn-success" aria-current="page" href="https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/" target="_blank">
+                                <a class="btn btn-success" aria-current="page" href="https://iqonic.design/product/admin-templates/hope-ui-free-open-source-laravel-admin-panel/" target="_blank">
                                     <svg width="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M5.91064 20.5886C5.91064 19.7486 6.59064 19.0686 7.43064 19.0686C8.26064 19.0686 8.94064 19.7486 8.94064 20.5886C8.94064 21.4186 8.26064 22.0986 7.43064 22.0986C6.59064 22.0986 5.91064 21.4186 5.91064 20.5886ZM17.1606 20.5886C17.1606 19.7486 17.8406 19.0686 18.6806 19.0686C19.5106 19.0686 20.1906 19.7486 20.1906 20.5886C20.1906 21.4186 19.5106 22.0986 18.6806 22.0986C17.8406 22.0986 17.1606 21.4186 17.1606 20.5886Z" fill="currentColor"></path>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1907 6.34909C20.8007 6.34909 21.2007 6.55909 21.6007 7.01909C22.0007 7.47909 22.0707 8.13909 21.9807 8.73809L21.0307 15.2981C20.8507 16.5591 19.7707 17.4881 18.5007 17.4881H7.59074C6.26074 17.4881 5.16074 16.4681 5.05074 15.1491L4.13074 4.24809L2.62074 3.98809C2.22074 3.91809 1.94074 3.52809 2.01074 3.12809C2.08074 2.71809 2.47074 2.44809 2.88074 2.50809L5.26574 2.86809C5.60574 2.92909 5.85574 3.20809 5.88574 3.54809L6.07574 5.78809C6.10574 6.10909 6.36574 6.34909 6.68574 6.34909H20.1907ZM14.1307 11.5481H16.9007C17.3207 11.5481 17.6507 11.2081 17.6507 10.7981C17.6507 10.3781 17.3207 10.0481 16.9007 10.0481H14.1307C13.7107 10.0481 13.3807 10.3781 13.3807 10.7981C13.3807 11.2081 13.7107 11.5481 14.1307 11.5481Z" fill="currentColor"></path>
@@ -62,14 +69,21 @@
     </div>
     <div class=" body-class-1 container">
         <aside class="mobile-offcanvas bd-aside card iq-document-card sticky-xl-top text-muted align-self-start mb-5 mt-n5" id="left-side-bar">
-            <div class="offcanvas-header p-0">  
+            <div class="offcanvas-header p-0">
                 <button class="btn-close float-end"></button>
             </div>
             <h2 class="h6 pb-2 border-bottom">On this page</h2>
             <nav class="small" id="elements-section">
                 <ul class="list-unstyled mb-0">
                     <li class="mt-2">
-                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">
+                            <i class="right-icon me-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </i>
+                         Components
+                        </button>
                         <ul class="list-unstyled ps-3 collapse" id="components-collapse" href="#components" style="">
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
@@ -96,7 +110,14 @@
                         </ul>
                     </li>
                     <li class="my-2">
-                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">
+                            <i class="right-icon me-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </i>  
+                          Forms
+                        </button>
                         <ul class="list-unstyled ps-3 collapse" id="forms-collapse" href="#forms" style="">
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled Forms</a></li>
@@ -110,14 +131,21 @@
                         </ul>
                     </li>
                     <li class="mb-2">
-                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+                        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">
+                            <i class="right-icon me-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </i>  
+                          Contents
+                        </button>
                         <ul class="list-unstyled ps-3 collapse" id="contents-collapse" href="#content" style="">
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#images">Images</a></li>
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
                             <li><a class="nav-link d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
                         </ul>
-                    </li>                    
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -267,10 +295,10 @@
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                                
+
                                 </div>
                             </div>
-                    </div>                    
+                    </div>
                 </article>
                 <article id="alerts">
                     <div class="bd-heading sticky-xl-top align-self-start">
@@ -321,18 +349,18 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
                                 <div class="tab-pane bd-heading-1 fade show active" id="content-alert-prv" role="tabpanel" aria-labelledby="typo-output">
-                                    <div class="bd-example">                
+                                    <div class="bd-example">
                                         <div class="alert alert-solid alert-primary alert-dismissible fade show" role="alert">
                                             A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>
                                     </div>
-                                    <div class="bd-example">                
+                                    <div class="bd-example">
                                         <div class="alert alert-primary alert-dismissible fade show" role="alert">
                                             A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
                                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -422,7 +450,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane bd-heading-1 fade show" id="content-alert-code" role="tabpanel" aria-labelledby="typo-output">
-                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;                
+                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;div class=&#x22;alert alert-primary alert-dismissible fade show&#x22; role=&#x22;alert&#x22;&#x3E;
         A simple primary alert with &#x3C;a href=&#x22;#&#x22; class=&#x22;alert-link&#x22;&#x3E;an example link&#x3C;/a&#x3E;. Give it a click if you like.
         &#x3C;button type=&#x22;button&#x22; class=&#x22;btn-close&#x22; data-bs-dismiss=&#x22;alert&#x22; aria-label=&#x22;Close&#x22;&#x3E;&#x3C;/button&#x3E;
@@ -514,7 +542,7 @@
 
                                 </div>
                             </div>
-                    
+
                     </div>
                 </article>
                 <article id="badge">
@@ -566,7 +594,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -581,7 +609,7 @@
                                     </div>
 
                                     <div class="bd-example">
-                                    
+
                                         <span class="badge rounded-pill bg-primary">Primary</span>
                                         <span class="badge rounded-pill bg-secondary">Secondary</span>
                                         <span class="badge rounded-pill bg-success">Success</span>
@@ -614,9 +642,9 @@
     &#x3C;span class=&#x22;badge rounded-pill bg-light text-dark&#x22;&#x3E;Light&#x3C;/span&#x3E;
     &#x3C;span class=&#x22;badge rounded-pill bg-dark&#x22;&#x3E;Dark&#x3C;/span&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                                
+
                                 </div>
-                            </div>        
+                            </div>
                     </div>
                 </article>
                 <article id="breadcrumb">
@@ -667,7 +695,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -678,14 +706,14 @@
                                                 <li class="breadcrumb-item active" aria-current="page">Home</li>
                                             </ol>
                                         </nav>
-                                        
+
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                                 <li class="breadcrumb-item active" aria-current="page">Library</li>
                                             </ol>
                                         </nav>
-                                        
+
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -714,13 +742,13 @@
         &#x3C;ol class=&#x22;breadcrumb&#x22;&#x3E;
             &#x3C;li class=&#x22;breadcrumb-item active&#x22; aria-current=&#x22;page&#x22;&#x3E;Home&#x3C;/li&#x3E;
         &#x3C;/ol&#x3E;
-    &#x3C;/nav&#x3E;                             
+    &#x3C;/nav&#x3E;
     &#x3C;nav aria-label=&#x22;breadcrumb&#x22;&#x3E;
         &#x3C;ol class=&#x22;breadcrumb&#x22;&#x3E;
             &#x3C;li class=&#x22;breadcrumb-item&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
             &#x3C;li class=&#x22;breadcrumb-item active&#x22; aria-current=&#x22;page&#x22;&#x3E;Library&#x3C;/li&#x3E;
         &#x3C;/ol&#x3E;
-    &#x3C;/nav&#x3E;  
+    &#x3C;/nav&#x3E;
     &#x3C;nav aria-label=&#x22;breadcrumb&#x22;&#x3E;
         &#x3C;ol class=&#x22;breadcrumb&#x22;&#x3E;
             &#x3C;li class=&#x22;breadcrumb-item&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
@@ -742,9 +770,9 @@
         &#x3C;/ol&#x3E;
     &#x3C;/nav&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                                
+
                                 </div>
-                            </div> 
+                            </div>
                     </div>
                 </article>
                 <article id="buttons">
@@ -822,7 +850,7 @@
                                             </span>
                                         </button>
                                     </div>
-                                    <div class="bd-example">                
+                                    <div class="bd-example">
                                         <button type="button" class="btn btn-primary">Primary</button>
                                         <button type="button" class="btn btn-secondary">Secondary</button>
                                         <button type="button" class="btn btn-success">Success</button>
@@ -833,7 +861,7 @@
                                         <button type="button" class="btn btn-dark">Dark</button>
                                         <button type="button" class="btn btn-link">Link</button>
                                     </div>
-                                    <div class="bd-example">                
+                                    <div class="bd-example">
                                         <button type="button" class="btn btn-outline-primary">Primary</button>
                                         <button type="button" class="btn btn-outline-secondary">Secondary</button>
                                         <button type="button" class="btn btn-outline-success">Success</button>
@@ -860,7 +888,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane bd-heading-1 fade show" id="content-Button-code" role="tabpanel" aria-labelledby="typo-output">
-                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;                
+                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-success&#x22;&#x3E;Success&#x3C;/button&#x3E;
@@ -871,7 +899,7 @@
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-dark&#x22;&#x3E;Dark&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-link&#x22;&#x3E;Link&#x3C;/button&#x3E;
 &#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bd-example&#x22;&#x3E;                
+&#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-outline-primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-outline-secondary&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-outline-success&#x22;&#x3E;Success&#x3C;/button&#x3E;
@@ -949,7 +977,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -1020,7 +1048,7 @@
         &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-outline-primary&#x22;&#x3E;Message&#x3C;/button&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-</code></pre></div>                        
+</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -1029,7 +1057,7 @@
                     <div class="bd-heading sticky-xl-top align-self-start">
                         <div class="card">
                             <div class="card-body">
-                                <h5>Calendar</h5>           
+                                <h5>Calendar</h5>
                                 <div class="d-flex align-items-center mt-2">
                                     <a class="d-flex" href="https://templates.iqonic.design/hope-ui/documentation/laravel/dist/plugins/vanila-datepicker.html" target="_blank">
                                         <svg width="20" class="me-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1081,7 +1109,7 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control vanila-datepicker" placeholder="Date Picker">
                                     </div>
-                                </div>  
+                                </div>
                                 <div class="bd-example">
                                     <div class="form-group vanila-daterangepicker d-flex flex-row">
                                         <input type="text" name="start" class="form-control" placeholder="From Date">
@@ -1102,7 +1130,7 @@
     &#x3C;div class=&#x22;input-group&#x22;&#x3E;
         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control vanila-datepicker&#x22; placeholder=&#x22;Date Picker&#x22;&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;  
+&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;div class=&#x22;form-group vanila-daterangepicker d-flex flex-row&#x22;&#x3E;
         &#x3C;input type=&#x22;text&#x22; name=&#x22;start&#x22; class=&#x22;form-control&#x22; placeholder=&#x22;From Date&#x22;&#x3E;
@@ -1116,7 +1144,7 @@
     &#x3C;div class=&#x22;input-group&#x22;&#x3E;
         &#x3C;div class=&#x22;vanila-datepicker&#x22;&#x3E;&#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>                          
+&#x3C;/div&#x3E;</code></pre></div>
                             </div>
                         </div>
                     </div>
@@ -1169,7 +1197,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -1353,7 +1381,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -1495,7 +1523,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -1897,7 +1925,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -1930,7 +1958,7 @@
                                             <li class="list-group-item">And a fifth one</li>
                                         </ul>
                                     </div>
-                        
+
                                     <div class="bd-example">
                                         <ol class="list-group list-group-numbered">
                                             <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -1959,7 +1987,7 @@
 
                                     <div class="bd-example">
                                         <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>                        
+                                            <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
                                             <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
                                             <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
                                             <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
@@ -2097,7 +2125,7 @@
 &#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;div class=&#x22;list-group&#x22;&#x3E;
-        &#x3C;a href=&#x22;#&#x22; class=&#x22;list-group-item list-group-item-action&#x22;&#x3E;A simple default list group item&#x3C;/a&#x3E;                        
+        &#x3C;a href=&#x22;#&#x22; class=&#x22;list-group-item list-group-item-action&#x22;&#x3E;A simple default list group item&#x3C;/a&#x3E;
         &#x3C;a href=&#x22;#&#x22; class=&#x22;list-group-item list-group-item-action list-group-item-primary&#x22;&#x3E;A simple primary list group item&#x3C;/a&#x3E;
         &#x3C;a href=&#x22;#&#x22; class=&#x22;list-group-item list-group-item-action list-group-item-secondary&#x22;&#x3E;A simple secondary list group item&#x3C;/a&#x3E;
         &#x3C;a href=&#x22;#&#x22; class=&#x22;list-group-item list-group-item-action list-group-item-success&#x22;&#x3E;A simple success list group item&#x3C;/a&#x3E;
@@ -2176,7 +2204,7 @@
             Fifth checkbox
         &#x3C;/label&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>                         
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -2229,7 +2257,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -2267,9 +2295,9 @@
             Full screen
         &#x3C;/button&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>       
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
-                                
+
                             </div>
                     </div>
                 </article>
@@ -2321,7 +2349,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -2569,7 +2597,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -2831,7 +2859,7 @@
             &#x3C;/div&#x3E;
         &#x3C;/div&#x3E;
     &#x3C;/nav&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>                          
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -2884,7 +2912,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -2892,7 +2920,7 @@
                                 <div class="bd-example">
                                     <button class="btn btn-primary me-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
                                         aria-controls="offcanvasTop">Toggle top offcanvas</button>
-                                    
+
                                     <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                                         <div class="offcanvas-header">
                                             <h5 id="offcanvasTopLabel">Offcanvas top</h5>
@@ -2905,7 +2933,7 @@
 
                                     <button class="btn btn-primary me-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                                         aria-controls="offcanvasRight">Toggle right offcanvas</button>
-                            
+
                                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                         <div class="offcanvas-header">
                                             <h5 id="offcanvasRightLabel">Offcanvas right</h5>
@@ -2918,7 +2946,7 @@
 
                                     <button class="btn btn-primary me-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
                                         aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
-                            
+
                                     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
                                         <div class="offcanvas-header">
                                             <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
@@ -2931,7 +2959,7 @@
 
                                     <button class="btn btn-primary me-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft"
                                         aria-controls="offcanvasLeft">Toggle left offcanvas</button>
-                                    
+
                                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
                                         <div class="offcanvas-header">
                                             <h5 class="offcanvas-title" id="offcanvasLeftLabel">Offcanvas Left</h5>
@@ -2944,7 +2972,7 @@
 
                                     <button class="btn btn-primary me-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScroll"
                                         aria-controls="offcanvasScroll">Toggle Scroll offcanvas</button>
-                                    
+
                                     <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="offcanvasScroll" aria-labelledby="offcanvasScrollLabel">
                                         <div class="offcanvas-header">
                                             <h5 class="offcanvas-title" id="offcanvasScrollLabel">Offcanvas Scroll</h5>
@@ -2959,7 +2987,7 @@
                             <div class="tab-pane bd-heading-1 fade show" id="content-Offcanvas-code" role="tabpanel" aria-labelledby="typo-output">
                                 <div class="section-block"><pre><code class="language-markup"> &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;button class=&#x22;btn btn-primary me-3 mb-3&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;offcanvas&#x22; data-bs-target=&#x22;#offcanvasTop&#x22;
-        aria-controls=&#x22;offcanvasTop&#x22;&#x3E;Toggle top offcanvas&#x3C;/button&#x3E;    
+        aria-controls=&#x22;offcanvasTop&#x22;&#x3E;Toggle top offcanvas&#x3C;/button&#x3E;
     &#x3C;div class=&#x22;offcanvas offcanvas-top&#x22; tabindex=&#x22;-1&#x22; id=&#x22;offcanvasTop&#x22; aria-labelledby=&#x22;offcanvasTopLabel&#x22;&#x3E;
         &#x3C;div class=&#x22;offcanvas-header&#x22;&#x3E;
             &#x3C;h5 id=&#x22;offcanvasTopLabel&#x22;&#x3E;Offcanvas top&#x3C;/h5&#x3E;
@@ -2992,7 +3020,7 @@
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
     &#x3C;button class=&#x22;btn btn-primary me-3 mb-3&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;offcanvas&#x22; data-bs-target=&#x22;#offcanvasLeft&#x22;
-        aria-controls=&#x22;offcanvasLeft&#x22;&#x3E;Toggle left offcanvas&#x3C;/button&#x3E;    
+        aria-controls=&#x22;offcanvasLeft&#x22;&#x3E;Toggle left offcanvas&#x3C;/button&#x3E;
     &#x3C;div class=&#x22;offcanvas offcanvas-start&#x22; tabindex=&#x22;-1&#x22; id=&#x22;offcanvasLeft&#x22; aria-labelledby=&#x22;offcanvasLeftLabel&#x22;&#x3E;
         &#x3C;div class=&#x22;offcanvas-header&#x22;&#x3E;
             &#x3C;h5 class=&#x22;offcanvas-title&#x22; id=&#x22;offcanvasLeftLabel&#x22;&#x3E;Offcanvas Left&#x3C;/h5&#x3E;
@@ -3003,7 +3031,7 @@
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
     &#x3C;button class=&#x22;btn btn-primary me-3 mb-3&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;offcanvas&#x22; data-bs-target=&#x22;#offcanvasScroll&#x22;
-        aria-controls=&#x22;offcanvasScroll&#x22;&#x3E;Toggle Scroll offcanvas&#x3C;/button&#x3E;    
+        aria-controls=&#x22;offcanvasScroll&#x22;&#x3E;Toggle Scroll offcanvas&#x3C;/button&#x3E;
     &#x3C;div class=&#x22;offcanvas offcanvas-start&#x22; tabindex=&#x22;-1&#x22; data-bs-scroll=&#x22;true&#x22; id=&#x22;offcanvasScroll&#x22; aria-labelledby=&#x22;offcanvasScrollLabel&#x22;&#x3E;
         &#x3C;div class=&#x22;offcanvas-header&#x22;&#x3E;
             &#x3C;h5 class=&#x22;offcanvas-title&#x22; id=&#x22;offcanvasScrollLabel&#x22;&#x3E;Offcanvas Scroll&#x3C;/h5&#x3E;
@@ -3066,7 +3094,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3169,7 +3197,7 @@
         &#x3C;/ul&#x3E;
     &#x3C;/nav&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                                
+
                                 </div>
                             </div>
                     </div>
@@ -3222,7 +3250,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3245,7 +3273,7 @@
                                         Popover on start
                                         </button>
                                     </div>
-                                </div>  
+                                </div>
                                 <div class="tab-pane bd-heading-1 fade show" id="content-Popover-code" role="tabpanel" aria-labelledby="typo-output">
                                     <div class="section-block"><pre><code class="language-markup"> &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-lg btn-danger&#x22; data-bs-toggle=&#x22;popover&#x22; title=&#x22;&#x22; data-bs-content=&#x22;And here&#x27;s some amazing content. It&#x27;s very engaging. Right?&#x22; data-bs-original-title=&#x22;Popover title&#x22;&#x3E;Click to toggle popover&#x3C;/button&#x3E;
@@ -3263,8 +3291,8 @@
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-bs-container=&#x22;body&#x22; data-bs-toggle=&#x22;popover&#x22; data-bs-placement=&#x22;left&#x22; data-bs-content=&#x22;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&#x22; data-bs-original-title=&#x22;&#x22; title=&#x22;&#x22;&#x3E;
         Popover on start
     &#x3C;/button&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>             
-                                </div> 
+&#x3C;/div&#x3E;</code></pre></div>
+                                </div>
                             </div>
                     </div>
                 </article>
@@ -3316,7 +3344,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3433,8 +3461,8 @@
         &#x3C;div class=&#x22;progress-bar&#x22; role=&#x22;progressbar&#x22; style=&#x22;width: 15%&#x22; aria-valuenow=&#x22;15&#x22; aria-valuemin=&#x22;0&#x22; aria-valuemax=&#x22;100&#x22;&#x3E;&#x3C;/div&#x3E;
         &#x3C;div class=&#x22;progress-bar progress-bar-striped progress-bar-animated bg-success&#x22; role=&#x22;progressbar&#x22; style=&#x22;width: 40%&#x22; aria-valuenow=&#x22;40&#x22; aria-valuemin=&#x22;0&#x22; aria-valuemax=&#x22;100&#x22;&#x3E;&#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>             
-                                </div> 
+&#x3C;/div&#x3E;</code></pre></div>
+                                </div>
                             </div>
                     </div>
                 </article>
@@ -3486,7 +3514,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3560,7 +3588,7 @@
         &#x3C;h4 id=&#x22;scrollspyHeading5&#x22;&#x3E;Fifth heading&#x3C;/h4&#x3E;
         &#x3C;p&#x3E;This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It&#x27;s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.&#x3C;/p&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>         
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -3613,12 +3641,12 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
                                 <div class="tab-pane bd-heading-1 fade show active" id="content-Spinners-prv" role="tabpanel" aria-labelledby="typo-output">
-                                    <div class="bd-example">                
+                                    <div class="bd-example">
                                         <div class="spinner-border text-primary" role="status">
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
@@ -3644,7 +3672,7 @@
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
                                     </div>
-                                    <div class="bd-example">                                
+                                    <div class="bd-example">
                                         <div class="spinner-grow text-primary" role="status">
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
@@ -3690,7 +3718,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane bd-heading-1 fade show" id="content-Spinners-code" role="tabpanel" aria-labelledby="typo-output">
-                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;                
+                                    <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;div class=&#x22;spinner-border text-primary&#x22; role=&#x22;status&#x22;&#x3E;
         &#x3C;span class=&#x22;visually-hidden&#x22;&#x3E;Loading...&#x3C;/span&#x3E;
     &#x3C;/div&#x3E;
@@ -3716,7 +3744,7 @@
         &#x3C;span class=&#x22;visually-hidden&#x22;&#x3E;Loading...&#x3C;/span&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bd-example&#x22;&#x3E;                                
+&#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;div class=&#x22;spinner-grow text-primary&#x22; role=&#x22;status&#x22;&#x3E;
         &#x3C;span class=&#x22;visually-hidden&#x22;&#x3E;Loading...&#x3C;/span&#x3E;
     &#x3C;/div&#x3E;
@@ -3759,7 +3787,7 @@
         &#x3C;span class=&#x22;spinner-grow spinner-grow-sm&#x22; role=&#x22;status&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
         Loading...
     &#x3C;/button&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>        
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -3812,7 +3840,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3888,7 +3916,7 @@
             &#x3C;/div&#x3E;
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>             
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -3941,7 +3969,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -3961,7 +3989,7 @@
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-bs-toggle=&#x22;tooltip&#x22; data-bs-placement=&#x22;bottom&#x22; title=&#x22;Tooltip on bottom&#x22;&#x3E;Tooltip on bottom&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-bs-toggle=&#x22;tooltip&#x22; data-bs-placement=&#x22;left&#x22; title=&#x22;Tooltip on start&#x22;&#x3E;Tooltip on start&#x3C;/button&#x3E;
     &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-secondary&#x22; data-bs-toggle=&#x22;tooltip&#x22; data-bs-html=&#x22;true&#x22; title=&#x22;&#x3C;em&#x3E;Tooltip&#x3C;/em&#x3E; &#x3C;u&#x3E;with&#x3C;/u&#x3E; &#x3C;b&#x3E;HTML&#x3C;/b&#x3E;&#x22;&#x3E;Tooltip with HTML&#x3C;/button&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>          
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>
@@ -4027,7 +4055,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4119,13 +4147,13 @@
                             </div>
 
                         </div>
-                    
+
                     </div>
                 </article>
                 <article id="disabled-forms">
                     <div class="bd-heading sticky-xl-top align-self-start">
                         <div class="card">
-                            <div class="card-body">          
+                            <div class="card-body">
                                 <h5>Disabled Forms</h5>
                                 <div class="d-flex align-items-center mt-2">
                                     <a class="d-flex" href="https://templates.iqonic.design/hope-ui/documentation/laravel/dist/main/" target="_blank">
@@ -4276,7 +4304,7 @@
                             </div>
 
                         </div>
-                    
+
                     </div>
                 </article>
                 <article id="sizing">
@@ -4327,7 +4355,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4398,10 +4426,10 @@
         &#x3C;input type=&#x22;file&#x22; class=&#x22;form-control form-control-sm&#x22; aria-label=&#x22;Small file input example&#x22;&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                            
+
                             </div>
-                        </div>         
-                    
+                        </div>
+
                     </div>
                 </article>
                 <article id="input-group">
@@ -4452,7 +4480,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4559,7 +4587,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4615,10 +4643,10 @@
     &#x3C;div class=&#x22;form-group&#x22;&#x3E;
         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control is-invalid&#x22; placeholder=&#x22;Enter Text&#x22;&#x3E;
     &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>             
+&#x3C;/div&#x3E;</code></pre></div>
                             </div>
                         </div>
-                    
+
                     </div>
                 </article>
                 <article id="floating-labels">
@@ -4669,7 +4697,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4781,7 +4809,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -4840,10 +4868,10 @@
         &#x3C;label for=&#x22;floatingInput&#x22;&#x3E;Regular&#x3C;/label&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                            
+
                             </div>
                         </div>
-                    
+
                     </div>
                 </article>
                 <article id="toggle-btn">
@@ -4894,7 +4922,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -5065,11 +5093,11 @@
         &#x3C;div class=&#x22;slider slider-dark&#x22;&#x3E;&#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                            
+
                             </div>
 
                         </div>
-                    
+
                     </div>
                 </article>
                 <article id="validation">
@@ -5120,7 +5148,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                             <div class="tab-content">
@@ -5259,10 +5287,10 @@
         &#x3C;/div&#x3E;
     &#x3C;/form&#x3E;
 &#x3C;/div&#x3E;</code></pre></div>
-                                
+
                                 </div>
                             </div>
-                        
+
                     </div>
                 </article>
             </section>
@@ -5325,7 +5353,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -5337,7 +5365,7 @@
                                     <p class="display-4">Display 4</p>
                                     <p class="display-5">Display 5</p>
                                     <p class="display-6">Display 6</p>
-                                </div>  
+                                </div>
                                 <div class="bd-example">
                                     <p class="h1">Heading 1</p>
                                     <p class="h2">Heading 2</p>
@@ -5399,7 +5427,7 @@
     &#x3C;p class=&#x22;display-4&#x22;&#x3E;Display 4&#x3C;/p&#x3E;
     &#x3C;p class=&#x22;display-5&#x22;&#x3E;Display 5&#x3C;/p&#x3E;
     &#x3C;p class=&#x22;display-6&#x22;&#x3E;Display 6&#x3C;/p&#x3E;
-&#x3C;/div&#x3E;  
+&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;p class=&#x22;h1&#x22;&#x3E;Heading 1&#x3C;/p&#x3E;
     &#x3C;p class=&#x22;h2&#x22;&#x3E;Heading 2&#x3C;/p&#x3E;
@@ -5454,7 +5482,7 @@
 &#x3C;/div&#x3E;</code></pre></div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </article>
                 <article id="images">
@@ -5505,7 +5533,7 @@
                                     Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -5523,7 +5551,7 @@
 &#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bd-example&#x22;&#x3E;
     &#x3C;svg class=&#x22;bd-placeholder-img img-thumbnail&#x22; width=&#x22;200&#x22; height=&#x22;200&#x22; xmlns=&#x22;http://www.w3.org/2000/svg&#x22; role=&#x22;img&#x22; aria-label=&#x22;A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200&#x22; preserveAspectRatio=&#x22;xMidYMid slice&#x22; focusable=&#x22;false&#x22;&#x3E;&#x3C;title&#x3E;A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera&#x3C;/title&#x3E;&#x3C;rect width=&#x22;100%&#x22; height=&#x22;100%&#x22; fill=&#x22;#868e96&#x22;&#x3E;&#x3C;/rect&#x3E;&#x3C;text x=&#x22;50%&#x22; y=&#x22;50%&#x22; fill=&#x22;#dee2e6&#x22; dy=&#x22;.3em&#x22;&#x3E;200x200&#x3C;/text&#x3E;&#x3C;/svg&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>                      
+&#x3C;/div&#x3E;</code></pre></div>
                             </div>
                         </div>
                     </div>
@@ -5576,7 +5604,7 @@
                                         Code
                                     </button>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -5658,7 +5686,7 @@
                                         <td>Cell</td>
                                         <td>Cell</td>
                                     </tr>
-                                    
+
                                     <tr class="table-primary">
                                         <th scope="row">Primary</th>
                                         <td>Cell</td>
@@ -5732,7 +5760,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div> 
+                                </div>
                             </div>
                             <div class="tab-pane bd-heading-1 fade show" id="content-table-code" role="tabpanel" aria-labelledby="typo-output">
                                 <div class="section-block"><pre><code class="language-markup">&#x3C;div class=&#x22;bd-example table-responsive&#x22;&#x3E;
@@ -5812,7 +5840,7 @@
                 &#x3C;td&#x3E;Cell&#x3C;/td&#x3E;
                 &#x3C;td&#x3E;Cell&#x3C;/td&#x3E;
             &#x3C;/tr&#x3E;
-            
+
             &#x3C;tr class=&#x22;table-primary&#x22;&#x3E;
                 &#x3C;th scope=&#x22;row&#x22;&#x3E;Primary&#x3C;/th&#x3E;
                 &#x3C;td&#x3E;Cell&#x3C;/td&#x3E;
@@ -5958,7 +5986,7 @@
 
     &#x3C;figcaption class=&#x22;figure-caption&#x22;&#x3E;A caption for the above image.&#x3C;/figcaption&#x3E;
     &#x3C;/figure&#x3E;
-&#x3C;/div&#x3E;</code></pre></div>          
+&#x3C;/div&#x3E;</code></pre></div>
                                 </div>
                             </div>
                     </div>

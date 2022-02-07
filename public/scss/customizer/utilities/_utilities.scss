@@ -1,0 +1,12 @@
+@each $color in $colors-name {
+    .text-#{$color}{
+        color: var(--#{$variable-prefix}#{$color}) !important;
+    }
+    .bg-#{$color}{
+        background-color: var(--#{$variable-prefix}#{$color}) !important;
+    }
+    .bg-soft-#{$color}{
+        color: var(--#{$variable-prefix}#{$color});
+        background-color: rgba(var(--#{$variable-prefix}#{$color}-rgb), .1) !important;
+    }
+}

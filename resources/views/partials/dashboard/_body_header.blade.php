@@ -7,7 +7,7 @@
         <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"/>
         <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"/>
       </svg>
-      <h4 class="logo-title">Hope UI</h4>
+      <h4 class="logo-title">{{env('APP_NAME')}}</h4>
     </a>
     <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
       <i class="icon">
@@ -26,7 +26,7 @@
       <input type="search" class="form-control" placeholder="Search...">
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span> 
+      <span class="navbar-toggler-icon"></span>
       <span class="navbar-toggler-icon">
         <span class="navbar-toggler-bar bar1 mt-2"></span>
         <span class="navbar-toggler-bar bar2"></span>
@@ -201,14 +201,19 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link py-0 d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="{{asset('images/avatars/01.png')}}" alt="User-Profile" class="img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/01.png')}}" alt="User-Profile" class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/avtar_1.png')}}" alt="User-Profile" class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/avtar_2.png')}}" alt="User-Profile" class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/avtar_4.png')}}" alt="User-Profile" class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/avtar_5.png')}}" alt="User-Profile" class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded">
+          <img src="{{asset('images/avatars/avtar_3.png')}}" alt="User-Profile" class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded">
             <div class="caption ms-3 d-none d-md-block ">
-              <h6 class="mb-0 caption-title">Austin Robertson</h6>
-              <p class="mb-0 caption-sub-title">Marketing Administrator</p>
+              <h6 class="mb-0 caption-title">{{ auth()->user()->full_name ?? 'Austin Robertson'  }}</h6>
+              <p class="mb-0 caption-sub-title text-capitalize">{{ str_replace('_',' ',auth()->user()->user_type) ?? 'Marketing Administrator' }}</p>
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{route('Users.userprofile')}}">Profile</a></li>
+            <li><a class="dropdown-item" href="{{route('users.show', auth()->id() || 1)}}">Profile</a></li>
             <li><a class="dropdown-item" href="{{route('auth.userprivacysetting')}}">Privacy Setting</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><form method="POST" action="{{route('logout')}}">

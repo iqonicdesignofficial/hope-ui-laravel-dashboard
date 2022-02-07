@@ -1,0 +1,17 @@
+.alert-primary {
+    color: var(--#{$variable-prefix}primary);
+    background: var(--#{$variable-prefix}primary-tint-80);
+    border-color: var(--#{$variable-prefix}primary);
+    .alert-link {
+        color: var(--#{$variable-prefix}primary-shade-40);
+    }
+    &.alert-solid {
+        color: var(--#{$variable-prefix}white);
+        background: var(--#{$variable-prefix}primary);
+        border-color: var(--#{$variable-prefix}primary);
+    }
+    &.alert-left {
+        background: rgba(var(--#{$variable-prefix}primary-rgb), .2);
+        border-color: var(--#{$variable-prefix}primary);
+    }
+}

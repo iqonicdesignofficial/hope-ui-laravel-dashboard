@@ -22,6 +22,7 @@
     <body class=" " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
         <div id="loading">
             @include('partials.dashboard._body_loader')
+            @include('partials.dashboard._head')
         </div>
         <div class="wrapper">
             {{ $slot }}

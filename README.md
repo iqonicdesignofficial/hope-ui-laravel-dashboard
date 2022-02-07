@@ -5,11 +5,11 @@
   </a>
 </p>
 <p align="center">
-<a href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/" target="__blank"><img src="https://img.shields.io/github/stars/iqonicdesignofficial/hope-ui-laravel-dashboard" /> </a>
-<a href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/network" target="__blank"><img src="https://img.shields.io/github/forks/iqonicdesignofficial/hope-ui-laravel-dashboard" /> </a>
-<a href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/issues" target="__blank"><img src="https://img.shields.io/github/issues/iqonicdesignofficial/hope-ui-laravel-dashboard" /> </a>
+<a href="https://github.com/iqonicdesignofficial/hope-ui-design-system/" target="__blank"><img src="https://img.shields.io/github/stars/iqonicdesignofficial/hope-ui-design-system" /> </a>
+<a href="https://github.com/iqonicdesignofficial/hope-ui-design-system/network" target="__blank"><img src="https://img.shields.io/github/forks/iqonicdesignofficial/hope-ui-design-system" /> </a>
+<a href="https://github.com/iqonicdesignofficial/hope-ui-design-system/issues" target="__blank"><img src="https://img.shields.io/github/issues/iqonicdesignofficial/hope-ui-design-system" /> </a>
 <a href="#" target="__blank"><img src="https://img.shields.io/bower/v/editor.md.svg" /> </a>
-<a href="https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/blob/main/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/iqonicdesignofficial/hope-ui-laravel-dashboard" /> </a>
+<a href="https://github.com/iqonicdesignofficial/hope-ui-design-system/blob/main/LICENSE" target="__blank"><img src="https://img.shields.io/github/license/iqonicdesignofficial/hope-ui-design-system" /> </a>
 <a href="https://twitter.com/iqonicdesign" target="__blank"><img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fiqonicdesign" /></a>
 </p>
 <h3 align="center">Free Open Source Bootstrap 5 Design System.</h3>
@@ -72,7 +72,8 @@ Built ideally for developers, designers, and startups, or Creators, Hope UI brin
 
   - [Quick Start](#quick-start)
     - [Method 1: Direct Download](#method-1-direct-download)
-    - [Method 2: Using NPM](#method-2-using-npm)
+    - [Method 2: Using CDN](#method-2-using-cdn)
+    - [Method 3: Using NPM](#method-3-using-npm)
   - [Documentation](#documentation)
   - [Version](#version)
   - [Public RoadMap](#public-roadmap)
@@ -91,11 +92,18 @@ Built ideally for developers, designers, and startups, or Creators, Hope UI brin
 You can use following method to get started with CSS and JS files of the design system.
 
 ### Method 1: Direct Download
-[Dowload from Github](https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/archive/refs/heads/main.zip)
+[Dowload from Github](https://github.com/tafcoder/sleek-dashboard/archive/refs/heads/master.zip)
 
 [Download from Iqonic Design](https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
+### Method 2: Using CDN
+```
+<link href="https://cdn.jsdelivr.net/gh/iqonicdesignofficial/hope-ui-design-system@main/dist/assets/css/hope-ui.min.css" rel="stylesheet"/>
+```
 
-### Method 2: Using NPM
+```
+<script src="https://cdn.jsdelivr.net/gh/iqonicdesignofficial/hope-ui-design-system@main/dist/assets/js/hope-ui.js"></script>
+```
+### Method 3: Using NPM
 Start working with the design system
 1. Install node_modules Run in terminal or CMD:
 ```
@@ -144,9 +152,11 @@ laravel
     │    ├── Helpers
     │    ├── Http
     │    │    ├── Controllers
-    |    |    |     └── Auth
-    │    |    |          ├── Controller.php
-    │    |    |          └── HomeController.php
+    |    |    |     ├── Auth
+    |    |    |     ├── security
+    │    |    |     ├── Controller.php
+    │    |    |     ├── UserController.php
+    │    |    |     └── HomeController.php
     │    │    ├── Middleware
     │    │    └── lRequests
     │    ├── Model
@@ -200,9 +210,21 @@ laravel
     │        │     ├── reboot/
     │        │     ├── utilities/
     │        │     └── _index.scss
+    │        ├── customizer
+    │        │     ├── components/
+    │        │     ├── layouts/
+    │        │     ├── menu-style/
+    │        │     ├── utilities/
+    │        │     ├── _components.scss
+    │        │     ├── _dark.scss
+    │        │     ├── _layouts.scss
+    │        │     ├── _reboot.scss
+    │        │     ├── _root.scss
+    │        │     └── _variables.scss
     │        ├── rtl.scss
     │        ├── dark.scss
     │        ├── custom.scss
+    │        ├── customizer.scss
     │        └── hope-ui.scss
     ├── resources
     |    ├── css
@@ -224,6 +246,7 @@ laravel
     │         ├── table
     │         ├── timeline
     │         ├── ui
+    │         ├── role-permission
     │         ├── dashboard.blade.php
     |         └── welcome.blade.php
     ├── route
@@ -261,7 +284,7 @@ laravel
 - [Subscribe on Youtube](https://www.youtube.com/c/IqonicDesign)
 - [Reach US](https://iqonic.design/contact-us/)
 ## Reporting Issues
-Have a bug or a feature request? Raise a new issue at our [github](https://github.com/iqonicdesignofficial/hope-ui-laravel-dashboard/issues) support
+Have a bug or a feature request? Raise a new issue at our [github](https://github.com/iqonicdesignofficial/hope-ui-design-system/issues) support
 
 ## Special Thanks
 - [Bootstrap](https://getbootstrap.com/)

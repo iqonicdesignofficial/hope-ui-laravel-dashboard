@@ -1,0 +1,39 @@
+.nav-link{
+    color: var(--#{$variable-prefix}primary);
+    &:hover, &:focus {
+        color: var(--#{$variable-prefix}primary-shade-20);
+    }
+}
+.nav-tabs{
+    .nav-link{
+        &.active{
+            color:var(--#{$variable-prefix}white);
+            background-color: var(--#{$variable-prefix}primary);
+            border-color: var(--#{$variable-prefix}primary);
+            box-shadow: 0 0.125rem 0.25rem rgba(var(--bs-primary-rgb), 0.3);
+        }
+    }
+}
+//     .nav-item{
+//         &.show {
+//             .nav-link{
+//                 color: var(--#{$variable-prefix}primary-tint-80);
+//                 background-color: var(--#{$variable-prefix}primary-shade-20);
+//                 border-color: var(--#{$variable-prefix}primary-shade-20);
+//             }
+//         }
+//     }
+// }
+.nav-pills {
+    .nav-link{
+        &.active{
+            color: #fff;
+            background-color: var(--#{$variable-prefix}primary);
+        }
+    }
+}
+//     .show > .nav-link {
+//         color: var(--#{$variable-prefix}primary-tint-100);
+//         background-color: var(--#{$variable-prefix}primary-shade-10);
+//     }
+// }

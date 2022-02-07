@@ -48,7 +48,7 @@
 
 
 @mixin sidebar-nav-item-hover($bg-color) {
-    background-color: rgba($bg-color,.1);
+    background-color: rgba($bg-color,.1); 
     color: $bg-color;
     .collapsed+.sub-nav {
         @content;   

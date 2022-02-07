@@ -11,7 +11,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        return view('dashboards.dashboard');
+        $assets = ['chart', 'animation'];
+        return view('dashboards.dashboard', compact('assets'));
     }
 
     /*
@@ -19,23 +20,28 @@ class HomeController extends Controller
      */
     public function horizontal(Request $request)
     {
-        return view('MenuStyle.horizontal');
+        $assets = ['chart', 'animation'];
+        return view('menu-style.horizontal',compact('assets'));
     }
     public function dualhorizontal(Request $request)
     {
-        return view('MenuStyle.dualhorizontal');
+        $assets = ['chart', 'animation'];
+        return view('menu-style.dual-horizontal',compact('assets'));
     }
     public function dualcompact(Request $request)
     {
-        return view('MenuStyle.dualcompact');
+        $assets = ['chart', 'animation'];
+        return view('menu-style.dual-compact',compact('assets'));
     }
     public function boxed(Request $request)
     {
-        return view('MenuStyle.boxed');
+        $assets = ['chart', 'animation'];
+        return view('menu-style.boxed',compact('assets'));
     }
     public function boxedfancy(Request $request)
     {
-        return view('MenuStyle.boxedfancy');
+        $assets = ['chart', 'animation'];
+        return view('menu-style.boxed-fancy',compact('assets'));
     }
 
     /*
@@ -48,7 +54,8 @@ class HomeController extends Controller
 
     public function calender(Request $request)
     {
-        return view('special-pages.calender');
+        $assets = ['calender'];
+        return view('special-pages.calender',compact('assets'));
     }
 
     public function kanban(Request $request)
@@ -63,7 +70,7 @@ class HomeController extends Controller
 
     public function rtlsupport(Request $request)
     {
-        return view('special-pages.rtlsupport');
+        return view('special-pages.rtl-support');
     }
 
     public function timeline(Request $request)
@@ -77,15 +84,16 @@ class HomeController extends Controller
      */
     public function widgetbasic(Request $request)
     {
-        return view('Widget.widgetbasic');
+        return view('widget.widget-basic');
     }
     public function widgetchart(Request $request)
     {
-        return view('Widget.widgetchart');
+        $assets = ['chart'];
+        return view('widget.widget-chart', compact('assets'));
     }
     public function widgetcard(Request $request)
     {
-        return view('Widget.widgetcard');
+        return view('widget.widget-card');
     }
 
     /*
@@ -93,11 +101,11 @@ class HomeController extends Controller
      */
     public function google(Request $request)
     {
-        return view('Maps.google');
+        return view('maps.google');
     }
     public function vector(Request $request)
     {
-        return view('Maps.vector');
+        return view('maps.vector');
     }
 
     /*
@@ -113,7 +121,7 @@ class HomeController extends Controller
     }
     public function confirmmail(Request $request)
     {
-        return view('auth.confirmmail');
+        return view('auth.confirm-mail');
     }
     public function lockscreen(Request $request)
     {
@@ -125,26 +133,7 @@ class HomeController extends Controller
     }
     public function userprivacysetting(Request $request)
     {
-        return view('auth.userprivacysetting');
-    }
-
-    /*
-     * App Page Routs
-     */
-
-    public function userprofile(Request $request)
-    {
-        return view('Users.userprofile');
-    }
-
-    public function useradd(Request $request)
-    {
-        return view('Users.useradd');
-    }
-
-    public function userlist(Request $request)
-    {
-        return view('Users.userlist');
+        return view('auth.user-privacy-setting');
     }
 
     /*
@@ -164,7 +153,7 @@ class HomeController extends Controller
     {
         return view('errors.maintenance');
     }
-    
+
     /*
      * uisheet Page Routs
      */
@@ -210,33 +199,33 @@ class HomeController extends Controller
 
     public function solid(Request $request)
     {
-        return view('Icons.solid');
+        return view('icons.solid');
     }
 
     public function outline(Request $request)
     {
-        return view('Icons.outline');
+        return view('icons.outline');
     }
 
     public function dualtone(Request $request)
     {
-        return view('Icons.dualtone');
+        return view('icons.dualtone');
     }
 
     public function colored(Request $request)
     {
-        return view('Icons.colored');
+        return view('icons.colored');
     }
 
     /*
      * Extra Page Routs
      */
-    public function PrivacyPolicy(Request $request)
+    public function privacypolicy(Request $request)
     {
-        return view('PrivacyPolicy');
+        return view('privacy-policy');
     }
-    public function TermsofUse(Request $request)
+    public function termsofuse(Request $request)
     {
-        return view('TermsofUse');
+        return view('terms-of-use');
     }
 }

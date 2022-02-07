@@ -326,3 +326,124 @@
         }
     }
 }
+
+.theme-color-purple-img{
+    display: none;
+}
+.theme-color-pink-img{
+    display: none;
+}
+.theme-color-green-img{
+    display: none;
+}
+.theme-color-yellow-img{
+    display: none;
+}
+.theme-color-blue-img{
+    display: none;
+}
+
+.theme-color-red{
+    .theme-color-purple-img{
+        display: none;
+    }
+    .theme-color-pink-img{
+        display: none;
+    }
+    .theme-color-green-img{
+        display: inline-block;
+    }
+    .theme-color-yellow-img{
+        display: none;
+    }
+    .theme-color-blue-img{
+        display: none;
+    }
+    .theme-color-default-img{
+        display: none;
+    }
+}
+
+.theme-color-blue{
+    .theme-color-purple-img{
+        display: inline-block;
+    }
+    .theme-color-pink-img{
+        display: none;
+    }
+    .theme-color-green-img{
+        display: none;
+    }
+    .theme-color-yellow-img{
+        display: none;
+    }
+    .theme-color-blue-img{
+        display: none;
+    }
+    .theme-color-default-img{
+        display: none;
+    }
+}
+
+.theme-color-gray{
+    .theme-color-purple-img{
+        display: none;
+    }
+    .theme-color-pink-img{
+        display: none;
+    }
+    .theme-color-green-img{
+        display: none;
+    }
+    .theme-color-yellow-img{
+        display: none;
+    }
+    .theme-color-blue-img{
+        display: inline-block;
+    }
+    .theme-color-default-img{
+        display: none;
+    }
+}
+
+.theme-color-yellow{
+    .theme-color-purple-img{
+        display: none;
+    }
+    .theme-color-pink-img{
+        display: none;
+    }
+    .theme-color-green-img{
+        display: none;
+    }
+    .theme-color-yellow-img{
+        display: inline-block;
+    }
+    .theme-color-blue-img{
+        display: none;
+    }
+    .theme-color-default-img{
+        display: none;
+    }
+}
+
+.theme-color-pink{
+    .theme-color-purple-img{
+        display: none;
+    }
+    .theme-color-pink-img{
+        display: inline-block;
+    }
+    .theme-color-green-img{
+        display: none;
+    }
+    .theme-color-yellow-img{
+        display: none;
+    }
+    .theme-color-blue-img{
+        display: none;
+    }
+    .theme-color-default-img{
+        display: none;
+    }
+}

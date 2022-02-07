@@ -22,6 +22,7 @@ mix.js('resources/js/libs.js', 'public/js/libs.min.js')
     .sass('public/scss/custom.scss', 'public/css')
     .sass('public/scss/dark.scss', 'public/css')
     .sass('public/scss/rtl.scss', 'public/css')
+    .sass('public/scss/customizer.scss', 'public/css')
     .options({
         processCssUrls: false
     });

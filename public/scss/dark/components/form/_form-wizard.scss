@@ -1,0 +1,51 @@
+#top-tab-list {
+    li {
+        a {
+            color: $card-bg;
+            background: $body-bg;
+            
+            .iq-icon {
+                background: $card-bg;
+                .svg-icon{
+                    color: $white;
+                }
+            }
+            .dark-wizard{
+                color: white;
+            }
+        }
+        &.active {
+            a {
+                background: $primary;
+                color: $white;  
+
+                .iq-icon {
+                    background: $white;
+                    .svg-icon
+                    {
+                        color: $primary;
+                    } 
+                }
+            }
+            &.done {
+                a {
+                    background: $success;
+                    i {
+                        color: $success; 
+                    }
+                }
+            }
+        }
+        &#confirm {
+            &.active {
+                a {
+                    background: $success;
+    
+                    i {
+                        color: $success; 
+                    }
+                }
+            }
+        }
+    }
+}

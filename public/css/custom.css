@@ -1,5 +1,5 @@
 /*!
-* Version: 1.1.0
+* Version: 1.2.0
 * Template: Example Project
 * Author: iqonic.design
 * Design and Developed by: iqonic.design
@@ -297,6 +297,9 @@
   color: #8A92A6;
   border: 0;
 }
+.bd-aside .btn .right-icon {
+  transition: transform 0.35s ease;
+}
 .bd-aside .btn:hover, .bd-aside .btn:focus {
   background-color: rgba(58, 87, 232, 0.1);
   color: #3a57e8;
@@ -304,14 +307,7 @@
 .bd-aside .btn:focus {
   box-shadow: 0 0 0 0.063rem rgba(58, 87, 232, 0.7);
 }
-.bd-aside .btn::before {
-  width: 1.25em;
-  line-height: 0;
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-  transition: transform 0.35s ease;
-  transform-origin: 0.5em 50%;
-}
-.bd-aside .btn[aria-expanded=true]::before {
+.bd-aside .btn[aria-expanded=true] .right-icon {
   transform: rotate(90deg);
 }
 
@@ -331,7 +327,7 @@
 [id=dropdowns] .bd-example .dropup,
 [id=dropdowns] .bd-example .dropend,
 [id=dropdowns] .bd-example .dropstart {
-  margin: 0 1rem 1rem 0;
+  margin-top: 0.5rem;
 }
 
 /* Layout */
@@ -398,7 +394,7 @@
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .mobile-offcanvas {
-    width: calc(100% - 60%) !important;
+    width: 40% !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -439,7 +435,7 @@
     left: 0;
     height: 100vh;
     z-index: 1200;
-    width: calc(100% - 25%);
+    width: 75%;
     overflow-y: scroll;
     overflow-x: hidden;
     transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;

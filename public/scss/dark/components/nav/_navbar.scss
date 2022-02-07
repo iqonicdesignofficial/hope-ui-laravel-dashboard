@@ -1,3 +1,11 @@
+.nav{
+    background: $body-bg;
+    .navbar-brand {
+		.logo-title {
+			color: $white;
+		}
+	}
+}
 .iq-navbar {
     border-color: $card-bg;
     background-color: $card-bg;
@@ -46,8 +54,15 @@
     .iq-navbar {
         .navbar-collapse {
             &:not(.offcanvas-collapse) {
-                // background: $body-bg;
+                background: $card-bg;
             }
+        }
+    }
+}
+.nav-tabs{
+    .nav-link{
+        &.active{
+            box-shadow: unset;
         }
     }
 }

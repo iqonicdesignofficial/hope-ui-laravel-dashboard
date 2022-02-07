@@ -1,0 +1,11 @@
+.form-control{
+    font-size: var(--body-font-size);
+    &:focus{
+        border-color: var(--#{$variable-prefix}primary-tint-40);
+    }
+}
+.form-select{
+    &:focus{
+        border-color: var(--#{$variable-prefix}primary-tint-40);
+    }
+}

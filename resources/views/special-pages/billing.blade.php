@@ -1,11 +1,11 @@
-<x-app-layout>
-<div class="row">                  
+<x-app-layout :assets="$assets ?? []">
+<div class="row">
    <div class="col-lg-12">
       <div class="card   rounded">
          <div class="card-body">
             <div class="row">
-               <div class="col-sm-12">    
-                  <h4 class="mb-2">Invoice  #215462</h4>                              
+               <div class="col-sm-12">
+                  <h4 class="mb-2">Invoice  #215462</h4>
                   <h5 class="mb-3">Hello , Devon Lane </h5>
                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                </div>
@@ -98,7 +98,7 @@
                         </tbody>
                      </table>
                   </div>
-               </div>                              
+               </div>
             </div>
             <div class="row">
                <div class="col-sm-12">
@@ -112,7 +112,7 @@
                      It is a long established fact that a reader will be distracted by the readable content of a page
                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
                      as opposed to using 'Content here, content here', making it look like readable English.
-                  </p>  
+                  </p>
                   <div class="d-flex justify-content-center mt-4">
                      <button type="button" class="btn btn-primary">Print</button>
                   </div>
@@ -120,6 +120,6 @@
             </div>
          </div>
       </div>
-   </div>                                    
+   </div>
 </div>
 </x-app-layout>
