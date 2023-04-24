@@ -1,0 +1,35 @@
+.nav{
+    .search-input{
+        &.input-group{
+            &:focus-within{
+                .input-group-text, .form-control{
+                    border-color: var(--#{$variable-prefix}primary-tint-40);
+                }
+            }
+        }
+    }
+    .sidebar-toggle{
+        background: var(--#{$variable-prefix}primary);
+    }
+}
+.iq-navbar-header{
+    &.navs-bg-color{
+        .iq-header-img{
+            background-color: var(--#{$variable-prefix}primary);
+        }
+    }
+}
+
+.iq-navbar{
+     .dropdown{
+        .dropdown-menu {
+            &.sub-drop {
+                  .iq-sub-card{
+                    &:hover{
+                        background: var(--bs-primary-tint-90);
+                    }
+                  }
+                }
+            }
+        }
+    }

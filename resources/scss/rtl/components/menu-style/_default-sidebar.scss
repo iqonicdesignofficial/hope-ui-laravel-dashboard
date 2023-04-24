@@ -1,0 +1,82 @@
+.sidebar-base {
+    .sidebar-list {
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    .right-icon {
+                        -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                    &.active {
+                        .right-icon {
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
+                    &[aria-expanded=true] {
+                        .right-icon {
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-nav{
+            .nav-item{
+                .nav-link:not(.disabled){
+                    span {
+                        margin-right: $spacer;
+                        margin-left: unset;
+                    }
+                }
+            }
+        }
+    }
+    &:not(.sidebar-mini){
+        .navbar-nav{
+            .nav-item{
+                &:not(.static-item){
+                    padding-left: unset;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+    &.navs-pill, &.navs-rounded{
+        &:not(.sidebar-mini){
+            .navbar-nav{
+                .nav-item{
+                    &:not(.static-item){
+                        padding-right: unset;
+                    }
+                }
+            }
+        }
+    }
+    .data-scrollbar{
+        .scrollbar-track-y{
+            left: 0;
+            right: unset;
+        }
+    }
+}
+.sidebar  {
+  .sidebar-toggle {
+      left: -12px;
+      right: unset;
+      transform: rotate(180deg);
+  }
+  .navbar-brand {
+      margin-left: 1rem;
+      margin-right: unset;
+    .logo-title {
+            margin-left: unset;
+            margin-right: 1rem;
+    }
+  }
+  &.sidebar-glass{
+    border-left: 1px solid;
+    border-right: unset;
+}
+}

@@ -15,7 +15,9 @@
 <link rel='stylesheet' href="{{asset('vendor/fullcalendar/timegrid/main.css')}}" />
 <link rel='stylesheet' href="{{asset('vendor/fullcalendar/list/main.css')}}" />
 <link rel="stylesheet" href="{{asset('vendor/Leaflet/leaflet.css')}}" />
-<link rel="stylesheet" href="{{asset('vendor/vanillajs-datepicker/dist/css/datepicker.min.css')}}" />
+
+<!-- Flatpickr css -->
+<link rel="stylesheet" href="{{asset('vendor/flatpickr/dist/flatpickr.min.css')}}" />
 
 <link rel="stylesheet" href="{{asset('vendor/aos/dist/aos.css')}}" />
 

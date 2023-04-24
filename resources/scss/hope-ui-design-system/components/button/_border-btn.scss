@@ -1,0 +1,42 @@
+.btn-border {
+    display: flex;
+    align-items: center;
+    border: $border-width * 2 solid $border-color;
+    transition: all 400ms ease;
+    border-radius: $border-radius;
+    cursor: pointer;
+    padding: $spacer*.5 $spacer;
+    &:hover {
+        border-color: darken($border-color, 20%);
+    }
+    &.active {
+        border-color: $primary;
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+.btn {
+    &.btn-border {
+        @include button-outline-variant($gray);
+        border: $border-width * 2 solid $border-color;
+        padding: $spacer*.5 $spacer;
+        border-color: $border-color;
+        &:hover {
+            background: transparent;
+            border-color: var(--bs-primary);
+            color: var(--bs-primary);
+        }
+        .btn-check:checked + &,
+        .btn-check:active + &,
+        &:active,
+        &.active{
+            background: var(--bs-primary);
+            color: var(--bs-white);
+            border-color: var(--bs-primary);
+            &.bg-transparent{
+                color: var(--bs-primary);
+            }
+        }
+    }
+}

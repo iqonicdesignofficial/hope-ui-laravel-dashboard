@@ -1,0 +1,23 @@
+[dir="rtl"] {
+    @import "utilities/utilities-reset";
+    @import "utilities/utilities";
+    @import "../bootstrap/utilities/api";
+
+    @import "./reboot/reboot";
+    @import "components/menu-style/index";
+    @import "./components/accordion/accordion";
+    @import "components/button/fixed-btn";
+    @import "components/progressbar/progressbar";
+    @import "components/profile/profile";
+    @import "components/widgets/progress-widget";
+    @import "components/widgets/profile-widget";
+    @import "components/widgets/credit-card";
+    @import "components/button-group/button-group";
+    @import "components/forms/form-check";
+    @import "components/dropdown/bs-dropdown";
+    @import "components/timeline/simple-timeline";
+
+    @import "pages/auth/authentication";
+    @import "pages/kanban/kanban";
+    @import "pages/pricing/pricing";
+}

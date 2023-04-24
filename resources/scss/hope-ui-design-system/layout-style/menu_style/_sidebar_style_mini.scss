@@ -1,0 +1,81 @@
+// sidebar-mini class
+
+.sidebar {
+    &.sidebar-mini{
+        --sidebar-width: #{$navbar-vertical-mini-width};
+        &+.main-content{
+            transition: var(--sidebar-transition);
+            transition-duration: var(--sidebar-transition-duration);
+            transition-timing-function: var(--sidebar-transition-function-ease);
+            --sidebar-width: #{$navbar-vertical-mini-width};
+        }
+        .navbar-brand {
+            .logo-title {
+                transform: translateX(-100%) scale(0);
+                opacity: 0;
+            }
+        }
+        &.sidebar-base {
+            &:not(.sidebar-hover:hover) {
+                .nav-item {
+                    .sub-nav{
+                        .nav-item {
+                            padding-left: 0;
+                        }
+                    }
+                    &.static-item {
+                        padding-left: 1rem;
+                    }
+                    .nav-link {
+                        padding: .5rem .75rem;
+                    }
+                }
+                .nav-item {
+                    .sub-nav{
+                        .nav-item {
+                            .icon {
+                                display: none;
+                            }
+                        }
+                    }
+                    .sub-nav {
+                        .nav-link {
+                            i.sidenav-mini-icon {
+                                font-style: inherit !important;
+                                opacity: 1;
+                                display: block;
+                                margin-left: .25rem;
+                            }
+                        }
+                    }
+                    .nav-link {
+                        &:not(.static-item) {
+                            span {
+                                transition: background-color 400ms ease-in-out, color 400ms ease-in-out, border-radius 400ms ease-in-out, transform 400ms ease-in-out, opacity 400ms ease-in-out;
+                                transform: translateX(-100%) scale(0);
+                                opacity: 0;
+                                &.sidenav-mini-icon {
+                                    opacity: 1;
+                                    display: block;
+                                    -webkit-transform: translateX(-100%) scale(1);
+                                    transform: translateX(-100%) scale(1);
+                                }
+                            }
+                        }
+                        &.static-item {
+                            text-align: center;
+                            justify-content: center;
+                            .default-icon {
+                                display: none;
+                            }
+                            .mini-icon {
+                                display: block;
+                                font-size: calc(1rem - 2px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

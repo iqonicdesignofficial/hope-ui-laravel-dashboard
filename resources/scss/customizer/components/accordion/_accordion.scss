@@ -1,0 +1,11 @@
+.accordion-button{
+    &:not(.collapsed){
+        color: var(--#{$variable-prefix}primary-shade-20);
+        background-color: var(--#{$variable-prefix}primary-tint-90);
+        box-shadow: inset 0 ($accordion-border-width * -1) 0, rgba(var(--#{$variable-prefix}black-rgb),0.13);
+    }
+    &:focus{
+        border-color: var(--#{$variable-prefix}primary-tint-40);
+        box-shadow: 0 .125rem $input-btn-focus-blur $input-btn-focus-width, rgba(var(--#{$variable-prefix}primary-rgb),.15);
+    }
+}

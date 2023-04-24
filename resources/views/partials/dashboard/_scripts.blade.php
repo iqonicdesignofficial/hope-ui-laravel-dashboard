@@ -41,7 +41,9 @@
 <script src="{{asset('js/plugins/calender.js')}}"></script>
 @endif
 
-<script src="{{asset('vendor/vanillajs-datepicker/dist/js/datepicker-full.js')}}"></script>
+<!-- Flatpickr Script -->
+<script src="{{asset('vendor/flatpickr/dist/flatpickr.min.js')}}"></script>
+<script src="{{asset('js/plugins/flatpickr.js')}}" defer></script>
 
 @stack('scripts')
 

@@ -1,0 +1,50 @@
+.sidebar-toggle {
+    position: absolute;
+    right: -12px;
+    top: 16px;
+    padding: 0.2rem;
+    cursor: pointer;
+    background: var(--#{$variable-prefix}primary);
+    color: $white;
+    border-radius: $border-radius-pill;
+    .icon {
+        display: flex;
+        transform: rotate(0);
+        transition: var(--sidebar-transition);
+        transition-duration: var(--sidebar-transition-duration);
+        transition-timing-function: var(--sidebar-transition-function-ease-in-out);
+        .icon-20 {
+            display: block;
+            transition: transform;
+            transition-duration: var(--sidebar-transition-duration);
+            transition-timing-function: var(--sidebar-transition-function-ease-in-out);
+            height: 1.25rem;
+            width: 1.25rem;
+        }
+    }
+}
+.sidebar-mini {
+    .sidebar-toggle {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 1199.98PX) {
+    .sidebar-toggle {
+        right: 18px;
+    }
+}
+.sidebar {
+    &.sidebar-mini {
+        .sidebar-toggle {
+            .icon-20 {
+                transition: transform;
+                transition-duration: var(--sidebar-transition-duration);
+                transition-timing-function: var(--sidebar-transition-function-ease-in-out);
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

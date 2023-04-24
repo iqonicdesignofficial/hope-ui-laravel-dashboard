@@ -1,0 +1,13 @@
+// nav-rounded all
+
+.sidebar{
+    &.navs-rounded-all{
+        .sidebar-body{
+            .nav-item {
+                .nav-link{
+                    border-radius: $border-radius-sm;
+                }
+            }
+        }
+    }
+}

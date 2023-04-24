@@ -1,0 +1,55 @@
+.card{
+    .iq-dashed-border{
+        padding: $card-spacer-y;
+        border-radius: $card-border-radius;
+        border: $border-width dashed $gray-400;
+    }
+    .card-body{
+        .grid-flow-col {
+            grid-auto-flow: column;
+        }
+        .iq-icon-box-2 {
+            height: 36px;
+            width: 36px;
+            min-width: 36px;
+            line-height: 36px;
+            background: $body-bg;
+            text-align: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 0.5rem;
+
+        }   
+        .iq-media-group-1 {
+            .iq-media-1 {
+                margin-left:-1.25rem;
+                position: relative;
+                z-index: 0;
+                &:hover {
+                    z-index: 9;
+                }
+                img {
+                    border: 2px solid $border-color;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            .iq-media.border {
+                border: 2px solid $border-color;
+            }
+        }
+        .iq-media-1 {
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            &:hover {
+                text-decoration: none;
+            }
+            border-radius: $border-radius-sm;
+        }
+    }
+}

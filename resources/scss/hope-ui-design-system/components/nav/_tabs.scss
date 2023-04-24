@@ -1,0 +1,24 @@
+
+.nav-tabs {
+    @include border-radius($nav-tabs-border-radius);
+    margin-bottom: .5rem;
+    .nav-link {
+      @include border-radius($nav-tabs-border-radius);
+      &.active{
+        @include box-shadow($box-color-shadow rgba($primary, $box-color-shadow-tint));
+      }
+    }
+}
+.nav-pills {
+  @include border-radius($nav-pills-border-radius);
+  margin-bottom: .5rem;
+}
+
+.nav-tunnel {
+  padding: $spacer * .25;
+  background: $gray-200;
+  border: 1px solid var(--#{$variable-prefix}primary);
+  .nav-link {
+      padding: $spacer * .25 1rem;
+  }
+}

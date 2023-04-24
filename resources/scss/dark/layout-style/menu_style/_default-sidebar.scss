@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: $card-bg;
+    .navbar-brand {
+        .logo-title {
+            color: $white;
+        }
+    }
+    .sidebar-header {
+        border-color: $border-color;
+    }
+}
+.sidebar-list{
+    .navbar-nav{
+        .nav-item{
+            .nav-link.static-item{
+                .default-icon{
+                    color: $light;
+                }
+            }
+        }
+    }
+}

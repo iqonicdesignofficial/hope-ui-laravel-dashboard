@@ -1,4 +1,4 @@
-<aside class="sidebar sidebar-default navs-rounded-all">
+<aside class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
     <div class="sidebar-header d-flex align-items-center justify-content-start">
         <a href="{{route('dashboard')}}" class="navbar-brand">
             <svg width="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
     </div>
     <div class="sidebar-body pt-0 data-scrollbar">
         <div class="sidebar-list" id="sidebar">
-        @include('partials.dashboard.vertical-nav') 
+        @include('partials.dashboard.vertical-nav')
         </div>
     </div>
     <div class="sidebar-footer"></div>

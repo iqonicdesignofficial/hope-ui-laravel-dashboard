@@ -1,0 +1,150 @@
+.iq-timeline {
+	margin: 0 0 0 20px;
+	padding: 0;
+	width: 100%;
+	li {
+		margin-left: 2.188rem;
+		position: relative;
+		padding: 15px 15px 0 5px;
+		list-style-type: none;
+		.timeline-dots {
+			position: absolute;
+			top: 20px;
+			left: -54px;
+			border: 3px solid #05bbc9;
+			border-radius: 90px;
+			padding: 5px;
+			background: #ffffff;
+			height: 2.5rem;
+			width: 2.5rem;
+			line-height: 25px;
+			text-align: center;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		width: 2px;
+		height: 100%;
+		background-color: #ccc;
+	}
+}
+.iq-timeline {
+    ul {
+        li {
+            width: 50%;
+            padding: 5px 30px 2.5rem 30px;
+            cursor: pointer;
+            margin: 0px;
+            &:nth-child(odd) {
+                float: left;
+                text-align: right;
+                clear: both;
+                .timeline-dots {
+                    right: -8px;
+                    left: auto;
+                }
+                .time {
+                    padding-left: 10px;
+                    right: -145px;
+                    -webkit-box-shadow: 0px 0px 0px 3px rgba(80, 181, 255, 0.3);
+                    -moz-box-shadow: 0px 0px 0px 3px rgba(80, 181, 255, 0.3);
+                    -ms-box-shadow: 0px 0px 0px 3px rgba(80, 181, 255, 0.3);
+                    -o-box-shadow: 0px 0px 0px 3px rgba(80, 181, 255, 0.3);
+                    box-shadow: 0px 0px 0px 3px rgba(80, 181, 255, 0.3);
+                }
+            }
+            &:nth-child(even) {
+                float: right;
+                text-align: left;
+                clear: both;
+                .timeline-dots {
+                    left: -8px;
+                    right: auto;
+                }
+                .time {
+                    text-align: right;
+                    padding-right: 10px;
+                    left: -145px;
+                    -webkit-box-shadow: 0px 0px 0px 3px rgba(73, 240, 211, 0.3);
+                    -moz-box-shadow: 0px 0px 0px 3px rgba(73, 240, 211, 0.3);
+                    -ms-box-shadow: 0px 0px 0px 3px rgba(73, 240, 211, 0.3);
+                    -o-box-shadow: 0px 0px 0px 3px rgba(73, 240, 211, 0.3);
+                    box-shadow: 0px 0px 0px 3px rgba(73, 240, 211, 0.3);
+                }
+            }
+            .time {
+                position: absolute;
+                top: 15px;
+                background-color: #05bbc9;
+                color: #fff;
+                text-align: left;
+                width: 120px;
+                height: 28px;
+                line-height: 28px;
+                border-radius: 20px;
+            }
+        }
+    }
+    li {
+        .timeline-dots {
+            height: 15px;
+            width: 15px;
+            background: #fff !important;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .iq-timeline {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #ccc;;
+        }
+        ul {
+            li {
+                &:nth-child(odd) {
+                    float: left;
+                    text-align: left;
+                    clear: both;
+                    .time {
+                        padding-left: 0px;
+                        left: 28px;
+                        text-align: center;
+                    }
+                    .timeline-dots {
+                        left: -8px;
+                        right: auto;
+                    }
+                }
+                width: 100%;
+                padding: 43px 27px 3.5rem 36px;
+                cursor: pointer;
+                margin: 0px;
+                &:nth-child(even) {
+                    .time {
+                        text-align: center;
+                        padding-right: 0px;
+                        left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        margin-top: 15px;
+    }
+}
+

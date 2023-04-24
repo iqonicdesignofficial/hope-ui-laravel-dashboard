@@ -1,0 +1,24 @@
+.main-content{
+    .content-inner {
+        min-height: calc(100vh - 6.6rem);
+    }
+}
+.sidebar {
+    &+.main-content {
+        margin-left: var(--sidebar-width);
+        transition: var(--sidebar-transition);
+        transition-duration: var(--sidebar-transition-duration);
+        transition-timing-function: var(--sidebar-transition-function-ease-in-out);
+    }
+}
+@media (min-width: 1200PX) {
+    .sidebar {
+        &+.main-content {
+            .nav {
+                .navbar-brand{
+                    display: none;
+                }
+            }
+        }
+    }
+}

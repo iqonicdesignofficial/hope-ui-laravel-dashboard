@@ -1,0 +1,21 @@
+// Sidebar Background Colors
+.sidebar {
+    &.sidebar-dark {
+        background-color: $navbar-vertical-dark-bg;
+    }
+    &.sidebar-color {
+        background-color: $navbar-vertical-color-bg;
+    }
+    &.sidebar-transparent {
+        background-color: transparent;
+    }
+    // &.sidebar-white{
+    //     background-color:$white;
+    //     .navbar-brand{
+    //         .logo-title{
+    //             color: $dark;
+    //         }
+    //     }
+    // }
+    
+}

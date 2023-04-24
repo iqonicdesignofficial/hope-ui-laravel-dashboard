@@ -1,0 +1,13 @@
+// nav-pill all
+
+.sidebar{
+    &.navs-pill-all{
+        .sidebar-body{
+            .nav-item {
+                .nav-link{
+                    border-radius: $border-radius-pill !important;
+                }
+            }
+        }
+    }
+}

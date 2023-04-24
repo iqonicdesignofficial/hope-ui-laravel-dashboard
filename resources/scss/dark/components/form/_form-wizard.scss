@@ -1,0 +1,49 @@
+#top-tab-list {
+    li {
+        a {
+            color: $card-bg;
+            background: $body-bg;
+            
+            .iq-icon {
+                background: $card-bg;
+                .svg-icon{
+                    color: $white;
+                }
+            }
+
+        }
+        &.active {
+            a {
+                background: var(--#{$variable-prefix}primary);
+                color: $white;  
+
+                .iq-icon {
+                    background: $white;
+                    .svg-icon
+                    {
+                        color: var(--#{$variable-prefix}primary);
+                    } 
+                }
+            }
+            &.done {
+                a {
+                    background: $success;
+                    i {
+                        color: $success; 
+                    }
+                }
+            }
+        }
+        &#confirm {
+            &.active {
+                a {
+                    background: $success;
+    
+                    i {
+                        color: $success; 
+                    }
+                }
+            }
+        }
+    }
+}

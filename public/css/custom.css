@@ -10,6 +10,14 @@
   outline: none;
 }
 
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
 .sign-bg {
   position: absolute;
   left: 0;
@@ -40,7 +48,6 @@
   .login-header {
     height: 12.5rem !important;
   }
-
   .login-bottom {
     margin-top: -6.25rem;
   }
@@ -338,11 +345,9 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: auto;
   }
-
   .bd-aside.sticky-xl-top {
     top: 2rem !important;
   }
-
   .bd-header {
     position: fixed;
     top: 0;
@@ -351,11 +356,9 @@
     z-index: 1030;
     grid-column: 1/span 3;
   }
-
   .sticky-xl-top {
     z-index: 2;
   }
-
   .bd-cheatsheet, .bd-cheatsheet section, .bd-cheatsheet article {
     display: grid;
     gap: 2rem;
@@ -363,17 +366,14 @@
     grid-column: span 2/span 2;
     grid-template-rows: auto;
   }
-
   .bd-aside {
     grid-area: 1/1;
     scroll-margin-top: 4rem;
   }
-
   .bd-cheatsheet section, .bd-cheatsheet section > .iq-side-content {
     top: 2rem;
     scroll-margin-top: 0;
   }
-
   .bd-cheatsheet article, .bd-cheatsheet .bd-heading {
     top: calc(7.2rem + 2rem);
     scroll-margin-top: calc(7.8rem + 2rem);
@@ -406,25 +406,21 @@
   .header .container {
     max-width: unset !important;
   }
-
   aside.mobile-offcanvas {
     margin-top: unset !important;
   }
   aside.mobile-offcanvas .offcanvas-header {
     display: block;
   }
-
   .body-class-1 {
     padding: unset;
   }
   .body-class-1.container {
     max-width: unset;
   }
-
   #content .iq-side-content .card {
     margin-top: 1.25rem;
   }
-
   .mobile-offcanvas {
     visibility: hidden;
     transform: translateX(-100%);
@@ -439,11 +435,10 @@
     overflow-y: scroll;
     overflow-x: hidden;
     transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background: #ffffffd6;
+    background: rgba(255, 255, 255, 0.8392156863);
     -webkit-backdrop-filter: blur(0.5rem);
             backdrop-filter: blur(0.5rem);
   }
-
   .mobile-offcanvas.show {
     visibility: visible;
     transform: translateY(0);
@@ -456,11 +451,9 @@
   .bd-aside.card.iq-document-card, .bd-cheatsheet {
     margin-top: -3rem;
   }
-
   aside.mobile-offcanvas .offcanvas-header {
     display: none;
   }
-
   .bd-cheatsheet section .iq-side-content {
     grid-column-end: 3;
   }

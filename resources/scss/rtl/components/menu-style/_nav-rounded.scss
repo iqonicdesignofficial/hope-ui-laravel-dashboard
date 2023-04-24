@@ -1,0 +1,36 @@
+.navs-pill{
+    .sidebar-body{
+        padding-left: 1rem;
+        padding-right: unset;
+    }
+}
+
+.sidebar{
+    //Sidebar One-side Rounded
+    &.navs-rounded{
+        .sidebar-body{
+            .nav-item{
+                .nav-link{
+                    border-top-left-radius: $border-radius;
+                    border-bottom-left-radius: $border-radius;
+                    border-top-right-radius: unset;
+                    border-bottom-right-radius: unset;
+                }
+            }
+        }
+    }
+
+    //Sidebar One-side Rounded Pill
+    &.navs-pill{
+        .sidebar-body{
+            .nav-item{
+                .nav-link{
+                    border-top-left-radius: $border-radius-pill !important;
+                    border-bottom-left-radius: $border-radius-pill !important;
+                    border-top-right-radius: unset !important;
+                    border-bottom-right-radius: unset !important;
+                }
+            }
+        }
+    }
+}

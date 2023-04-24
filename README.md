@@ -122,7 +122,7 @@ npm run dev
 ```
 cp .env.example .env
 
-php artisan key:generate
+php artisan key:artisan
 ```
 5. To run the project:
 ```

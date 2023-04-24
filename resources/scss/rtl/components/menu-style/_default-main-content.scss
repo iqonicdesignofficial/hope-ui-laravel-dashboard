@@ -1,0 +1,15 @@
+.sidebar {
+    &+.main-content {
+        margin-right: var(--sidebar-width);
+        margin-left: auto;
+    }
+}
+@include media-breakpoint-down(xl) {
+    .sidebar-default.sidebar-mini.sidebar-boxed+.main-content,
+    .sidebar-default.sidebar-boxed+.main-content,
+    .sidebar-default.sidebar-mini+.main-content,
+    .sidebar-default+.main-content {
+        margin-right: 0;
+        margin-left: unset;
+    }
+}

@@ -1,0 +1,73 @@
+@each $color in $colors-name {
+    .btn{
+        &.btn-#{$color}{
+            color: var(--#{$variable-prefix}white);
+            background-color: var(--#{$variable-prefix}#{$color});
+            border-color: var(--#{$variable-prefix}#{$color});
+            
+            &:hover{
+                color:  var(--#{$variable-prefix}white);
+                background-color: var(--#{$variable-prefix}#{$color}-shade-20);
+                border-color: var(--#{$variable-prefix}#{$color}-shade-20);
+            }
+            &:focus{
+                color: var(--#{$variable-prefix}white);
+                background-color: var(--#{$variable-prefix}#{$color}-shade-20);
+                border-color: var(--#{$variable-prefix}#{$color}-shade-20);
+            }
+            &:active, &.active{
+                color: var(--#{$variable-prefix}white);
+                background-color: var(--#{$variable-prefix}#{$color}-shade-20);
+                border-color: var(--#{$variable-prefix}#{$color}-shade-20);
+            }
+        }
+        &.btn-outline-#{$color}{
+            color: var(--#{$variable-prefix}#{$color}-shade-20);
+            border-color: var(--#{$variable-prefix}#{$color}-shade-20);
+            &:hover{
+                color:  var(--#{$variable-prefix}white);
+                background-color: var(--#{$variable-prefix}#{$color});
+                border-color: var(--#{$variable-prefix}#{$color});
+            }
+            &:active, &.active{
+                color: var(--#{$variable-prefix}white);
+                background-color: var(--#{$variable-prefix}#{$color}-shade-20);
+                border-color: var(--#{$variable-prefix}#{$color}-shade-20);
+            }
+        }
+        &.btn-soft-#{$color}{
+            color: var(--#{$variable-prefix}#{$color});
+            background-color: rgba(var(--#{$variable-prefix}#{$color}-rgb), .1);
+            border-color: transparent;
+            &:hover, &:focus, &:active{
+                color: var(--#{$variable-prefix}#{$color}-tint-20);
+                background-color: rgba(var(--#{$variable-prefix}#{$color}-rgb), .2);
+                // border-color: rgba(var(--bs-primary-rgb), .2);
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+.btn-link{
+    color:var(--#{$variable-prefix}primary);
+}
+.bd-aside{
+    .active{
+        color: var(--#{$variable-prefix}primary);
+        background-color: var(--#{$variable-prefix}primary-tint-90);
+    }
+    .btn:hover{
+        color: var(--#{$variable-prefix}primary);
+        background-color: var(--#{$variable-prefix}primary-tint-90);
+    }
+    .btn:focus{
+        color: var(--#{$variable-prefix}primary);
+        background-color: var(--#{$variable-prefix}primary-tint-90);
+        box-shadow: 0 0 0 0.063rem rgba(var(--#{$variable-prefix}primary-rgb),0.7);
+    }
+    a:hover{
+        background-color: var(--#{$variable-prefix}primary-tint-90) ;
+    }
+}

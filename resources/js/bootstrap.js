@@ -15,7 +15,7 @@ require('datatables.net-bs4');
 require('datatables.net');
 require('smooth-scrollbar');
 window.Swal = require('sweetalert2');
-require('vanillajs-datepicker');
+require('flatpickr');
 window.Scrollbar = require('smooth-scrollbar/dist/smooth-scrollbar')
 window.ApexCharts = require('apexcharts');
 window.waypoint = require('waypoints/lib/noframework.waypoints');

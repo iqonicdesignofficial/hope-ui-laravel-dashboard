@@ -1,0 +1,15 @@
+.h-10{
+    height: 10rem;
+}
+.line-height-0{
+    line-height: 0;
+}
+.max-17{
+    max-height: 17rem;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+@each $size,$value in $icon-size {
+    .icon-#{$value}{@include icons($value)}
+}

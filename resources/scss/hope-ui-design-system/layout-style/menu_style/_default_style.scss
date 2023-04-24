@@ -1,0 +1,22 @@
+
+.sidebar {
+    &.sidebar-default {
+        .nav-link {
+            &:not(.static-item){
+                --shadow-dark-color: var(--#{$variable-prefix}primary-rgb);
+                &.active, &[aria-expanded=true] {
+                    background: var(--#{$variable-prefix}primary);
+                    color: $white;
+                    box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color), 38%)
+                }
+                &:hover {
+                    &:not(.active):not([aria-expanded=true]) {
+                        background: var(--#{$variable-prefix}primary-tint-90);
+                        color: var(--#{$variable-prefix}primary);
+                        box-shadow: unset;
+                    }
+                }
+            }
+        }
+    }
+}

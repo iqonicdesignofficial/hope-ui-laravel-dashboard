@@ -1,0 +1,15 @@
+.sidebar{
+    &.sidebar-default{
+        .nav-link{
+            &:not(.static-item){
+                &:hover{
+                    &:not(.active){
+                        &:not([aria-expanded=true]){
+                            background-color: rgba(var(--#{$variable-prefix}primary-rgb), .2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

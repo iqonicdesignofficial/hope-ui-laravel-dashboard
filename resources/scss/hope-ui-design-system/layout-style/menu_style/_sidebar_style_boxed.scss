@@ -1,0 +1,27 @@
+
+.sidebar {
+    &.sidebar-boxed {
+        margin: 1rem;
+        border-radius: $border-radius;
+        &+.main-content {
+            margin-left: calc(var(--sidebar-width) + 2rem);
+            .navbar {
+                border-radius: $border-radius;
+                margin: 1rem;
+                margin-bottom: 0;
+            }
+            .footer {
+                border-radius: $border-radius;
+                margin: 1rem;
+                margin-top: 0;
+            }
+        }
+        &.sidebar-mini {
+            &+.main-content {
+                --sidebar-width: #{$navbar-vertical-mini-width};
+                margin-left: calc(var(--sidebar-width) + 2rem);
+            }
+        }
+    }
+}
+
