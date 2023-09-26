@@ -1,0 +1,82 @@
+.btn {
+    .btn-inner {
+        i:not(.fas):not(.fab) {
+            position: relative;
+            top: 2px;
+        }
+
+        svg {
+            position: relative;
+            top: -2px;
+            width: 24px;
+        }
+    }
+}
+
+.btn-icon {
+    padding: $btn-icon-padding-y $btn-icon-padding-x;
+
+    &.btn-sm {
+        padding: $btn-icon-padding-y-sm $btn-icon-padding-x-sm;
+    }
+
+    &.btn-lg {
+        padding: $btn-icon-padding-y-lg $btn-icon-padding-x-lg;
+    }
+}
+
+.btn-setting {
+    padding: $spacer * .5;
+    z-index: $zindex-general + 100;
+    top: 50%;
+}
+
+.btn-dashboard {
+    top: 68%;
+    right: -3.1rem !important;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -webkit-border-bottom-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    -webkit-border-top-right-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+}
+
+.btn-sm {
+    .btn-inner {
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+.btn-xs {
+    .btn-inner {
+        svg {
+            width: 16px;
+        }
+    }
+}
+
+.btn-lg {
+    .btn-inner {
+        svg {
+            width: 32px;
+        }
+    }
+
+    &.btn-icon {
+        .btn-inner {
+            svg {
+                top: 0;
+            }
+        }
+    }
+}
+
+.customizer-btn {
+    transform: rotate(-45deg);
+}

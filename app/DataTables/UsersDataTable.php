@@ -85,7 +85,7 @@ class UsersDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('<"row align-items-center"<"col-md-2" l><"col-md-6" B><"col-md-4"f>><"table-responsive my-3" rt><"row align-items-center" <"col-md-6" i><"col-md-6" p>><"clear">')
-            
+
                     ->parameters([
                         "processing" => true,
                         "autoWidth" => false,
@@ -117,13 +117,4 @@ class UsersDataTable extends DataTable
         ];
     }
 
-    /**
-     * Get filename for export.
-     *
-     * @return string
-     */
-    protected function filename()
-    {
-        return 'Users_' . date('YmdHis');
-    }
 }

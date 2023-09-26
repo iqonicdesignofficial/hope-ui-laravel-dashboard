@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "vanillajs-datepicker@1.1.4",
+      "C:\\laragon\\www\\hope-ui\\laravel"
+    ]
+  ],
+  "_from": "vanillajs-datepicker@1.1.4",
+  "_id": "vanillajs-datepicker@1.1.4",
+  "_inBundle": false,
+  "_integrity": "sha512-XJhvRx+VqtRjqrPlgNCQntLpCntFKPMBd8ahxZhLkvrWX0bNdpP3kz5j13L2Q0xfTAY/QMfQtVZvBvRF0NilcA==",
+  "_location": "/vanillajs-datepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "vanillajs-datepicker@1.1.4",
+    "name": "vanillajs-datepicker",
+    "escapedName": "vanillajs-datepicker",
+    "rawSpec": "1.1.4",
+    "saveSpec": null,
+    "fetchSpec": "1.1.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vanillajs-datepicker/-/vanillajs-datepicker-1.1.4.tgz",
+  "_spec": "1.1.4",
+  "_where": "C:\\laragon\\www\\hope-ui\\laravel",
+  "author": {
+    "name": "Hidenao Miyamoto"
+  },
+  "bugs": {
+    "url": "https://github.com/mymth/vanillajs-datepicker/issues"
+  },
+  "description": "A vanilla JavaScript remake of bootstrap-datepicker for Bulma and other CSS frameworks",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "autoprefixer": "^9.8.6",
+    "bootstrap": "^4.5.3",
+    "bulma": "^0.9.1",
+    "bulma-tooltip": "^3.0.2",
+    "cssnano": "^4.1.10",
+    "docsify-cli": "^4.4.2",
+    "esm": "^3.2.25",
+    "foundation-sites": "^6.6.3",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.2.1",
+    "postcss": "^8.2.1",
+    "postcss-node-sass": "^2.1.8",
+    "postcss-scss": "^3.0.4",
+    "rollup": "^2.35.1",
+    "simulant": "^0.2.2",
+    "sinon": "^9.2.2",
+    "uglify-es": "^3.3.9",
+    "unexpected": "^12.0.0"
+  },
+  "exports": {
+    ".": "./js/main.js",
+    "./Datepicker": "./js/Datepicker.js",
+    "./DateRangePicker": "./js/DateRangePicker.js",
+    "./locales/*": "./js/i18n/locales/*.js",
+    "./locales/": "./js/i18n/locales/"
+  },
+  "homepage": "https://github.com/mymth/vanillajs-datepicker#readme",
+  "keywords": [
+    "datepicker",
+    "bulma",
+    "bootstrap",
+    "vanilla",
+    "javascript",
+    "scss"
+  ],
+  "license": "MIT",
+  "module": "js/main.js",
+  "name": "vanillajs-datepicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mymth/vanillajs-datepicker.git"
+  },
+  "scripts": {
+    "build": "npm run build:js && npm run build:locales && npm run build:css",
+    "build:css": "node scripts/build-css.js",
+    "build:js": "rollup -c",
+    "build:locales": "node scripts/build-locales.js",
+    "docsify": "docsify serve docs",
+    "make": "npm run build && npm run minify",
+    "make:css": "npm run build:css && npm run minify:css",
+    "make:js": "npm run build:js && npm run minify:js",
+    "minify": "npm run minify:js && npm run minify:css",
+    "minify:css": "node scripts/minify-css.js",
+    "minify:js": "node scripts/minify-js.js",
+    "test": "npm run test:lib && npm run test:unit",
+    "test:lib": "mocha -r esm test/unit/lib",
+    "test:unit": "mocha -r esm test/unit"
+  },
+  "version": "1.1.4"
+}

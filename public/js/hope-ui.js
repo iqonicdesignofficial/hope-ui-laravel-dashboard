@@ -192,59 +192,18 @@ if(typeof copy !== typeof undefined) {
 }
 
 /*---------------------------------------------------------------------
-              Flatpickr
+              Vanila Datepicker
 -----------------------------------------------------------------------*/
-const date_flatpickr = document.querySelectorAll('.date_flatpicker')
-  Array.from(date_flatpickr, (elem) => {
-    if (typeof flatpickr !== typeof undefined) {
-      flatpickr(elem, {
-        minDate: "today",
-        dateFormat: "Y-m-d",
-      })
-    }
-  })
-/*----------Range Flatpickr--------------*/
-const range_flatpicker = document.querySelectorAll('.range_flatpicker')
-Array.from(range_flatpicker, (elem) => {
-  if (typeof flatpickr !== typeof undefined) {
-    flatpickr(elem, {
-      mode: "range",
-      minDate: "today",
-      dateFormat: "Y-m-d",
-    })
+const datepickers = document.querySelectorAll('.vanila-datepicker')
+Array.from(datepickers, (elem) => {
+  if(typeof Datepicker !== typeof undefined) {
+    new Datepicker(elem)
   }
 })
-/*------------Wrap Flatpickr---------------*/
-const wrap_flatpicker = document.querySelectorAll('.wrap_flatpicker')
-Array.from(wrap_flatpicker, (elem) => {
-  if (typeof flatpickr !== typeof undefined) {
-    flatpickr(elem, {
-      wrap: true,
-      minDate: "today",
-      dateFormat: "Y-m-d",
-    })
-  }
-})
-/*-------------Time Flatpickr---------------*/
-const time_flatpickr = document.querySelectorAll('.time_flatpicker')
-Array.from(time_flatpickr, (elem) => {
-  if (typeof flatpickr !== typeof undefined) {
-    flatpickr(elem, {
-      enableTime: true,
-      noCalendar: true,
-      dateFormat: "H:i",
-    })
-  }
-})
-/*-------------Inline Flatpickr-----------------*/
-const inline_flatpickr = document.querySelectorAll('.inline_flatpickr')
-Array.from(inline_flatpickr, (elem) => {
-  if (typeof flatpickr !== typeof undefined) {
-    flatpickr(elem, {
-      inline: true,
-      minDate: "today",
-      dateFormat: "Y-m-d",
-    })
+const daterangePickers = document.querySelectorAll('.vanila-daterangepicker')
+Array.from(daterangePickers, (elem) => {
+  if(typeof Datepicker !== typeof undefined) {
+    new DateRangePicker(elem)
   }
 })
 
@@ -541,3 +500,63 @@ window.addEventListener('load', function() {
         }, false);
       });
 }, false);
+
+(function () {
+    /*----------------------------------------------------------
+                               Flatpickr
+    -------------------------------------------------------------*/
+    const date_flatpickr = document.querySelectorAll('.date_flatpicker')
+    Array.from(date_flatpickr, (elem) => {
+      if (typeof flatpickr !== typeof undefined) {
+        flatpickr(elem, {
+          minDate: "today",
+          dateFormat: "Y-m-d",
+        })
+      }
+    })
+    /*----------Range Flatpickr--------------*/
+    const range_flatpicker = document.querySelectorAll('.range_flatpicker')
+    Array.from(range_flatpicker, (elem) => {
+      if (typeof flatpickr !== typeof undefined) {
+        flatpickr(elem, {
+          mode: "range",
+          minDate: "today",
+          dateFormat: "Y-m-d",
+        })
+      }
+    })
+    /*------------Wrap Flatpickr---------------*/
+    const wrap_flatpicker = document.querySelectorAll('.wrap_flatpicker')
+    Array.from(wrap_flatpicker, (elem) => {
+      if (typeof flatpickr !== typeof undefined) {
+        flatpickr(elem, {
+          wrap: true,
+          minDate: "today",
+          dateFormat: "Y-m-d",
+        })
+      }
+    })
+    /*-------------Time Flatpickr---------------*/
+    const time_flatpickr = document.querySelectorAll('.time_flatpicker')
+    Array.from(time_flatpickr, (elem) => {
+      if (typeof flatpickr !== typeof undefined) {
+        flatpickr(elem, {
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+        })
+      }
+    })
+    /*-------------Inline Flatpickr-----------------*/
+    const inline_flatpickr = document.querySelectorAll('.inline_flatpickr')
+    Array.from(inline_flatpickr, (elem) => {
+      if (typeof flatpickr !== typeof undefined) {
+        flatpickr(elem, {
+          inline: true,
+          minDate: "today",
+          dateFormat: "Y-m-d",
+        })
+      }
+    })
+
+  })();

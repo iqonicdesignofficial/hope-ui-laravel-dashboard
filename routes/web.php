@@ -27,6 +27,25 @@ Route::get('/storage', function () {
     Artisan::call('storage:link');
 });
 
+
+//Landing-Pages Routes
+Route::group(['prefix' => 'landing-pages'], function() {
+Route::get('index',[HomeController::class, 'landing_index'])->name('landing-pages.index');
+Route::get('blog',[HomeController::class, 'landing_blog'])->name('landing-pages.blog');
+Route::get('blog-detail',[HomeController::class, 'landing_blog_detail'])->name('landing-pages.blog-detail');
+Route::get('about',[HomeController::class, 'landing_about'])->name('landing-pages.about');
+Route::get('contact',[HomeController::class, 'landing_contact'])->name('landing-pages.contact');
+Route::get('ecommerce',[HomeController::class, 'landing_ecommerce'])->name('landing-pages.ecommerce');
+Route::get('faq',[HomeController::class, 'landing_faq'])->name('landing-pages.faq');
+Route::get('feature',[HomeController::class, 'landing_feature'])->name('landing-pages.feature');
+Route::get('pricing',[HomeController::class, 'landing_pricing'])->name('landing-pages.pricing');
+Route::get('saas',[HomeController::class, 'landing_saas'])->name('landing-pages.saas');
+Route::get('shop',[HomeController::class, 'landing_shop'])->name('landing-pages.shop');
+Route::get('shop-detail',[HomeController::class, 'landing_shop_detail'])->name('landing-pages.shop-detail');
+Route::get('software',[HomeController::class, 'landing_software'])->name('landing-pages.software');
+Route::get('startup',[HomeController::class, 'landing_startup'])->name('landing-pages.startup');
+});
+
 //UI Pages Routs
 Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
 

@@ -3,31 +3,31 @@
     <h3 class="offcanvas-title" id="offcanvasExampleLabel">Settings</h3>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body data-scrollbar">
     <div class="row">
       <div class="col-lg-12">
          <h5 class="mb-3">Scheme</h5>
         <div class="d-grid gap-x-3 grid-cols-3 mb-4">
-          <div class="btn-border" data-setting="color-mode" data-name="color" data-value="auto">
-              <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="btn btn-border" data-setting="color-mode" data-name="color" data-value="auto">
+              <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill="currentColor" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
               </svg>
             <span class="ms-2 "> Auto </span>
           </div>
-           <div class="btn-border" data-setting="color-mode" data-name="color" data-value="dark">
-             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <div class="btn btn-border" data-setting="color-mode" data-name="color" data-value="dark">
+             <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill="currentColor" d="M9,2C7.95,2 6.95,2.16 6,2.46C10.06,3.73 13,7.5 13,12C13,16.5 10.06,20.27 6,21.54C6.95,21.84 7.95,22 9,22A10,10 0 0,0 19,12A10,10 0 0,0 9,2Z" />
               </svg>
             <span class="ms-2 "> Dark  </span>
           </div>
-           <div class="btn-border active" data-setting="color-mode" data-name="color" data-value="light">
-              <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <div class="btn btn-border active" data-setting="color-mode" data-name="color" data-value="light">
+              <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z" />
             </svg>
             <span class="ms-2 "> Light</span>
           </div>
         </div>
-        <hr class="hr-horizontal"> 
+        <hr class="hr-horizontal">
         <div class="d-flex align-items-center justify-content-between">
         <h5 class="mt-4 mb-3">Color Customizer</h5>
         <div  data-value="theme-color-default" data-info="#079aa2" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Default">
@@ -38,22 +38,22 @@
           </div>
         </div>
         <div class="grid-cols-5 mb-4 d-grid gap-x-2">
-          <div class="btn-border"  data-value="theme-color-blue"  data-info="#573BFF" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-1">
+          <div class="btn-border bg-transparent active"  data-value="theme-color-blue"  data-info="#573BFF" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-1">
           <svg  class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"> <circle cx="12" cy="12" r="10" fill="#00C3F9" /> <path d="M2,12 a1,1 1 1,0 20,0" fill="#573BFF" /></svg>
           </div>
-          <div class="btn-border" data-value="theme-color-gray" data-info="#FD8D00" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-2">
+          <div class="btn-border bg-transparent active" data-value="theme-color-gray" data-info="#FD8D00" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-2">
           <svg  class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"> <circle cx="12" cy="12" r="10" fill="#91969E" /> <path d="M2,12 a1,1 1 1,0 20,0" fill="#FD8D00" /></svg>
           </div>
-          <div class="btn-border"  data-value="theme-color-red" data-info="#366AF0" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-3">
+          <div class="btn-border bg-transparent active"  data-value="theme-color-red" data-info="#366AF0" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-3">
           <svg  class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"> <circle cx="12" cy="12" r="10" fill="#DB5363" /> <path d="M2,12 a1,1 1 1,0 20,0" fill="#366AF0" /></svg>
           </div>
-          <div class="btn-border"  data-value="theme-color-yellow" data-info="#6410F1" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-4">
+          <div class="btn-border bg-transparent active"  data-value="theme-color-yellow" data-info="#6410F1" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-4">
           <svg  class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"> <circle cx="12" cy="12" r="10" fill="#EA6A12" /> <path d="M2,12 a1,1 1 1,0 20,0" fill="#6410F1" /></svg>
           </div>
-          <div class="btn-border"  data-value="theme-color-pink" data-info="#25C799" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-5">
+          <div class="btn-border bg-transparent active"  data-value="theme-color-pink" data-info="#25C799" data-setting="color-mode1" data-name="color" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Theme-5">
           <svg  class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"> <circle cx="12" cy="12" r="10" fill="#E586B3" /> <path d="M2,12 a1,1 1 1,0 20,0" fill="#25C799" /></svg>
           </div>
-          
+
         </div>
         <hr class="hr-horizontal">
         <h5 class="mb-3 mt-4">Scheme Direction</h5>
@@ -71,38 +71,19 @@
         </div>
         <hr class="hr-horizontal">
         <h5 class="mt-4 mb-3">Sidebar Color</h5>
-        <div class="d-grid gap-x-3 grid-cols-2 mb-4">
-          <div class="btn btn-border mb-4" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-dark">
-              <i class="text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                </svg>
-              </i>
+          <div class="d-grid gap-3 grid-cols-2 mb-4">
+            <div class="btn btn-border d-block" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-white">
+              <span class="ms-2 "> Default </span>
+            </div>
+          <div class="btn btn-border d-block" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-dark">
             <span class="ms-2 "> Dark </span>
           </div>
-          <div class="btn btn-border mb-4" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-color">
-              <i class="text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                </svg>
-              </i>
-            <span class="ms-2 "> Color </span>
+          <div class="btn btn-border d-block" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-color">
+            <span class=""> Color </span>
           </div>
-          <div class="btn btn-border active" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-white">
-              <i class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="8" fill="currentColor" stroke="black" stroke-width="3"></circle>
-                </svg>
-              </i>
-            <span class="ms-2 "> White </span>
-          </div>
-          <div class="btn btn-border " data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-transparent">
-              <i class="text-body">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="8" fill="#F5F6FA" stroke="black" stroke-width="3"></circle>
-                </svg>
-              </i>
-            <span class="ms-2 "> Transparent </span>
+
+          <div class="btn btn-border d-block" data-setting="sidebar" data-name="sidebar-color" data-value="sidebar-transparent">
+            <span class=""> Transparent </span>
           </div>
         </div>
         <hr class="hr-horizontal">
@@ -171,13 +152,8 @@
               <img src="{{asset('images/settings/light/12.png')}}" alt="transparent" class="mode light-img img-fluid btn-border p-0 flex-column" data-setting="navbar" data-target=".iq-navbar" data-name="navbar-type" data-value="navs-transparent">
             <span class="mt-2">Transparent</span>
           </div>
-          <div class="btn btn-border active col-span-full" data-setting="navbar" data-name="navbar-default" data-value="default">
-              <i class="text-body">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="8" fill="#F5F6FA" stroke="black" stroke-width="3"></circle>
-                </svg>
-              </i>
-            <span class="ms-2 "> Default </span>
+          <div class="btn btn-border active col-span-full mt-4 d-block" data-setting="navbar" data-name="navbar-default" data-value="default">
+            <span class=""> Default Nabvar </span>
           </div>
         </div>
       </div>

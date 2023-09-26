@@ -1,0 +1,184 @@
+.landing-pages {
+    h1 {
+        font-size: 5.625rem;
+    }
+
+    h2 {
+        font-size: 4.188rem;
+    }
+
+    h3 {
+        font-size: 3.188rem;
+    }
+
+    h4 {
+        font-size: 2.375rem;
+    }
+
+    h5 {
+        font-size: 1.750rem;
+    }
+
+    h6 {
+        font-size: 1.321rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        color: #232D42;
+    }
+
+    small {
+        font-size: 0.75rem;
+    }
+
+    .section-padding {
+        padding: 9.5rem 1rem 9.5rem 1rem;
+    }
+    .section-card-padding{
+        padding: 9.5rem 1rem 7.5rem 1rem;
+    }
+    .inner-card-box{
+        padding: 3rem 0rem 3rem 0rem;
+    }
+
+    .body-bg {
+        background: #F5F5F5;
+    }
+
+    .page-bg {
+        background: #F9F9F9;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 600;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-weight: 500;
+    }
+
+    .inner-box {
+        padding: 5rem 0rem 5rem 0rem;
+    }
+
+    .title-top {
+        margin-top: 64px;
+    }
+
+    .client-img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .landing-pages {
+        h1 {
+            line-height: 70px;
+            font-size: 60px;
+        }
+
+        h2 {
+            line-height: 55px;
+            font-size: 45px;
+        }
+
+        h3 {
+            line-height: 45px;
+            font-size: 35px;
+        }
+
+        h4 {
+            line-height: 35px;
+            font-size: 25px;
+        }
+
+        h5 {
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        h6 {
+            line-height: 26px;
+            font-size: 16px;
+        }
+
+        .section-padding {
+            padding-top: 52px;
+            padding-right: 16px;
+            padding-bottom: 52px;
+            padding-left: 16px;
+        }
+        .section-card-padding {
+            padding-top: 52px;
+            padding-right: 16px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+        }
+
+        .inner-box {
+            padding-top: 50px;
+            padding-right: 16px;
+            padding-bottom: 50px;
+            padding-left: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .landing-pages {
+        h1 {
+            line-height: 55px;
+            font-size: 50px;
+        }
+
+        h2 {
+            line-height: 42px;
+            font-size: 32px;
+        }
+
+        h3 {
+            line-height: 38px;
+            font-size: 28px;
+        }
+
+        h4 {
+            line-height: 32px;
+            font-size: 22px;
+        }
+
+        h5 {
+            line-height: 28px;
+            font-size: 18px;
+        }
+
+        h6 {
+            line-height: 26px;
+            font-size: 16px;
+        }
+
+        .title-top {
+            margin-top: 24px;
+        }
+        .client-img {
+            display: block;
+            margin: 0 auto;
+            width: auto;
+        }
+        .sub-header {
+            overflow: hidden;
+        }
+    } 
+}

@@ -228,4 +228,65 @@ class HomeController extends Controller
     {
         return view('terms-of-use');
     }
+
+
+    /*
+    * Landing Page Routs
+    */
+    public function landing_index(Request $request)
+    {
+        return view('landing-pages.pages.index');
+    }
+    public function landing_blog(Request $request)
+    {
+        return view('landing-pages.pages.blog');
+    }
+    public function landing_about(Request $request)
+    {
+        return view('landing-pages.pages.about');
+    }
+    public function landing_blog_detail(Request $request)
+    {
+        return view('landing-pages.pages.blog-detail');
+    }
+    public function landing_contact(Request $request)
+    {
+        return view('landing-pages.pages.contact-us');
+    }
+    public function landing_ecommerce(Request $request)
+    {
+        return view('landing-pages.pages.ecommerce-landing-page');
+    }
+    public function landing_faq(Request $request)
+    {
+        return view('landing-pages.pages.faq');
+    }
+    public function landing_feature(Request $request)
+    {
+        return view('landing-pages.pages.feature');
+    }
+    public function landing_pricing(Request $request)
+    {
+        return view('landing-pages.pages.pricing');
+    }
+    public function landing_saas(Request $request)
+    {
+        return view('landing-pages.pages.saas-marketing-landing-page');
+    }
+    public function landing_shop(Request $request)
+    {
+        return view('landing-pages.pages.shop');
+    }
+    public function landing_shop_detail(Request $request)
+    {
+        return view('landing-pages.pages.shop_detail');
+    }
+    public function landing_software(Request $request)
+    {
+        return view('landing-pages.pages.software-landing-page');
+    }
+    public function landing_startup(Request $request)
+    {
+        return view('landing-pages.pages.startup-landing-page');
+    }
 }

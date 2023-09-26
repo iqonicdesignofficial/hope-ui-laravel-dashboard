@@ -17,12 +17,14 @@ const mix = require('laravel-mix');
 //     require('autoprefixer'),
 // ]);
 mix.js('resources/js/libs.js', 'public/js/libs.min.js')
+    .js('resources/js/app-landing.js', 'public/js/app-landing.min.js')
     .sass('resources/sass/libs.scss','public/css/libs.min.css')
     .sass('public/scss/hope-ui.scss', 'public/css')
     .sass('public/scss/custom.scss', 'public/css')
     .sass('public/scss/dark.scss', 'public/css')
     .sass('public/scss/rtl.scss', 'public/css')
     .sass('public/scss/customizer.scss', 'public/css')
+    .sass('public/scss/landing-pages/landing-pages.scss', 'public/css')
     .options({
         processCssUrls: false
     });

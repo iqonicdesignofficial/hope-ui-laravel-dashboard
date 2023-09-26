@@ -1,0 +1,53 @@
+#testimonial-one-slider {
+    position: relative;
+
+    .slider-circle-btn {
+        .swiper-button {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+
+            &.swiper-button-next {
+                right: 0.2rem;
+                left: auto;
+                top: 45%;
+                background: var(--#{$variable-prefix}primary);
+                border-radius: 5rem;
+
+                &:after {
+                    content: 'next';
+                    font-size: 0.75rem;
+                    ;
+                    color: $white;
+                }
+            }
+
+            &.swiper-button-prev {
+                &:after {
+                    content: 'prev';
+                    font-size: 0.75rem;
+                    ;
+                    color: $white;
+                }
+
+                right:auto;
+                left: 0.2rem;
+                top: 45%;
+                background: var(--#{$variable-prefix}primary);
+                border-radius: 5rem;
+            }
+        }
+    }
+}
+
+//Back-To-Top
+
+#back-to-top {
+    display: inline !important;
+
+    .top {
+        bottom: 1.563rem;
+        right: 1.563rem;
+        z-index: 999;
+    }
+}

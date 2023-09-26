@@ -1,0 +1,43 @@
+.banner-one-app {
+    padding: 6.25rem 0rem 3.125rem 0.675rem;
+}
+
+.banner-one-img {
+    img {
+        width: 90%;
+    }
+}
+
+.features-card {
+    margin-top: -370px;
+}
+
+.sub-header {
+    background-image: url(../../../../images/landing-pages/images/top-header.webp);
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+    background-color: $primary;
+    background-size: cover;
+    color: $white;
+}
+
+.features-card {
+    padding: 80px 0px 100px 0px;
+}
+
+
+@include media-breakpoint-down(lg) {
+    .image-position {
+        display: grid;
+        justify-content: center;
+    }
+
+    .features-card {
+        margin-top: 0px;
+        padding: 40px 0px 50px 0px;
+    }
+
+    .banner-one-app {
+        padding: 3.25rem 0rem 3.125rem 0.675rem;
+    }
+}

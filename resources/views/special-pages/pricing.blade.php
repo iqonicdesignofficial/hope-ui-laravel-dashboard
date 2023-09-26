@@ -529,7 +529,7 @@
                               If you will take advantage of the above-listed amenities, classes, and services, Life Time's membership fees may be worth the cost.
                            </p>
                            <div class="mb-5 pt-2">
-                              <p class="line-around text-secondary mb-0"><span class="line-around-1">Included Features</span></p>
+                              <p class="line-around text-gray mb-0"><span class="line-around-1">Included Features</span></p>
                            </div>
                            <div class="row">
                               <div class="col-lg-6 col-md-6 col-sm-12">
@@ -581,7 +581,7 @@
                               </h1>
                               <small class="ms-1 text-muted fw-light">USD</small>
                            </div>
-                           <div class="font-medium text-center text-secondary">
+                           <div class="font-medium text-center text-gray">
                               <div>No monthly subscription,</div>
                               <div>you only pay once.</div>
                            </div>
@@ -597,7 +597,7 @@
                <div class="card my-5">
                   <div class="card-body">
                      <h2 class="my-0 fw-normal mb-4">Enterprise</h2>
-                     <h1 class="card-title pricing-card-title mb-0">$29 <small class="text-secondary"> / month</small></h1>
+                     <h1 class="card-title pricing-card-title mb-0">$29 <small class="text-gray"> / month</small></h1>
                      <p class="mb-0">billed yearly</p>
                      <p>$79.9 billed monthly</p>
                      <ul class="list-unstyled my-3">
@@ -615,7 +615,7 @@
                   <div class="card-body">
                      <h2><span class="badge rounded-pill bg-soft-primary mb-4"><small class="text-uppercase px-3">Popular</small></span></h2>
                      <h2 class="my-0 fw-normal mb-4">Pro</h2>
-                     <h1 class="card-title pricing-card-title mb-0">$15<small class="text-secondary"> / month</small></h1>
+                     <h1 class="card-title pricing-card-title mb-0">$15<small class="text-gray"> / month</small></h1>
                      <p class="mb-0">billed yearly</p>
                      <p>$55.0 billed monthly</p>
                      <ul class="list-unstyled my-3">
@@ -632,7 +632,7 @@
                <div class="card my-5">
                   <div class="card-body">
                      <h2 class="my-0 fw-normal mb-4">Premium</h2>
-                     <h1 class="card-title pricing-card-title mb-0">$49 <small class="text-secondary"> / month</small></h1>
+                     <h1 class="card-title pricing-card-title mb-0">$49 <small class="text-gray"> / month</small></h1>
                      <p class="mb-0">billed yearly</p>
                      <p>$99.9 billed monthly</p>
                      <ul class="list-unstyled my-3">

@@ -130,7 +130,7 @@
                                 <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
                                 </svg>
                                 <div class="ms-2">
-                                <span class="text-secondary">Sales</span>
+                                <span class="text-gray">Sales</span>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center ms-3 text-info">
@@ -138,12 +138,12 @@
                                 <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
                                 </svg>
                                 <div class="ms-2">
-                                <span class="text-secondary">Cost</span>
+                                <span class="text-gray">Cost</span>
                                 </div>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <a href="#" class="text-secondary dropdown-toggle" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                             This Week
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton2">
@@ -165,7 +165,7 @@
                             <h4 class="card-title">Earnings</h4>
                         </div>
                         <div class="dropdown">
-                            <a href="#" class="text-secondary dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 This Week
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
@@ -184,7 +184,7 @@
                                     <circle cx="12" cy="12" r="8" fill="#3a57e8"></circle>
                                 </svg>
                                 <div class="ms-3">
-                                    <span class="text-secondary">Fashion</span>
+                                    <span class="text-gray">Fashion</span>
                                     <h6>251K</h6>
                                 </div>
                                 </div>
@@ -193,7 +193,7 @@
                                     <circle cx="12" cy="12" r="8" fill="#4bc7d2"></circle>
                                 </svg>
                                 <div class="ms-3">
-                                    <span class="text-secondary">Accessories</span>
+                                    <span class="text-gray">Accessories</span>
                                     <h6>176K</h6>
                                 </div>
                                 </div>
@@ -209,7 +209,7 @@
                             <h4 class="card-title">Conversions</h4>
                         </div>
                         <div class="dropdown">
-                            <a href="#" class="text-secondary dropdown-toggle" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
                                 This Week
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
@@ -493,12 +493,12 @@
                     <div class="card-body d-flex justify-content-around text-center">
                         <div>
                             <h2 class="mb-2">750<small>K</small></h2>
-                            <p class="mb-0 text-secondary">Website Visitors</p>
+                            <p class="mb-0 text-gray">Website Visitors</p>
                         </div>
                         <hr class="hr-vertial">
                         <div>
                             <h2 class="mb-2">7,500</h2>
-                            <p class="mb-0 text-secondary">New Customers</p>
+                            <p class="mb-0 text-gray">New Customers</p>
                         </div>
                     </div>
                     </div>

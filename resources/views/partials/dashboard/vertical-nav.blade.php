@@ -110,7 +110,7 @@
                     <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
                 </svg>
             </i>
-            <span>Design System<span class="badge rounded-pill bg-success">UI</span></span>
+            <span class="item-name">Design System<span class="badge rounded-pill bg-success item-name">UI</span></span>
         </a>
     </li>
     <li><hr class="hr-horizontal"></li>
@@ -604,7 +604,7 @@
     <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-table" role="button" aria-expanded="false" aria-controls="sidebar-table">
             <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="none">
                     <path d="M2 5C2 4.44772 2.44772 4 3 4H8.66667H21C21.5523 4 22 4.44772 22 5V8H15.3333H8.66667H2V5Z" fill="currentColor" stroke="white"/>
                     <path d="M2 8H6H14H22V11V19C22 19.5523 21.5523 20 21 20H14H6H3C2.44772 20 2 19.5523 2 19V11V8Z" fill="currentColor" fill-opacity="0.4"/>
                     <path d="M6 8H2V11M6 8V20M6 8H14M6 20H3C2.44772 20 2 19.5523 2 19V11M6 20H14M14 8H22V11M14 8V20M14 20H21C21.5523 20 22 19.5523 22 19V11M2 11H22M2 14H22M2 17H22M10 8V20M18 8V20" stroke="white"/>

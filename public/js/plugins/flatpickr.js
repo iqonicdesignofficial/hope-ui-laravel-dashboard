@@ -6,7 +6,7 @@ Array.from(datetime, (elem) => {
         dateFormat: "Y-m-d H:i",
     })
   }
-}) 
+})
 const humandate = document.querySelectorAll('.flatpickr_humandate')
 Array.from(humandate, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -16,7 +16,7 @@ Array.from(humandate, (elem) => {
       dateFormat: "Y-m-d",
   })
   }
-}) 
+})
 const minDate = document.querySelectorAll('.flatpickr_minDate')
 Array.from(minDate, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -25,7 +25,7 @@ Array.from(minDate, (elem) => {
   }
   )
   }
-}) 
+})
 const maxDate = document.querySelectorAll('.flatpickr_maxDate')
 Array.from(maxDate, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -33,10 +33,10 @@ Array.from(maxDate, (elem) => {
       dateFormat: "d.m.Y",
       maxDate: "15.12.2017"
   }
-  
+
   )
   }
-}) 
+})
 const specificdisable = document.querySelectorAll('.flatpickr_specificdisable')
 Array.from(specificdisable, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -47,7 +47,7 @@ Array.from(specificdisable, (elem) => {
     }
   )
   }
-}) 
+})
 
 
 const disableexcept = document.querySelectorAll('.flatpickr_disableexcept')
@@ -56,10 +56,10 @@ Array.from(disableexcept, (elem) => {
     flatpickr(elem , {
       enable: ["2025-03-30", "2025-05-21", "2025-06-08", new Date(2025, 8, 9) ]
   }
-      
+
   )
   }
-}) 
+})
 const multidate = document.querySelectorAll('.flatpickr_multidate')
 Array.from(multidate, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -67,10 +67,10 @@ Array.from(multidate, (elem) => {
       mode: "multiple",
       dateFormat: "Y-m-d"
   }
-      
+
   )
   }
-}) 
+})
 
 
 const range = document.querySelectorAll('.flatpickrrange')
@@ -82,7 +82,7 @@ Array.from(range, (elem) => {
       dateFormat: "Y-m-d",
     })
   }
-}) 
+})
 const date= document.querySelectorAll('.flatpickrdate')
 Array.from(date, (elem) => {
   if(typeof flatpickr !== typeof undefined) {
@@ -102,6 +102,6 @@ Array.from(time, (elem) => {
       dateFormat: "H:i",
     })
   }
-}) 
+})
 
 

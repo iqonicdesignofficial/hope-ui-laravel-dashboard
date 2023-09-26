@@ -1,0 +1,27 @@
+// Configuration
+@import "../bootstrap/functions";
+// Variables
+@import "../hope-ui-design-system/variable";
+@import "../hope-ui-design-system/variables/index";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+
+@import "./components/root";
+
+// app landing
+@import "./components/widgets/banner";
+@import "./components/widgets/footer";
+@import "./components/widgets/services";
+
+// software landing
+@import "./components/widgets/card";
+
+// header
+@import "./components/widgets/header";
+
+// Scrollbar
+@import "./components/widgets/scrollbar";
+
+//swiper landing
+@import "./components/widgets/swiper";

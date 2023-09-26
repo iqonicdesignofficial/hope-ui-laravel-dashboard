@@ -1,0 +1,17 @@
+
+.card-block {
+	display: flex; 
+	flex-grow: 1; 
+	flex-direction: column;
+	&.card-stretch {
+		-webkit-box-align: stretch; 
+		-ms-flex-align: stretch; 
+		align-items: stretch;
+	}
+	&.card-height-half {
+		height: calc(50% - 2rem);
+	}
+	&.card-height {
+		height: calc(100% - 2rem);
+	}
+}

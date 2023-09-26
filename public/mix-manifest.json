@@ -1,9 +1,11 @@
 {
     "/js/libs.min.js": "/js/libs.min.js",
+    "/js/app-landing.min.js": "/js/app-landing.min.js",
     "/css/libs.min.css": "/css/libs.min.css",
     "/css/hope-ui.css": "/css/hope-ui.css",
     "/css/rtl.css": "/css/rtl.css",
     "/css/dark.css": "/css/dark.css",
     "/css/custom.css": "/css/custom.css",
+    "/css/landing-pages.css": "/css/landing-pages.css",
     "/css/customizer.css": "/css/customizer.css"
 }
