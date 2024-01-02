@@ -1,11 +1,14 @@
 <?php
 
 // Controllers
+
+use App\Http\Controllers\DeviceDataController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Security\RolePermission;
 use App\Http\Controllers\Security\RoleController;
 use App\Http\Controllers\Security\PermissionController;
 use App\Http\Controllers\UserController;
+use App\Models\DeviceData;
 use Illuminate\Support\Facades\Artisan;
 // Packages
 use Illuminate\Support\Facades\Route;
@@ -23,40 +26,41 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
 
-Route::get('/storage', function () {
-    Artisan::call('storage:link');
-});
+// Route::get('/storage', function () {
+//     Artisan::call('storage:link');
+// });
 
 
 //Landing-Pages Routes
-Route::group(['prefix' => 'landing-pages'], function() {
-Route::get('index',[HomeController::class, 'landing_index'])->name('landing-pages.index');
-Route::get('blog',[HomeController::class, 'landing_blog'])->name('landing-pages.blog');
-Route::get('blog-detail',[HomeController::class, 'landing_blog_detail'])->name('landing-pages.blog-detail');
-Route::get('about',[HomeController::class, 'landing_about'])->name('landing-pages.about');
-Route::get('contact',[HomeController::class, 'landing_contact'])->name('landing-pages.contact');
-Route::get('ecommerce',[HomeController::class, 'landing_ecommerce'])->name('landing-pages.ecommerce');
-Route::get('faq',[HomeController::class, 'landing_faq'])->name('landing-pages.faq');
-Route::get('feature',[HomeController::class, 'landing_feature'])->name('landing-pages.feature');
-Route::get('pricing',[HomeController::class, 'landing_pricing'])->name('landing-pages.pricing');
-Route::get('saas',[HomeController::class, 'landing_saas'])->name('landing-pages.saas');
-Route::get('shop',[HomeController::class, 'landing_shop'])->name('landing-pages.shop');
-Route::get('shop-detail',[HomeController::class, 'landing_shop_detail'])->name('landing-pages.shop-detail');
-Route::get('software',[HomeController::class, 'landing_software'])->name('landing-pages.software');
-Route::get('startup',[HomeController::class, 'landing_startup'])->name('landing-pages.startup');
-});
+// Route::group(['prefix' => 'landing-pages'], function() {
+// Route::get('index',[HomeController::class, 'landing_index'])->name('landing-pages.index');
+// Route::get('blog',[HomeController::class, 'landing_blog'])->name('landing-pages.blog');
+// Route::get('blog-detail',[HomeController::class, 'landing_blog_detail'])->name('landing-pages.blog-detail');
+// Route::get('about',[HomeController::class, 'landing_about'])->name('landing-pages.about');
+// Route::get('contact',[HomeController::class, 'landing_contact'])->name('landing-pages.contact');
+// Route::get('ecommerce',[HomeController::class, 'landing_ecommerce'])->name('landing-pages.ecommerce');
+// Route::get('faq',[HomeController::class, 'landing_faq'])->name('landing-pages.faq');
+// Route::get('feature',[HomeController::class, 'landing_feature'])->name('landing-pages.feature');
+// Route::get('pricing',[HomeController::class, 'landing_pricing'])->name('landing-pages.pricing');
+// Route::get('saas',[HomeController::class, 'landing_saas'])->name('landing-pages.saas');
+// Route::get('shop',[HomeController::class, 'landing_shop'])->name('landing-pages.shop');
+// Route::get('shop-detail',[HomeController::class, 'landing_shop_detail'])->name('landing-pages.shop-detail');
+// Route::get('software',[HomeController::class, 'landing_software'])->name('landing-pages.software');
+// Route::get('startup',[HomeController::class, 'landing_startup'])->name('landing-pages.startup');
+// });
 
 //UI Pages Routs
-Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
+Route::get('/', [HomeController::class, 'signin'])->name('signin');
 
 Route::group(['middleware' => 'auth'], function () {
     // Permission Module
-    Route::get('/role-permission',[RolePermission::class, 'index'])->name('role.permission.list');
-    Route::resource('permission',PermissionController::class);
-    Route::resource('role', RoleController::class);
+    // Route::get('/role-permission',[RolePermission::class, 'index'])->name('role.permission.list');
+    // Route::resource('permission',PermissionController::class);
+    // Route::resource('role', RoleController::class);
 
     // Dashboard Routes
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/device/{id}', [DeviceDataController::class, 'show'])->name('dashboard.device');
 
     // Users Module
     Route::resource('users', UserController::class);
@@ -73,15 +77,15 @@ Route::group(['prefix' => 'menu-style'], function() {
 });
 
 //App Details Page => 'special-pages'], function() {
-Route::group(['prefix' => 'special-pages'], function() {
-    //Example Page Routs
-    Route::get('billing', [HomeController::class, 'billing'])->name('special-pages.billing');
-    Route::get('calender', [HomeController::class, 'calender'])->name('special-pages.calender');
-    Route::get('kanban', [HomeController::class, 'kanban'])->name('special-pages.kanban');
-    Route::get('pricing', [HomeController::class, 'pricing'])->name('special-pages.pricing');
-    Route::get('rtl-support', [HomeController::class, 'rtlsupport'])->name('special-pages.rtlsupport');
-    Route::get('timeline', [HomeController::class, 'timeline'])->name('special-pages.timeline');
-});
+// Route::group(['prefix' => 'special-pages'], function() {
+//     //Example Page Routs
+//     Route::get('billing', [HomeController::class, 'billing'])->name('special-pages.billing');
+//     Route::get('calender', [HomeController::class, 'calender'])->name('special-pages.calender');
+//     Route::get('kanban', [HomeController::class, 'kanban'])->name('special-pages.kanban');
+//     Route::get('pricing', [HomeController::class, 'pricing'])->name('special-pages.pricing');
+//     Route::get('rtl-support', [HomeController::class, 'rtlsupport'])->name('special-pages.rtlsupport');
+//     Route::get('timeline', [HomeController::class, 'timeline'])->name('special-pages.timeline');
+// });
 
 //Widget Routs
 Route::group(['prefix' => 'widget'], function() {
@@ -136,5 +140,5 @@ Route::group(['prefix' => 'icons'], function() {
     Route::get('colored', [HomeController::class, 'colored'])->name('icons.colored');
 });
 //Extra Page Routs
-Route::get('privacy-policy', [HomeController::class, 'privacypolicy'])->name('pages.privacy-policy');
-Route::get('terms-of-use', [HomeController::class, 'termsofuse'])->name('pages.term-of-use');
+// Route::get('privacy-policy', [HomeController::class, 'privacypolicy'])->name('pages.privacy-policy');
+// Route::get('terms-of-use', [HomeController::class, 'termsofuse'])->name('pages.term-of-use');
