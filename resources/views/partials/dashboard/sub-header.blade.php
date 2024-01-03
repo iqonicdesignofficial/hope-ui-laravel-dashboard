@@ -32,3 +32,42 @@
         <img src="{{asset('images/dashboard/top-header5.png')}}" alt="header" class="theme-color-pink-img img-fluid w-100 h-100 animated-scaleX">
     </div>
 </div>
+<div class="modal fade" id="addDeviceModal" tabindex="-1" aria-labelledby="addDeviceModal" aria-hidden="
+@isset($error)
+    {{ 'false' }}
+@else
+        {{ 'true' }}
+@endisset">
+    <div class="modal-dialog">
+       <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Add New Device</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('device.add') }}" method="POST">
+                    @csrf
+                    @isset($error)
+                        <div class="mb-3" v-if="showErrorMessage">
+                            <label for="validationServer03" class="form-label">Device Code</label>
+                            <input type="text" class="form-control is-invalid" id="device_code" required v-model="deviceCode" name="device_code">
+                            <div class="invalid-feedback">
+                                Device Code already exists
+                            </div>
+                        </div>
+                    @else
+                        <div class="mb-3" v-if="!showErrorMessage">
+                            <label for="recipient-name" class="col-form-label">Device Code:</label>
+                            <input type="text" class="form-control" id="device_code" required v-model="deviceCode" name="device_code">
+                        </div>
+                    @endisset
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">{{ __('Add') }}</button>
+            </div>
+                </form>
+        </div>
+    </div>
+</div>

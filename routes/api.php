@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ActivityRecordController;
+use App\Http\Controllers\DeviceDataController;
 use App\Http\Controllers\FeedingDataController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('/feeding', [FeedingDataController::class, 'store']);
+Route::post('/activity', [ActivityRecordController::class, 'store']);
+Route::post('/connect', [DeviceDataController::class, 'show']);

@@ -205,43 +205,6 @@
                               </div>
                            </div>
                         @endforeach
-                        {{-- 
-                        <div class=" d-flex profile-media align-items-top mb-2">
-                           <div class="profile-dots-pills border-primary mt-1"></div>
-                           <div class="ms-4">
-                              <h6 class=" mb-1">Manual Feeding #1</h6>
-                              <span class="mb-0">11 JUL 8:10 PM</span>
-                           </div>
-                        </div>
-                        <div class=" d-flex profile-media align-items-top mb-2">
-                           <div class="profile-dots-pills border-primary mt-1"></div>
-                           <div class="ms-4">
-                              <h6 class=" mb-1">Water Level Low #1</h6>
-                              <span class="mb-0">11 JUL 11 PM</span>
-                           </div>
-                        </div>
-                        <div class=" d-flex profile-media align-items-top mb-2">
-                           <div class="profile-dots-pills border-primary mt-1"></div>
-                           <div class="ms-4">
-                              <h6 class=" mb-1">Automated Feeding #2</h6>
-                              <span class="mb-0">11 JUL 7:64 PM</span>
-                           </div>
-                        </div>
-                        <div class=" d-flex profile-media align-items-top mb-2">
-                           <div class="profile-dots-pills border-primary mt-1"></div>
-                           <div class="ms-4">
-                              <h6 class=" mb-1">Manual Feeding #2</h6>
-                              <span class="mb-0">11 JUL 1:21 AM</span>
-                           </div>
-                        </div>
-                        <div class=" d-flex profile-media align-items-top mb-1">
-                           <div class="profile-dots-pills border-primary mt-1"></div>
-                           <div class="ms-4">
-                              <h6 class=" mb-1">Automated Feeding #1</h6>
-                              <span class="mb-0">11 JUL 4:50 AM</span>
-                           </div>
-                        </div> 
-                        --}}
                      </div>
                   </div>
                </div>
@@ -252,35 +215,37 @@
 </x-app-layout>
 
 <script>
-      var options = {
-          series: [{
-          name: 'tank 1',
-          data: [2, 1, 3, 1, 2, 3, 5]
-        }, {
-          name: 'tank 2',
-          data: [1, 0, 3, 1, 2, 2, 1]
-        }],
-          chart: {
-          height: 300,
-          type: 'area'
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        xaxis: {
-          type: 'datetime',
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-20T01:30:00.000Z", "2018-09-21T02:30:00.000Z", "2018-09-22T03:30:00.000Z", "2018-09-23T04:30:00.000Z", "2018-09-24T05:30:00.000Z", "2018-09-25T06:30:00.000Z"]
-        },
-        tooltip: {
-          x: {
-            format: 'dd/MM/yy HH:mm'
-          },
-        },
-        };
+   var options = {
+      series: [],
+      chart: {
+      height: 300,
+      type: 'area'
+   },
+   dataLabels: {
+      enabled: false
+   },
+   stroke: {
+      curve: 'smooth'
+   },
+   xaxis: {
+      type: 'datetime',
+      categories: []
+   },
+   tooltip: {
+      x: {
+      format: 'dd/MM/yy HH:mm'
+      },
+   },
+   };
 
-        var chart = new ApexCharts(document.querySelector("#feeding-freq"), options);
-        chart.render();
+   fetch('/getFeedingFrequency/'+{{ $device->id }})
+      .then(response => response.json())
+      .then(data => {
+          options.series = data.map(tankData => ({
+            name: tankData.name,
+            data: tankData.data
+         }));
+         var chart = new ApexCharts(document.querySelector("#feeding-freq"), options);
+         chart.render();
+      });
 </script>

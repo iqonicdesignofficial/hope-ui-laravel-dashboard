@@ -19,6 +19,23 @@ class DeviceDataController extends Controller
         return DeviceData::all();
     }
     /**
+     * Update Device status to online
+     */
+    public function makeOnline($device_code) 
+    {
+        $device = DeviceData::where('device_code', $device_code)->first();
+        
+        if ($device) {
+            $device->update(['device_status' => 'online']);
+
+            return response()->json(['message' => 'Device Connected'], 200);
+        } else {
+
+            return response()->json(['message' => 'No device in record'], 200);
+        }
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -29,9 +46,30 @@ class DeviceDataController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDeviceDataRequest $request)
-    {
-        //
+    public function store(StoreDeviceDataRequest $request): View
+    {   
+        request()->validate([
+            'device_code' => 'required'
+        ]);
+        $device = DeviceData::where('device_code', $request->device_code)->first();
+
+        if ($device) {
+            $error = 'device already exists';
+            $devices = DeviceData::all();
+            return view('dashboards.dashboard', compact('error', 'devices'));
+
+        } else {
+            DeviceData::create([
+                'device_code' => $request->device_code,
+                'device_ip' => '192.168.4.1',
+                'camera1_ip' => '192.168.1.69',
+                'camera2_ip' => '192.168.1.69',
+                'device_status' => 'offline'
+            ]);
+            $success = 'device added';
+            $devices = DeviceData::all();
+            return view('dashboards.dashboard', compact('success', 'devices'));
+        }
     }
 
     /**
@@ -42,8 +80,7 @@ class DeviceDataController extends Controller
         $assets = ['chart', 'animation'];
         $device = DeviceData::where('id', $id)->first();
         $activities = ActivityRecord::where('device_no', $id)->simplePaginate(5);
-        $feedingData = FeedingData::all();
-        return view('dashboards.device', compact('assets', 'device', 'activities', 'feedingData'));
+        return view('dashboards.device', compact('assets', 'device', 'activities'));
     }
 
     /**

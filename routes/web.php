@@ -3,12 +3,12 @@
 // Controllers
 
 use App\Http\Controllers\DeviceDataController;
+use App\Http\Controllers\FeedingDataController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Security\RolePermission;
 use App\Http\Controllers\Security\RoleController;
 use App\Http\Controllers\Security\PermissionController;
 use App\Http\Controllers\UserController;
-use App\Models\DeviceData;
 use Illuminate\Support\Facades\Artisan;
 // Packages
 use Illuminate\Support\Facades\Route;
@@ -61,6 +61,12 @@ Route::group(['middleware' => 'auth'], function () {
     // Dashboard Routes
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::get('/device/{id}', [DeviceDataController::class, 'show'])->name('dashboard.device');
+
+    // FeedingData Routes
+    Route::get('/getFeedingFrequency/{device_no}', [FeedingDataController::class, 'getFeedingFrequency']);
+
+    // Device Data Routes
+    Route::post('/device/add', [DeviceDataController::class, 'store'])->name('device.add');
 
     // Users Module
     Route::resource('users', UserController::class);

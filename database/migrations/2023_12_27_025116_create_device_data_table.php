@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('device_data', function (Blueprint $table) {
             $table->id();
             $table->string('device_code');
-            $table->string('device_ip');
-            $table->string('camera1_ip');
-            $table->string('camera2_ip');
-            $table->string('device_status');
+            $table->string('device_ip')->default('192.168.1.1');
+            $table->string('camera1_ip')->default('192.168.1.69');
+            $table->string('camera2_ip')->default('192.168.1.68');
+            $table->string('device_status')->default('offline');
             $table->timestamps();
         });
     }
