@@ -69,6 +69,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/deviceAdd', [DeviceDataController::class, 'store'])->name('device.add');
     Route::get('/device/{id}', [DeviceDataController::class, 'show'])->name('dashboard.device');
     Route::get('/deviceList', [DeviceDataController::class, 'deviceList'])->name('device.list');
+    Route::get('/removeDevice/{id}', [DeviceDataController::class, 'destroy'])->name('device.destroy');
 
     // Users Module
     Route::resource('users', UserController::class);

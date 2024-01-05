@@ -28,7 +28,7 @@
                                </svg>
                             </div>
                             <div class="progress-detail">
-                               <p  class="mb-2">Devices Online</p>
+                               <p  class="mb-2">Devices Verified</p>
                                <h4 class="counter">
                                  @isset($online)
                                      {{ $online }}

@@ -32,6 +32,7 @@ class DeviceDataController extends Controller
             $deviceList[] = [
                 'name' => ('Device ' . $device->id),
                 'route' => route('dashboard.device', ['id' => $device->id]),
+                'destroy' => route('device.destroy', ['id'=> $device->id]),
                 'icon' => 'H',
                 'status' => $device->device_status
             ];
@@ -124,7 +125,7 @@ class DeviceDataController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DeviceData $deviceData)
+    public function destroy(DeviceData $deviceData, $id)
     {
         //
     }
