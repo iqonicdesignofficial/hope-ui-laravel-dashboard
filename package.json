@@ -27,15 +27,15 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.1.0",
-        "axios": "^0.21",
+        "axios": "^1.6.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.2.5",
-        "resolve-url-loader": "^3.1.2",
+        "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.0",
         "sass-loader": "^13.2.2",
         "vue": "^2.6.12",
-        "vue-loader": "^15.9.6",
+        "vue-loader": "^17.4.0",
         "vue-template-compiler": "^2.6.12"
     }
 }

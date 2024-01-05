@@ -16,7 +16,6 @@
                            <h4 class="logo-title ms-3">{{env('APP_NAME')}}</h4>
                         </a>
                         <h2 class="mb-2 text-center">Sign In</h2>
-                        <p class="text-center">Login to stay connected.</p>
                         <x-auth-session-status class="mb-4" :status="session('status')" />
 
                         <!-- Validation Errors -->
@@ -26,8 +25,8 @@
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="form-group">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input id="email" type="email" name="email"  value="{{env('IS_DEMO') ? 'admin@example.com' : old('email')}}"   class="form-control"  placeholder="admin@example.com" required autofocus>
+                                    <label for="email" class="form-label">Username</label>
+                                    <input id="email" type="email" name="email"  value=""   class="form-control"  placeholder="username" required autofocus>
                                  </div>
                               </div>
                               <div class="col-lg-12">
@@ -43,33 +42,13 @@
                                     <label class="form-check-label" for="customCheck1">Remember Me</label>
                                  </div>
                               </div>
-                              <div class="col-lg-6">
+                              {{-- <div class="col-lg-6">
                                  <a href="{{route('auth.recoverpw')}}"  class="float-end">Forgot Password?</a>
-                              </div>
+                              </div> --}}
                            </div>
                            <div class="d-flex justify-content-center">
                               <button type="submit" class="btn btn-primary">{{ __('Sign In') }}</button>
                            </div>
-                           <p class="text-center my-3">or sign in with other accounts?</p>
-                           <div class="d-flex justify-content-center">
-                              <ul class="list-group list-group-horizontal list-group-flush">
-                                 <li class="list-group-item border-0 pb-0">
-                                    <a href="#"><img src="{{asset('images/brands/fb.svg')}}" alt="fb"></a>
-                                 </li>
-                                 <li class="list-group-item border-0 pb-0">
-                                    <a href="#"><img src="{{asset('images/brands/gm.svg')}}" alt="gm"></a>
-                                 </li>
-                                 <li class="list-group-item border-0 pb-0">
-                                    <a href="#"><img src="{{asset('images/brands/im.svg')}}" alt="im"></a>
-                                 </li>
-                                 <li class="list-group-item border-0 pb-0">
-                                    <a href="#"><img src="{{asset('images/brands/li.svg')}}" alt="li"></a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <p class="mt-3 text-center">
-                              Don’t have an account? <a href="{{route('auth.signup')}}" class="text-underline">Click here to sign up.</a>
-                           </p>
                         </form>
                      </div>
                   </div>
