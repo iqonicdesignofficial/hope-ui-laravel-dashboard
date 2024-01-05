@@ -56,7 +56,7 @@
 </ul>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        fetch('/deviceList')
+        fetch("{{ route('device.list') }}")
             .then(response => response.json())
             .then(data => {
                 const deviceListContainer = document.getElementById('horizontal-menu');

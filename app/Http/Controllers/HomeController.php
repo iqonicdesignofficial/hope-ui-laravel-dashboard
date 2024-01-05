@@ -14,7 +14,9 @@ class HomeController extends Controller
     {
         $assets = ['chart', 'animation'];
         $devices = DeviceData::all();
-        return view('dashboards.dashboard', compact('assets', 'devices'));
+        $online = DeviceData::where('device_status', 'online')->get();
+        $online = count($online);
+        return view('dashboards.dashboard', compact('assets', 'devices', 'online'));
     }
     public function device(Request $request)
     {

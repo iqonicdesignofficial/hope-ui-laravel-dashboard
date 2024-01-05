@@ -29,7 +29,13 @@
                             </div>
                             <div class="progress-detail">
                                <p  class="mb-2">Devices Online</p>
-                               <h4 class="counter">0</h4>
+                               <h4 class="counter">
+                                 @isset($online)
+                                     {{ $online }}
+                                 @else
+                                    0
+                                 @endisset
+                               </h4>
                             </div>
                          </div>
                       </div>
