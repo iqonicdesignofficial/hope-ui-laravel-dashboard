@@ -34,28 +34,11 @@
             </i>
         </a>
         <ul class="sub-nav collapse" id="horizontal-menu" data-bs-parent="#sidebar">
-            {{-- @isset($deviceList)
-                @foreach ($deviceList as $device)
-                    <li class="nav-item ">
-                        <a class="nav-link {{activeRoute(route('dashboard.device', ['id' => $device->id]))}}" href="{{route('dashboard.device', ['id' => $device->id])}}">
-                        <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                    <g>
-                                    <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                    </g>
-                                </svg>
-                            </i>
-                        <i class="sidenav-mini-icon"> H </i>
-                        <span class="item-name">Device {{ $device->id }}</span>
-                        </a>
-                    </li>
-                @endforeach
-            @else
-                <li class="nav-item">
-                    <span class="item-name">No Devices</span>
-                </li>
-            @endisset --}}
-            <li class="nav-item ">
+
+            <li class="nav-item">
+                <span class="item-name">No Devices</span>
+            </li>
+            {{-- <li class="nav-item ">
                 <a class="nav-link {{activeRoute(route('dashboard.device', ['id' => 1]))}}" href="{{route('dashboard.device', ['id' => 1])}}">
                 <i class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
@@ -67,10 +50,46 @@
                 <i class="sidenav-mini-icon"> H </i>
                 <span class="item-name">Device 1</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </li>
 </ul>
 <script>
-    
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/deviceList')
+            .then(response => response.json())
+            .then(data => {
+                const deviceListContainer = document.getElementById('horizontal-menu');
+
+                deviceListContainer.innerHTML = '';
+
+                data.forEach(device => {
+                    const li = document.createElement('li');
+                    li.className = 'nav-item';
+
+                    const onlineStatus = device.status === 'online';
+
+                    li.innerHTML = `
+                        <a class="nav-link" href="${onlineStatus ? device.route : '' }">
+                            <i class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                    <g>
+                                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                    </g>
+                                </svg>
+                            </i>
+                            <i class="sidenav-mini-icon"> ${device.icon} </i>
+                            <span class="item-name">${device.name}</span>
+                            ${onlineStatus
+                                ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.31804 6.318C3.90017 6.73587 3.5687 7.23194 3.34255 7.77791C3.1164 8.32388 3 8.90905 3 9.5C3 10.091 3.1164 10.6761 3.34255 11.2221C3.5687 11.7681 3.90017 12.2641 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.5C21.0001 8.30652 20.526 7.16192 19.682 6.318C18.8381 5.47408 17.6935 4.99997 16.5 4.99997C15.3066 4.99997 14.162 5.47408 13.318 6.318L12 7.636L10.682 6.318C10.2642 5.90013 9.7681 5.56866 9.22213 5.34251C8.67616 5.11636 8.09099 4.99996 7.50004 4.99996C6.90909 4.99996 6.32392 5.11636 5.77795 5.34251C5.23198 5.56866 4.7359 5.90013 4.31804 6.318V6.318Z" fill="currentColor" />
+                                    </svg>`
+                                : ''}
+                        </a>
+                    `;
+                    deviceListContainer.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching device list:', error));
+    });
 </script>

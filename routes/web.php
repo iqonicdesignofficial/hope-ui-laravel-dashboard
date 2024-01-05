@@ -60,13 +60,15 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Dashboard Routes
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-    Route::get('/device/{id}', [DeviceDataController::class, 'show'])->name('dashboard.device');
 
     // FeedingData Routes
-    Route::get('/getFeedingFrequency/{device_no}', [FeedingDataController::class, 'getFeedingFrequency']);
+    Route::get('/getFeedingFrequency/{device_no}', [FeedingDataController::class, 'getFeedingFrequency'])->name('device.feedingFrequency');
+    Route::get('/getWeeklyTemp/{device_no}', [FeedingDataController::class, 'getWeeklyTemp'])->name('device.temperatureData');
 
     // Device Data Routes
-    Route::post('/device/add', [DeviceDataController::class, 'store'])->name('device.add');
+    Route::post('/deviceAdd', [DeviceDataController::class, 'store'])->name('device.add');
+    Route::get('/device/{id}', [DeviceDataController::class, 'show'])->name('dashboard.device');
+    Route::get('/deviceList', [DeviceDataController::class, 'deviceList'])->name('device.list');
 
     // Users Module
     Route::resource('users', UserController::class);

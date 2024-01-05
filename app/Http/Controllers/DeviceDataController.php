@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateDeviceDataRequest;
 use App\Models\ActivityRecord;
 use App\Models\DeviceData;
 use App\Models\FeedingData;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class DeviceDataController extends Controller
@@ -18,12 +19,33 @@ class DeviceDataController extends Controller
     {
         return DeviceData::all();
     }
+
+    /**
+     * Return Device lists
+     */
+    public function deviceList()
+    {
+        $devices = DeviceData::all();
+        $deviceList = [];
+
+        foreach ($devices as $device) {
+            $deviceList[] = [
+                'name' => ('Device ' . $device->id),
+                'route' => route('dashboard.device', ['id' => $device->id]),
+                'icon' => 'H',
+                'status' => $device->device_status
+            ];
+        }
+
+        return response()->json($deviceList);
+    }
+
     /**
      * Update Device status to online
      */
-    public function makeOnline($device_code) 
+    public function makeOnline(Request $request) 
     {
-        $device = DeviceData::where('device_code', $device_code)->first();
+        $device = DeviceData::where('device_code', $request->device_code)->first();
         
         if ($device) {
             $device->update(['device_status' => 'online']);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreActivityRecordRequest;
 use App\Http\Requests\UpdateActivityRecordRequest;
 use App\Models\ActivityRecord;
+use App\Models\DeviceData;
 
 class ActivityRecordController extends Controller
 {
@@ -29,9 +30,14 @@ class ActivityRecordController extends Controller
      */
     public function store(StoreActivityRecordRequest $request)
     {
+        $device = DeviceData::where('device_code', $request->device_code)->first();
+
+        if (!$device)
+            return response()->json([], 400);
+
         $request()->validate([
             'ativity' => 'required',
-            'device_no' => 'required',
+            'device_no' => $device->id,
             'tank_no' => 'required',
         ]);
 

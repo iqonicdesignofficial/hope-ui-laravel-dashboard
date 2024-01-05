@@ -22,6 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/feeding', [FeedingDataController::class, 'store']);
+Route::post('/feed', [FeedingDataController::class, 'store']);
 Route::post('/activity', [ActivityRecordController::class, 'store']);
-Route::post('/connect', [DeviceDataController::class, 'show']);
+Route::post('/connect', [DeviceDataController::class, 'makeOnline']);

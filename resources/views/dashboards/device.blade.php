@@ -1,9 +1,9 @@
 <x-app-layout :assets="$assets ?? []">
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12 col-lg-6">
             <div class="card align-items-center" data-aos="fade-up" data-aos-delay="1000">
                @if (false)
-               {{-- Insert Here the camera stream --}}
+               
 
                @else
                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">No Connection</text></svg>
@@ -43,7 +43,7 @@
         <div class="col-md-12 col-lg-6">
          <div class="card align-items-center" data-aos="fade-up" data-aos-delay="1000">
             @if (false)
-            {{-- Insert Here the camera stream --}}
+            
 
             @else
             <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">No Connection</text></svg>
@@ -79,7 +79,7 @@
            </div>
         </div>
         </div>
-    </div>
+    </div> --}}
     <div class="row">
         <div class="col-md-12 col-lg-8">
             <div class="row">
@@ -124,21 +124,22 @@
                         <div class="header-title">
                            <h4 class="card-title">Average Temp</h4>
                         </div>
-                        <div class="dropdown">
-                           {{-- <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"> --}}
+                        {{-- <div class="dropdown">
+                           <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                            <a href="#" class="text-gray" id="dropdownMenuButton1" aria-expanded="false">
                               This Week
                            </a>
-                           {{-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                               <li><a class="dropdown-item" href="#">This Week</a></li>
                               <li><a class="dropdown-item" href="#">This Month</a></li>
                               <li><a class="dropdown-item" href="#">This Year</a></li>
-                           </ul> --}}
-                        </div>
+                           </ul>
+                        </div> --}}
                      </div>
                      <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
-                           <div id="myChart" class="col-md-8 col-lg-8 myChart"></div>
+                           {{-- <div id="myChart" class="col-md-8 col-lg-8 myChart"></div> --}}
+                           <div id="averageTempChart" class="col-md-8 col-lg-8"></div>
                            <div class="d-grid gap col-md-4 col-lg-4">
                               <div class="d-flex align-items-start">
                                  <svg class="mt-2" xmlns="http://www.w3.org/2000/svg" width="14" viewBox="0 0 24 24" fill="#3a57e8">
@@ -148,7 +149,7 @@
                                  </svg>
                                  <div class="ms-3">
                                     <span class="text-gray">Tank 1</span>
-                                    <h6>251K</h6>
+                                    <h6></h6>
                                  </div>
                               </div>
                               <div class="d-flex align-items-start">
@@ -159,7 +160,7 @@
                                  </svg>
                                  <div class="ms-3">
                                     <span class="text-gray">Tank 2</span>
-                                    <h6>176K</h6>
+                                    <h6></h6>
                                  </div>
                               </div>
                            </div>
@@ -180,7 +181,7 @@
                         </div>
                      </div>
                      <div class="card-body">
-                        <div id="d-activity" class="d-activity"></div>
+                        <div id="dailyChart" class=""></div>
                      </div>
                   </div>
                </div>
@@ -215,37 +216,162 @@
 </x-app-layout>
 
 <script>
-   var options = {
-      series: [],
-      chart: {
-      height: 300,
-      type: 'area'
-   },
-   dataLabels: {
-      enabled: false
-   },
-   stroke: {
-      curve: 'smooth'
-   },
-   xaxis: {
-      type: 'datetime',
-      categories: []
-   },
-   tooltip: {
-      x: {
-      format: 'dd/MM/yy HH:mm'
-      },
-   },
-   };
+var feedingOptions = {
+    series: [],
+    chart: {
+        height: 300,
+        type: 'line',
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    stroke: {
+        curve: 'smooth',
+    },
+    xaxis: {
+        type: 'category', // Use category type for non-date categories
+        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    },
+    tooltip: {
+        x: {
+            format: 'dd/MM/yy HH:mm',
+        },
+    },
+};
 
-   fetch('/getFeedingFrequency/'+{{ $device->id }})
-      .then(response => response.json())
-      .then(data => {
-          options.series = data.map(tankData => ({
-            name: tankData.name,
-            data: tankData.data
-         }));
-         var chart = new ApexCharts(document.querySelector("#feeding-freq"), options);
-         chart.render();
-      });
+fetch("{{ route('device.feedingFrequency', ['device_no' => $device->id]) }}")
+    .then(response => response.json())
+    .then(data => {
+        // Assuming data structure like: [{ 'name': 'tank 1', 'data': [2, 3, 1, 2, 1, 2, 1] }, ...]
+
+        // Configure series data
+        feedingOptions.series = data.map(entry => ({
+            name: entry.name,
+            data: entry.data,
+        }));
+
+        // Create and render the chart
+        var feedingChart = new ApexCharts(document.querySelector("#feeding-freq"), feedingOptions);
+        feedingChart.render();
+    })
+    .catch(error => console.error('Error fetching weekly feeding frequency data:', error));
+   
+   fetch('{{ route('device.temperatureData', ['device_no' => $device->id]) }}')
+    .then(response => response.json())
+    .then(data => {
+        const maxTemperatureValue = 80; // Set the maximum temperature value
+
+        // Extracting tank numbers, weekly data, and weekly averages
+        const tankNumbers = data.map(tankData => tankData.tank_no);
+        const weeklyAverages = data.map(tankData => tankData.weekly_average);
+
+        const weeklyAverageOptions = {
+            series: weeklyAverages.flat(), // Flatten the array of arrays
+            chart: {
+               type: 'radialBar',
+               height: 250,
+            },
+            plotOptions: {
+               radialBar: {
+                     dataLabels: {
+                        name: {
+                           fontSize: '22px',
+                        },
+                        value: {
+                           fontSize: '16px',
+                        },
+                        total: {
+                           show: true,
+                           label: 'Average',
+                           formatter: function (w) {
+                              var totalAverage = 0.0;
+                              var totalCount = 0;
+
+                              weeklyAverages.forEach(tankTemp => {
+                                 if (Array.isArray(tankTemp)) {
+                                       totalAverage += tankTemp.reduce((a, b) => a + b, 0);
+                                       totalCount += tankTemp.length; // Increment total count by the number of elements in the array
+                                 } else {
+                                       totalAverage += tankTemp;
+                                       totalCount++; // Increment total count by 1 for non-array values
+                                 }
+                              });
+
+                              if (totalCount === 0) {
+                                 return 0; // Handle division by zero
+                              }
+
+                              return (totalAverage / totalCount).toFixed(2);
+                           }
+                        }
+                     },
+                     min: 0, // Set the minimum value
+                     max: maxTemperatureValue, // Set the maximum value
+               }
+            },
+            labels: tankNumbers.map(tankNumber => 'Tank ' + tankNumber),
+         };
+
+        const weeklyDataOptions = {
+            series: data.map(tankData => ({
+               name: 'Tank ' + tankData.tank_no,
+               data: tankData.weekly_data,
+            })),
+            chart: {
+               type: 'bar',
+               height: 250,
+               toolbar: {
+                     show: false
+               },
+               zoom: {
+                     enabled: true
+               }
+            },
+            responsive: [{
+               breakpoint: 480,
+               options: {
+                     legend: {
+                        position: 'bottom',
+                        offsetX: -10,
+                        offsetY: 0
+                     }
+               }
+            }],
+            plotOptions: {
+               bar: {
+                     horizontal: false,
+                     borderRadius: 2,
+                     columnWidth: '55%',
+                     dataLabels: {
+                        total: {
+                           enabled: true,
+                           style: {
+                                 fontSize: '16px',
+                                 fontWeight: 900
+                           }
+                        }
+                     }
+               }
+            },
+            xaxis: {
+               type: 'datetime',
+               categories: data.length > 0 ? data[0].weekly_data.map(date => new Date(date).toLocaleDateString()) : [],
+            },
+            legend: {
+               position: 'right',
+               offsetY: 40
+            },
+            fill: {
+               opacity: 1
+            }
+         };
+
+        var weeklyAverageChart = new ApexCharts(document.querySelector("#averageTempChart"), weeklyAverageOptions);
+        var weeklyDataChart = new ApexCharts(document.querySelector("#dailyChart"), weeklyDataOptions);
+
+        weeklyAverageChart.render();
+        weeklyDataChart.render();
+    })
+    .catch(error => console.error('Error fetching weekly temperature data:', error));
+
 </script>
