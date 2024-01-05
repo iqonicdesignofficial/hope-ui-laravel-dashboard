@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
                     <div>
-                        <h1>Aqua Feeder!</h1>
+                        <h1>Fish Place</h1>
                         <p>Automated fish feeding and monitoring system.</p>
                     </div>
                     <div>
