@@ -45,11 +45,17 @@ class DeviceDataController extends Controller
      * Update Device status to online
      */
     public function makeOnline(Request $request) 
-    {
+    {   
+        request()->validate([
+            'device_code' => 'required',
+            'tank_size' => 'required'
+        ]);
+
         $device = DeviceData::where('device_code', $request->device_code)->first();
         
         if ($device) {
             $device->update(['device_status' => 'online']);
+            $device->update(['tank_size' => $request->tank_size]);
 
             return response()->json(['message' => 'Device Connected'], 200);
         } else {

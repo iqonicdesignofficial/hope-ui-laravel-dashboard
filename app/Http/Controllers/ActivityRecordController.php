@@ -30,12 +30,12 @@ class ActivityRecordController extends Controller
      */
     public function store(StoreActivityRecordRequest $request)
     {
-        $request()->validate([
+        request()->validate([
             'ativity' => 'required',
             'tank_no' => 'required',
             'device_code' => 'required'
         ]);
-        
+
         $device = DeviceData::where('device_code', $request->device_code)->first();
 
         if (!$device)
