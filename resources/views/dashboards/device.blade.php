@@ -221,9 +221,12 @@ var feedingOptions = {
     chart: {
         height: 300,
         type: 'line',
+        toolbar: {
+            show: false,
+         }
     },
     dataLabels: {
-        enabled: false,
+        enabled: true,
     },
     stroke: {
         curve: 'smooth',
