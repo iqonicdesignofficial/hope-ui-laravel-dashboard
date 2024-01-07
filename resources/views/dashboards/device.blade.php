@@ -287,24 +287,7 @@ fetch("{{ route('device.feedingFrequency', ['device_no' => $device->id]) }}")
                            show: true,
                            label: 'Average',
                            formatter: function (w) {
-                              var totalAverage = 0.0;
-                              var totalCount = 0;
-
-                              weeklyAverages.forEach(tankTemp => {
-                                 if (Array.isArray(tankTemp)) {
-                                       totalAverage += tankTemp.reduce((a, b) => a + b, 0);
-                                       totalCount += tankTemp.length; // Increment total count by the number of elements in the array
-                                 } else {
-                                       totalAverage += tankTemp;
-                                       totalCount++; // Increment total count by 1 for non-array values
-                                 }
-                              });
-
-                              if (totalCount === 0) {
-                                 return 0; // Handle division by zero
-                              }
-
-                              return (totalAverage / totalCount).toFixed(2);
+                              return 0;
                            }
                         }
                      },
