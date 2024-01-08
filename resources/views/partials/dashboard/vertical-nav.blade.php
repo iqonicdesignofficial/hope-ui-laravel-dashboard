@@ -34,23 +34,9 @@
             </i>
         </a>
         <ul class="sub-nav collapse" id="horizontal-menu" data-bs-parent="#sidebar">
-
             <li class="nav-item">
                 <span class="item-name">No Devices</span>
             </li>
-            {{-- <li class="nav-item ">
-                <a class="nav-link {{activeRoute(route('dashboard.device', ['id' => 1]))}}" href="{{route('dashboard.device', ['id' => 1])}}">
-                <i class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                            <g>
-                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                            </g>
-                        </svg>
-                    </i>
-                <i class="sidenav-mini-icon"> H </i>
-                <span class="item-name">Device 1</span>
-                </a>
-            </li> --}}
         </ul>
     </li>
 </ul>
