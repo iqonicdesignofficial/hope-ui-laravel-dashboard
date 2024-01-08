@@ -62,9 +62,9 @@ class FeedingDataController extends Controller
         $WeeklyData_t2 = $getDailytemperature(2);
         $weeklyAverage_t1 = $getWeeklyAverage($WeeklyData_t1);
         $weeklyAverage_t2 = $getWeeklyAverage($WeeklyData_t2);
-        $average_t1 = array_sum($weeklyAverage_t1) / count($weeklyAverage_t1);
+        $average_t1 = (count($weeklyAverage_t1) == 0) ? 0 : array_sum($weeklyAverage_t1) / count($weeklyAverage_t1);
         $average_t1 = number_format($average_t1, 1);
-        $average_t2 = array_sum($weeklyAverage_t2) / count($weeklyAverage_t2);
+        $average_t2 = (count($weeklyAverage_t2) == 0) ? 0 : array_sum($weeklyAverage_t2) / count($weeklyAverage_t2);
         $average_t2 = number_format($average_t2, 1);
         
 

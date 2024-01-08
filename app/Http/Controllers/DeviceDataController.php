@@ -33,7 +33,7 @@ class DeviceDataController extends Controller
                 'name' => ('Device ' . $device->id),
                 'route' => route('dashboard.device', ['id' => $device->id]),
                 'destroy' => route('device.destroy', ['id'=> $device->id]),
-                'icon' => 'H',
+                'icon' => $device->id,
                 'status' => $device->device_status
             ];
         }
@@ -52,10 +52,12 @@ class DeviceDataController extends Controller
         ]);
 
         $device = DeviceData::where('device_code', $request->device_code)->first();
+        $deviceIP = $request->ip();
         
         if ($device) {
             $device->update(['device_status' => 'online']);
             $device->update(['tank_size' => $request->tank_size]);
+            $device->update(['device_ip' => $deviceIP]);
 
             return response()->json(['message' => 'Device Connected'], 200);
         } else {
