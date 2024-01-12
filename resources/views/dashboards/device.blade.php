@@ -1,87 +1,127 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
 <x-app-layout :assets="$assets ?? []">
-    {{-- <div class="row">
-        <div class="col-md-12 col-lg-6">
-            <div class="card align-items-center" data-aos="fade-up" data-aos-delay="1000">
-               @if (false)
-               
-
-               @else
-               <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">No Connection</text></svg>
-         
-               @endif
-               <div class="card-header d-flex justify-content-between flex-wrap">
-                  <div class="header-title">
-                     <h4 class="card-title">Tank 1</h4>
+   <div class="container-fluid content-inner mt-n5 py-0">
+      <div>
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <div class="d-fex justify-content-between">
+                        <div class="d-flex align-items-center">
+                           <div class="p-2 rounded bg-warning">
+                              <h5 class="px-2 text-white">1</h5>
+                           </div>
+                           <h4 class="px-3"></h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="d-grid gap-card">
+                        <div class="embed-responsive embed-responsive-4by3">
+                           <iframe class="embed-responsive-item" src=""></iframe>
+                         </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                           <div class="pe-3">
+                              <i class="fas fa-thermometer-half fa-2x" style="color:#059e8a;"></i>
+                           </div>
+                           <div>
+                              <h6 class="mb-1">Water Temperature</h6>
+                              <p class="mb-0">36.6 C</p>
+                           </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                           <div class="pe-3">
+                              <i class="fas fa-tint fa-2x" style="color:#00add6;"></i>
+                           </div>
+                           <div>
+                              <h6 class="mb-1">Water Level</h6>
+                              <p class="mb-0">Normal</p>
+                           </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                           <div class="dropdown">
+                              <button class="btn px-2 py-2 ms-2 dropdown-toggle" type="button" id="btnInterval_1" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <svg class="icon-32" width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
+                                    <path opacity="0.4" d="M22 12C22 17.524 17.523 22 12 22C6.477 22 2 17.524 2 12C2 6.478 6.477 2 12 2C17.523 2 22 6.478 22 12Z" fill="currentColor"></path>                                <path d="M15.5739 15.8145C15.4429 15.8145 15.3109 15.7805 15.1899 15.7095L11.2639 13.3675C11.0379 13.2315 10.8989 12.9865 10.8989 12.7225V7.67554C10.8989 7.26154 11.2349 6.92554 11.6489 6.92554C12.0629 6.92554 12.3989 7.26154 12.3989 7.67554V12.2965L15.9589 14.4195C16.3139 14.6325 16.4309 15.0925 16.2189 15.4485C16.0779 15.6835 15.8289 15.8145 15.5739 15.8145Z" fill="currentColor"></path>                                
+                                 </svg>
+                                 Time Interval                            
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnInterval_1">
+                                  <li><a class="dropdown-item active" href="#">30 seconds "demo"</a></li>
+                                  <li><a class="dropdown-item" href="#">24 Hours</a></li>
+                                  <li><a class="dropdown-item" href="#">6 Hours</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Manual Feeding Only</a></li>
+                              </ul>
+                              </div>
+                           <button class="btn btn-primary">Feed Now</button>
+                        </div>
+                     </div>
                   </div>
                </div>
-               <div class="card-body align-items-center">
-                    <div class="col">
-                        <div class="row">
-                            <div>
-                                <p class="display-6">Temperature: </p>
-                            </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <div class="d-fex justify-content-between">
+                        <div class="d-flex align-items-center">
+                           <div class="p-2 rounded bg-warning">
+                              <h5 class="px-2 text-white">2</h5>
+                           </div>
+                           <h4 class="px-3"></h4>
                         </div>
-                        <br>
-                        <div class="row">
-                            <p class="display-6">Water Level: </p>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="d-grid gap-card">
+                        <div class="embed-responsive embed-responsive-4by3">
+                           <iframe class="embed-responsive-item" src=""></iframe>
+                         </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                           <div class="pe-3">
+                              <i class="fas fa-thermometer-half fa-2x" style="color:#059e8a;"></i>
+                           </div>
+                           <div>
+                              <h6 class="mb-1">Water Temperature</h6>
+                              <p class="mb-0">36.6 C</p>
+                           </div>
                         </div>
-                    </div>
-                    <br>
-                    <button class="btn btn-primary ">Feed Now</button>
-                    <br>
-                    <br>
-                    <div class="mb-3">
-                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                            <option selected="">Set Feeding Interval</option>
-                            <option value="12">12</option>
-                            <option value="24">24</option>
-                        </select>
-                    </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                           <div class="pe-3">
+                              <i class="fas fa-tint fa-2x" style="color:#00add6;"></i>
+                           </div>
+                           <div>
+                              <h6 class="mb-1">Water Level</h6>
+                              <p class="mb-0">Normal</p>
+                           </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mt-3">
+                           <div class="dropdown">
+                              <button class="btn px-2 py-2 ms-2 dropdown-toggle" type="button" id="btnInterval_2" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <svg class="icon-32" width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
+                                    <path opacity="0.4" d="M22 12C22 17.524 17.523 22 12 22C6.477 22 2 17.524 2 12C2 6.478 6.477 2 12 2C17.523 2 22 6.478 22 12Z" fill="currentColor"></path>                                <path d="M15.5739 15.8145C15.4429 15.8145 15.3109 15.7805 15.1899 15.7095L11.2639 13.3675C11.0379 13.2315 10.8989 12.9865 10.8989 12.7225V7.67554C10.8989 7.26154 11.2349 6.92554 11.6489 6.92554C12.0629 6.92554 12.3989 7.26154 12.3989 7.67554V12.2965L15.9589 14.4195C16.3139 14.6325 16.4309 15.0925 16.2189 15.4485C16.0779 15.6835 15.8289 15.8145 15.5739 15.8145Z" fill="currentColor"></path>                                
+                                 </svg>
+                                 Time Interval                            
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnInterval_2">
+                                  <li><a class="dropdown-item active" href="#">30 seconds "demo"</a></li>
+                                  <li><a class="dropdown-item" href="#">24 Hours</a></li>
+                                  <li><a class="dropdown-item" href="#">6 Hours</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Manual Feeding Only</a></li>
+                              </ul>
+                              </div>
+                           <button class="btn btn-primary">Feed Now</button>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
-        </div>
-        <div class="col-md-12 col-lg-6">
-         <div class="card align-items-center" data-aos="fade-up" data-aos-delay="1000">
-            @if (false)
-            
-
-            @else
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">No Connection</text></svg>
-      
-            @endif<div class="card-header d-flex justify-content-between flex-wrap">
-              <div class="header-title">
-                 <h4 class="card-title">Tank 1</h4>
-              </div>
-           </div>
-           <div class="card-body align-items-center">
-                <div class="col">
-                    <div class="row">
-                        <div>
-                            <p class="display-6">Temperature: </p>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <p class="display-6">Water Level: </p>
-                    </div>
-                </div>
-                <br>
-                <button class="btn btn-primary ">Feed Now</button>
-                <br>
-                <br>
-                <div class="mb-3">
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option selected="">Set Feeding Interval</option>
-                        <option value="12">12</option>
-                        <option value="24">24</option>
-                    </select>
-                </div>
-           </div>
-        </div>
-        </div>
-    </div> --}}
-    <div class="row">
-        <div class="col-md-12 col-lg-8">
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 col-lg-8">
             <div class="row">
                <div class="col-md-12">
                   <div class="card" data-aos="fade-up" data-aos-delay="800">
@@ -124,21 +164,9 @@
                         <div class="header-title">
                            <h4 class="card-title">Average Temp</h4>
                         </div>
-                        {{-- <div class="dropdown">
-                           <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                           <a href="#" class="text-gray" id="dropdownMenuButton1" aria-expanded="false">
-                              This Week
-                           </a>
-                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item" href="#">This Week</a></li>
-                              <li><a class="dropdown-item" href="#">This Month</a></li>
-                              <li><a class="dropdown-item" href="#">This Year</a></li>
-                           </ul>
-                        </div> --}}
                      </div>
                      <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
-                           {{-- <div id="myChart" class="col-md-8 col-lg-8 myChart"></div> --}}
                            <div id="averageTempChart" class="col-md-8 col-lg-8"></div>
                            <div class="d-grid gap col-md-4 col-lg-4">
                               <div class="d-flex align-items-start">
@@ -198,10 +226,10 @@
                      </div>
                      <div class="card-body">
                         @foreach ($activities as $activity)
-                           <div class=" d-flex profile-media align-items-top mb-2">
+                           <div class="d-flex profile-media align-items-top mb-2">
                               <div class="profile-dots-pills border-primary mt-1"></div>
                               <div class="ms-4">
-                                 <h6 class=" mb-1">{{ $activity->ativity }} #{{ $activity->tank_no }}</h6>
+                                 <h6 class="mb-1">{{ $activity->activity }} #{{ $activity->tank_no }}</h6>
                                  <span class="mb-0">{{ $activity->created_at }}</span>
                               </div>
                            </div>
@@ -212,152 +240,25 @@
             </div>
          </div>
       </div>
-    </div>
+   </div>
 </x-app-layout>
 
+<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 <script>
-var feedingOptions = {
-    series: [],
-    chart: {
-        height: 300,
-        type: 'line',
-        toolbar: {
-            show: false,
-         }
-    },
-    dataLabels: {
-        enabled: true,
-    },
-    stroke: {
-        curve: 'smooth',
-    },
-    xaxis: {
-        type: 'category', // Use category type for non-date categories
-        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    },
-    tooltip: {
-        x: {
-            format: 'dd/MM/yy HH:mm',
-        },
-    },
-};
+   // var pusher = new Pusher('a82d91e357ff1005b2b0', {
+   //    cluster: 'ap1'
+   // });
 
-fetch("{{ route('device.feedingFrequency', ['device_no' => $device->id]) }}")
-    .then(response => response.json())
-    .then(data => {
-        // Assuming data structure like: [{ 'name': 'tank 1', 'data': [2, 3, 1, 2, 1, 2, 1] }, ...]
+   // var channel = pusher.subscribe('channel-deviceStatus');
+   // channel.bind('PusherBroadcast', function (data) {
+   //    if (data.action === 'feed_tank_1') {
+   //       alert("Feeding on tank 1");
+   //    } else if (data.action == 'feed_tank_2') {
+   //       alert("Feeding on tank 2");
+   //    }
+   // });
 
-        // Configure series data
-        feedingOptions.series = data.map(entry => ({
-            name: entry.name,
-            data: entry.data,
-        }));
-
-        // Create and render the chart
-        var feedingChart = new ApexCharts(document.querySelector("#feeding-freq"), feedingOptions);
-        feedingChart.render();
-    })
-    .catch(error => console.error('Error fetching weekly feeding frequency data:', error));
-   
-   fetch('{{ route('device.temperatureData', ['device_no' => $device->id]) }}')
-    .then(response => response.json())
-    .then(data => {
-        const maxTemperatureValue = 80; // Set the maximum temperature value
-
-        // Extracting tank numbers, weekly data, and weekly averages
-        const tankNumbers = data.map(tankData => tankData.tank_no);
-        const weeklyAverages = data.map(tankData => tankData.weekly_average);
-
-        const weeklyAverageOptions = {
-            series: weeklyAverages.flat(), // Flatten the array of arrays
-            chart: {
-               type: 'radialBar',
-               height: 250,
-            },
-            plotOptions: {
-               radialBar: {
-                     dataLabels: {
-                        name: {
-                           fontSize: '22px',
-                        },
-                        value: {
-                           fontSize: '16px',
-                        },
-                        total: {
-                           show: true,
-                           label: 'Average',
-                           formatter: function (w) {
-                              return 0;
-                           }
-                        }
-                     },
-                     min: 0, // Set the minimum value
-                     max: maxTemperatureValue, // Set the maximum value
-               }
-            },
-            labels: tankNumbers.map(tankNumber => 'Tank ' + tankNumber),
-         };
-
-        const weeklyDataOptions = {
-            series: data.map(tankData => ({
-               name: 'Tank ' + tankData.tank_no,
-               data: tankData.weekly_data,
-            })),
-            chart: {
-               type: 'bar',
-               height: 250,
-               toolbar: {
-                     show: false
-               },
-               zoom: {
-                     enabled: true
-               }
-            },
-            responsive: [{
-               breakpoint: 480,
-               options: {
-                     legend: {
-                        position: 'bottom',
-                        offsetX: -10,
-                        offsetY: 0
-                     }
-               }
-            }],
-            plotOptions: {
-               bar: {
-                     horizontal: false,
-                     borderRadius: 2,
-                     columnWidth: '55%',
-                     dataLabels: {
-                        total: {
-                           enabled: true,
-                           style: {
-                                 fontSize: '16px',
-                                 fontWeight: 900
-                           }
-                        }
-                     }
-               }
-            },
-            xaxis: {
-               type: 'datetime',
-               categories: data.length > 0 ? data[0].weekly_data.map(date => new Date(date).toLocaleDateString()) : [],
-            },
-            legend: {
-               position: 'right',
-               offsetY: 40
-            },
-            fill: {
-               opacity: 1
-            }
-         };
-
-        var weeklyAverageChart = new ApexCharts(document.querySelector("#averageTempChart"), weeklyAverageOptions);
-        var weeklyDataChart = new ApexCharts(document.querySelector("#dailyChart"), weeklyDataOptions);
-
-        weeklyAverageChart.render();
-        weeklyDataChart.render();
-    })
-    .catch(error => console.error('Error fetching weekly temperature data:', error));
-
+   // function feed(t) {
+   //    fetch("{{ route('broadcast', ['message'=>'feed_tank_1']) }}");
+   // }
 </script>

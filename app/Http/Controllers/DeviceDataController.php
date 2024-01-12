@@ -110,7 +110,7 @@ class DeviceDataController extends Controller
     {
         $assets = ['chart', 'animation'];
         $device = DeviceData::where('id', $id)->first();
-        $activities = ActivityRecord::where('device_no', $id)->simplePaginate(5);
+        $activities = ActivityRecord::orderBy('created_at', 'desc')->where('device_no', $id)->simplePaginate(5);
         return view('dashboards.device', compact('assets', 'device', 'activities'));
     }
 
