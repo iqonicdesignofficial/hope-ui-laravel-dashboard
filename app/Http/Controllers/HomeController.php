@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DeviceData;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +13,13 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $assets = ['chart', 'animation'];
-        return view('dashboards.dashboard', compact('assets'));
+        $devices = DeviceData::all();
+        return view('dashboards.dashboard', compact('assets', 'devices'));
+    }
+    public function device(Request $request)
+    {
+        $assets = ['chart', 'animation'];
+        return view('dashboards.device', compact('assets'));
     }
 
     /*

@@ -30,7 +30,6 @@
         {{ $slot }}
     </div>
     @include('partials.dashboard._scripts')
-    <a class="btn btn-fixed-end btn-secondary btn-icon btn-dashboard" href="../landing-pages/index">Landing Pages</a>
 </body>
 
 </html>
